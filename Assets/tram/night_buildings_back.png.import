@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3p51hkw83da5"
-path="res://.godot/imported/buildings_front.png-5441e01c02a532160959477dd5bcd618.ctex"
+uid="uid://rlo66v4u5hha"
+path="res://.godot/imported/night_buildings_back.png-ecac333a7e4287774a4e61f9adf24fa8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/buildings_front.png"
-dest_files=["res://.godot/imported/buildings_front.png-5441e01c02a532160959477dd5bcd618.ctex"]
+source_file="res://Assets/tram/night_buildings_back.png"
+dest_files=["res://.godot/imported/night_buildings_back.png-ecac333a7e4287774a4e61f9adf24fa8.ctex"]
 
 [params]
 

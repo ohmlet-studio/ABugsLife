@@ -8,18 +8,17 @@ var notification_spacing: float = 10.0
 var screen_width: float = 400.0
 var top_position: float = 0.0
 
-var is_swiping: bool = false
-var swipe_start_pos: Vector2
-var swipe_threshold: float = 100.0
-var current_tween: Tween  # Track current tween to avoid conflicts
+var swipe_data: Dictionary = {}  # Store swipe data for each notification
+var swipe_threshold: float = 50.0
+var active_tweens: Dictionary = {}  # Track tweens for each notification
 
 func _ready():
 	notifications = get_children()
 	
 	arrange_notifications()
 	
-	if notifications.size() > 0:
-		setup_swipe_for_top_notification()
+	# Setup swipe for all notifications
+	setup_swipe_for_all_notifications()
 
 func arrange_notifications():
 	for i in range(notifications.size()):
@@ -36,9 +35,10 @@ func move_notif_up(notif_node: Control, target_position: Vector2, duration: floa
 	return tween
 
 func swipe_notif_away(notif_node: Control, direction: int = 1):
-	# Kill any existing tween to avoid conflicts
-	if current_tween:
-		current_tween.kill()
+	# Kill any existing tween for this notification
+	if active_tweens.has(notif_node):
+		active_tweens[notif_node].kill()
+		active_tweens.erase(notif_node)
 	
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)
@@ -53,80 +53,97 @@ func swipe_notif_away(notif_node: Control, direction: int = 1):
 	
 	tween.tween_property(notif_node, "position", target_pos, 0.3)
 	
-	tween.tween_callback(remove_top_notification)
+	# Pass the specific notification to be removed
+	tween.tween_callback(func(): remove_notification(notif_node))
 
-func remove_top_notification():
-	if notifications.size() == 0:
+func remove_notification(notif_node: Control):
+	var notif_index = notifications.find(notif_node)
+	if notif_index == -1:
 		return
 	
-	var removed_notif = notifications[0]
-	notifications.remove_at(0)
-	removed_notif.queue_free()
+	# Clean up swipe data and tweens for this notification
+	swipe_data.erase(notif_node)
+	if active_tweens.has(notif_node):
+		active_tweens[notif_node].kill()
+		active_tweens.erase(notif_node)
 	
-	# Animate all remaining notifications moving up
-	animate_all_notifications_up()
+	# Disconnect signal
+	if notif_node.gui_input.is_connected(_on_notification_input):
+		notif_node.gui_input.disconnect(_on_notification_input)
 	
-	# Set up swipe for the new top notification
-	if notifications.size() > 0:
-		setup_swipe_for_top_notification()
+	notifications.remove_at(notif_index)
+	notif_node.queue_free()
+	
+	# Animate all notifications below the removed one moving up
+	animate_notifications_up_from_index(notif_index)
 		
 	if notifications.size() == 0:
 		popup.action_completed.emit()
 
-func animate_all_notifications_up():
-	for i in range(notifications.size()):
+func animate_notifications_up_from_index(start_index: int):
+	for i in range(start_index, notifications.size()):
 		var notif = notifications[i]
 		var target_y = top_position + (i * (notification_height + notification_spacing))
 		var target_pos = Vector2(0, target_y)
 		
-		await get_tree().create_timer(i * 0.05).timeout
+		await get_tree().create_timer((i - start_index) * 0.05).timeout
 		move_notif_up(notif, target_pos, 0.4)
 
-func setup_swipe_for_top_notification():
-	if notifications.size() == 0:
-		return
-	
-	var top_notif = notifications[0]
-	
-	if top_notif.gui_input.is_connected(_on_notification_input):
-		top_notif.gui_input.disconnect(_on_notification_input)
-	
-	top_notif.gui_input.connect(_on_notification_input)
+func setup_swipe_for_all_notifications():
+	for notif in notifications:
+		if notif.gui_input.is_connected(_on_notification_input):
+			notif.gui_input.disconnect(_on_notification_input)
+		
+		# Create a callable that captures the notification
+		var callable = func(event: InputEvent): _on_notification_input(notif, event)
+		notif.gui_input.connect(callable)
+		
+		# Initialize swipe data for this notification
+		swipe_data[notif] = {
+			"is_swiping": false,
+			"start_pos": Vector2.ZERO,
+			"original_pos": notif.position
+		}
 
-func _on_notification_input(event: InputEvent):
-	if notifications.size() == 0:
+func _on_notification_input(notif_node: Control, event: InputEvent):
+	if not swipe_data.has(notif_node):
 		return
 	
-	var top_notif = notifications[0]
+	var data = swipe_data[notif_node]
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
-				is_swiping = true
-				swipe_start_pos = event.position
+				data.is_swiping = true
+				data.start_pos = event.position
+				data.original_pos = notif_node.position
 				# Kill any existing tweens when starting to swipe
-				if current_tween:
-					current_tween.kill()
+				if active_tweens.has(notif_node):
+					active_tweens[notif_node].kill()
+					active_tweens.erase(notif_node)
 			else:
-				if is_swiping:
-					handle_swipe_end(event.position, top_notif)
-				is_swiping = false
+				if data.is_swiping:
+					handle_swipe_end(event.position, notif_node)
+				data.is_swiping = false
 	
-	elif event is InputEventMouseMotion and is_swiping:
-		handle_swipe_drag(event.position, top_notif)
+	elif event is InputEventMouseMotion and data.is_swiping:
+		handle_swipe_drag(event.position, notif_node)
 
 func handle_swipe_drag(current_pos: Vector2, notif_node: Control):
-	if current_pos.x < swipe_start_pos.x:
+	var data = swipe_data[notif_node]
+	
+	if current_pos.x < data.start_pos.x:
 		return
 		
-	var drag_distance = current_pos.x - swipe_start_pos.x
+	var drag_distance = current_pos.x - data.start_pos.x
 	
 	var max_drag = swipe_threshold * 1.5
 	drag_distance = clamp(drag_distance, -max_drag, max_drag)
 	
-	# Store the original Y position to maintain it
-	var original_y = get_notification_target_y(0)  # Top notification's target Y
-	notif_node.position = Vector2(drag_distance, original_y)
+	# Get the current target Y position for this notification
+	var notif_index = notifications.find(notif_node)
+	var target_y = get_notification_target_y(notif_index)
+	notif_node.position = Vector2(drag_distance, target_y)
 	
 	# Add some visual feedback - scale and rotate slightly based on drag
 	var drag_ratio = abs(drag_distance) / swipe_threshold
@@ -145,7 +162,8 @@ func get_notification_target_y(index: int) -> float:
 
 func handle_swipe_end(end_pos: Vector2, notif_node: Control):
 	"""Handle the end of a swipe gesture"""
-	var swipe_distance = end_pos.x - swipe_start_pos.x
+	var data = swipe_data[notif_node]
+	var swipe_distance = end_pos.x - data.start_pos.x
 	
 	if abs(swipe_distance) >= swipe_threshold:
 		# Complete the swipe
@@ -156,19 +174,24 @@ func handle_swipe_end(end_pos: Vector2, notif_node: Control):
 		snap_back_notification(notif_node)
 
 func snap_back_notification(notif_node: Control):
-	# Kill any existing tween
-	if current_tween:
-		current_tween.kill()
+	# Kill any existing tween for this notification
+	if active_tweens.has(notif_node):
+		active_tweens[notif_node].kill()
 	
-	current_tween = create_tween()
-	current_tween.set_ease(Tween.EASE_OUT)
-	current_tween.set_trans(Tween.TRANS_SPRING)
+	var tween = create_tween()
+	active_tweens[notif_node] = tween
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_SPRING)
 	
-	# Get the proper target position (this is key!)
-	var target_pos = Vector2(0, get_notification_target_y(0))
+	# Get the proper target position for this specific notification
+	var notif_index = notifications.find(notif_node)
+	var target_pos = Vector2(0, get_notification_target_y(notif_index))
 	
 	# Reset all properties to their original states
-	current_tween.parallel().tween_property(notif_node, "position", target_pos, 0.4)
-	current_tween.parallel().tween_property(notif_node, "scale", Vector2.ONE, 0.4)
-	current_tween.parallel().tween_property(notif_node, "rotation", 0.0, 0.4)
-	current_tween.parallel().tween_property(notif_node, "modulate:a", 1.0, 0.4)
+	tween.parallel().tween_property(notif_node, "position", target_pos, 0.4)
+	tween.parallel().tween_property(notif_node, "scale", Vector2.ONE, 0.4)
+	tween.parallel().tween_property(notif_node, "rotation", 0.0, 0.4)
+	tween.parallel().tween_property(notif_node, "modulate:a", 1.0, 0.4)
+	
+	# Clean up the tween reference when done
+	tween.finished.connect(func(): active_tweens.erase(notif_node))

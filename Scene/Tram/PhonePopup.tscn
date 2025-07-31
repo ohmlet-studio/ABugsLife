@@ -1,14 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1oq7xevew5jw"]
+[gd_scene load_steps=7 format=3 uid="uid://c1oq7xevew5jw"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_aw7cm"]
 [ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scene/Tram/phone_popup.gd" id="2_ccss7"]
 [ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/phone.png" id="3_b74y7"]
 [ext_resource type="Script" uid="uid://bf8b7abk4j6jh" path="res://Scripts/Tram/PhoneInterface.gd" id="3_wp84m"]
+[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scene/Tram/move_arm.gd" id="5_dbujg"]
 
 [sub_resource type="Theme" id="Theme_3slvu"]
 
 [node name="PhonePopup" instance=ExtResource("1_aw7cm")]
 script = ExtResource("2_ccss7")
+
+[node name="Shadow" parent="Popup" index="0"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 247.8
+offset_bottom = 247.8
+
+[node name="PanelContainer" parent="Popup" index="1"]
+layout_mode = 0
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background4" index="0"]
 position = Vector2(-5, -5)
@@ -74,12 +85,13 @@ color = Color(0.695503, 0.695503, 0.695503, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Leg" type="ColorRect" parent="Popup/PanelContainer/Background4/Elements" index="2"]
-visible = false
-offset_left = 137.0
-offset_top = 44.0
-offset_right = 168.0
-offset_bottom = 283.0
+offset_left = 89.9916
+offset_top = 49.3574
+offset_right = 120.992
+offset_bottom = 288.357
 rotation = -0.225498
-pivot_offset = Vector2(15.2884, 219.961)
+pivot_offset = Vector2(15.1354, 9.70146)
+mouse_filter = 2
 theme = SubResource("Theme_3slvu")
 color = Color(0.650618, 0.412791, 0.15247, 1)
+script = ExtResource("5_dbujg")
