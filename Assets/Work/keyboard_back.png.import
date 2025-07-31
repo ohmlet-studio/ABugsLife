@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dffhqcd0ti7p"
-path="res://.godot/imported/day_sky.png-a6ac6a97d18c3c4bdaf3263216fa8c54.ctex"
+uid="uid://d1gux3ef6tgoi"
+path="res://.godot/imported/keyboard_back.png-8cafcd72d1e3e23a967c3c53d918e8a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/day_sky.png"
-dest_files=["res://.godot/imported/day_sky.png-a6ac6a97d18c3c4bdaf3263216fa8c54.ctex"]
+source_file="res://Assets/Work/keyboard_back.png"
+dest_files=["res://.godot/imported/keyboard_back.png-8cafcd72d1e3e23a967c3c53d918e8a2.ctex"]
 
 [params]
 

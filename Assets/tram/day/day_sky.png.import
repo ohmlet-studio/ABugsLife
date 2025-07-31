@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyjpmqg7s2dwe"
-path="res://.godot/imported/firefly.png-72615ee2b1163ff8bd2e3a52988f39f5.ctex"
+uid="uid://dffhqcd0ti7p"
+path="res://.godot/imported/day_sky.png-a4da0c9ee0ef614e3d603bb1e7a052e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/firefly.png"
-dest_files=["res://.godot/imported/firefly.png-72615ee2b1163ff8bd2e3a52988f39f5.ctex"]
+source_file="res://Assets/Tram/day/day_sky.png"
+dest_files=["res://.godot/imported/day_sky.png-a4da0c9ee0ef614e3d603bb1e7a052e4.ctex"]
 
 [params]
 

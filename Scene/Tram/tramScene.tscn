@@ -1,23 +1,23 @@
 [gd_scene load_steps=22 format=3 uid="uid://h6qs28nw2xu0"]
 
-[ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_e6itl"]
-[ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_lrxl7"]
-[ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="3_1s6la"]
-[ext_resource type="Texture2D" uid="uid://dffhqcd0ti7p" path="res://Assets/tram/day_sky.png" id="3_gtxjj"]
-[ext_resource type="Texture2D" uid="uid://bvdck63pb0s27" path="res://Assets/tram/cloud_outline.png" id="4_pqa8r"]
-[ext_resource type="Texture2D" uid="uid://vaurujj3dx2e" path="res://Assets/tram/night_sky.png" id="4_vwqo8"]
-[ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="4_xjeqg"]
-[ext_resource type="Texture2D" uid="uid://cqbqllrxwck78" path="res://Assets/tram/day_clouds.png" id="5_vwqo8"]
-[ext_resource type="Texture2D" uid="uid://d16o5xj4p0awo" path="res://Assets/tram/night_clouds.png" id="6_ec4dg"]
-[ext_resource type="Texture2D" uid="uid://1p4bg4ce8awr" path="res://Assets/tram/day_buildings_back.png" id="8_ec4dg"]
-[ext_resource type="Texture2D" uid="uid://rlo66v4u5hha" path="res://Assets/tram/night_buildings_back.png" id="9_6gjmk"]
-[ext_resource type="Texture2D" uid="uid://btnu0xryoxpx8" path="res://Assets/tram/background_tram_inside.png" id="9_ks1fj"]
-[ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/tram/night_tram_lights.png" id="10_jp7pj"]
-[ext_resource type="Texture2D" uid="uid://c0a7q71ls5d16" path="res://Assets/tram/day_buildings_front.png" id="10_sxxr5"]
-[ext_resource type="Texture2D" uid="uid://t5sm8seu1qpt" path="res://Assets/tram/night_buildings_front.png" id="11_ks1fj"]
-[ext_resource type="Texture2D" uid="uid://b786ak1kq2j1o" path="res://Assets/tram/day_tram_lights.png" id="11_tuk3y"]
-[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/tram/firefly.png" id="15_6gjmk"]
-[ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_ywpfr"]
+[ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
+[ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
+[ext_resource type="Texture2D" uid="uid://dffhqcd0ti7p" path="res://Assets/Tram/day/day_sky.png" id="3_55tlu"]
+[ext_resource type="Texture2D" uid="uid://vaurujj3dx2e" path="res://Assets/Tram/night/night_sky.png" id="4_g7uoi"]
+[ext_resource type="Texture2D" uid="uid://bvdck63pb0s27" path="res://Assets/Tram/cloud_outline.png" id="5_inkxg"]
+[ext_resource type="Texture2D" uid="uid://cqbqllrxwck78" path="res://Assets/Tram/day/day_clouds.png" id="6_pcc3a"]
+[ext_resource type="Texture2D" uid="uid://d16o5xj4p0awo" path="res://Assets/Tram/night/night_clouds.png" id="7_xuh25"]
+[ext_resource type="Texture2D" uid="uid://1p4bg4ce8awr" path="res://Assets/Tram/day/day_buildings_back.png" id="8_gq3dt"]
+[ext_resource type="Texture2D" uid="uid://rlo66v4u5hha" path="res://Assets/Tram/night/night_buildings_back.png" id="9_p687b"]
+[ext_resource type="Texture2D" uid="uid://c0a7q71ls5d16" path="res://Assets/Tram/day/day_buildings_front.png" id="10_ytes1"]
+[ext_resource type="Texture2D" uid="uid://t5sm8seu1qpt" path="res://Assets/Tram/night/night_buildings_front.png" id="11_t5ihy"]
+[ext_resource type="Texture2D" uid="uid://btnu0xryoxpx8" path="res://Assets/Tram/background_tram_inside.png" id="12_sq7lc"]
+[ext_resource type="Texture2D" uid="uid://b786ak1kq2j1o" path="res://Assets/Tram/day/day_tram_lights.png" id="13_kfqh7"]
+[ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/Tram/night/night_tram_lights.png" id="14_xddm6"]
+[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/firefly.png" id="15_wbbch"]
+[ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="16_iyawv"]
+[ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="17_s6t5j"]
+[ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_rv5di"]
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
 length = 0.001
@@ -58,12 +58,12 @@ _data = {
 }
 
 [node name="TramScene" type="Node2D"]
-script = ExtResource("1_e6itl")
+script = ExtResource("1_qlsm1")
 
 [node name="TramExterior" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="TramExterior"]
-script = ExtResource("2_lrxl7")
+script = ExtResource("2_cqi5x")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="TramExterior/ParallaxBackground"]
 motion_scale = Vector2(0, 0)
@@ -71,13 +71,13 @@ motion_mirroring = Vector2(1183, 0)
 
 [node name="DaySky" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer3"]
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("3_gtxjj")
+texture = ExtResource("3_55tlu")
 centered = false
 
 [node name="NightSky" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer3"]
 visible = false
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("4_vwqo8")
+texture = ExtResource("4_g7uoi")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="TramExterior/ParallaxBackground"]
@@ -86,20 +86,20 @@ motion_mirroring = Vector2(1183, 0)
 
 [node name="CloudsOutline" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer2"]
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("4_pqa8r")
+texture = ExtResource("5_inkxg")
 centered = false
 
 [node name="DayClouds" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer2"]
 modulate = Color(1, 1, 1, 0.603922)
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("5_vwqo8")
+texture = ExtResource("6_pcc3a")
 centered = false
 
 [node name="NightClouds" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer2"]
 visible = false
 modulate = Color(1, 1, 1, 0.603922)
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("6_ec4dg")
+texture = ExtResource("7_xuh25")
 centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="TramExterior/ParallaxBackground"]
@@ -108,13 +108,13 @@ motion_mirroring = Vector2(1183, 0)
 
 [node name="DayBuildingsBack" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("8_ec4dg")
+texture = ExtResource("8_gq3dt")
 centered = false
 
 [node name="NightBuildingsBack" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
 visible = false
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("9_6gjmk")
+texture = ExtResource("9_p687b")
 centered = false
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="TramExterior/ParallaxBackground"]
@@ -123,13 +123,13 @@ motion_mirroring = Vector2(1183, 0)
 
 [node name="DayBuildingsFront" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer4"]
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("10_sxxr5")
+texture = ExtResource("10_ytes1")
 centered = false
 
 [node name="NightBuildingsFront" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer4"]
 visible = false
 scale = Vector2(0.462219, 0.462219)
-texture = ExtResource("11_ks1fj")
+texture = ExtResource("11_t5ihy")
 centered = false
 
 [node name="TramInterior" type="Node2D" parent="."]
@@ -137,26 +137,26 @@ centered = false
 [node name="TramInside2" type="Sprite2D" parent="TramInterior"]
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
-texture = ExtResource("9_ks1fj")
+texture = ExtResource("12_sq7lc")
 centered = false
 
 [node name="DayLights" type="Sprite2D" parent="TramInterior"]
 visible = false
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
-texture = ExtResource("11_tuk3y")
+texture = ExtResource("13_kfqh7")
 centered = false
 
 [node name="NightLights" type="Sprite2D" parent="TramInterior"]
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
-texture = ExtResource("10_jp7pj")
+texture = ExtResource("14_xddm6")
 centered = false
 
 [node name="Firefly" type="Sprite2D" parent="TramInterior"]
 position = Vector2(250, 369)
 scale = Vector2(0.320213, 0.320213)
-texture = ExtResource("15_6gjmk")
+texture = ExtResource("15_wbbch")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TramInterior"]
 libraries = {
@@ -164,9 +164,9 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
-script = ExtResource("3_1s6la")
+script = ExtResource("16_iyawv")
 
-[node name="PhonePopup" parent="Interactions" instance=ExtResource("4_xjeqg")]
+[node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
 position = Vector2(726, 78)
 scale = Vector2(1.34046, 1.34046)
-script = ExtResource("18_ywpfr")
+script = ExtResource("18_rv5di")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d16o5xj4p0awo"
-path="res://.godot/imported/night_clouds.png-997c5d92982d545b4b0d5d8e1ac4cdda.ctex"
+uid="uid://cjhp2yrr66x71"
+path="res://.godot/imported/message.png-66369cac1ea1a83e5ecae47531c9def2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/night_clouds.png"
-dest_files=["res://.godot/imported/night_clouds.png-997c5d92982d545b4b0d5d8e1ac4cdda.ctex"]
+source_file="res://Assets/Tram/popups/message.png"
+dest_files=["res://.godot/imported/message.png-66369cac1ea1a83e5ecae47531c9def2.ctex"]
 
 [params]
 

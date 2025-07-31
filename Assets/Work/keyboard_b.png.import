@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cadaviik482md"
-path="res://.godot/imported/night_tram_lights.png-c35efca89163db69fe8575e4b8007571.ctex"
+uid="uid://dlhhm2i0amyvi"
+path="res://.godot/imported/keyboard_b.png-662b20ce94fb9ea22df95ea6641edfb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/night_tram_lights.png"
-dest_files=["res://.godot/imported/night_tram_lights.png-c35efca89163db69fe8575e4b8007571.ctex"]
+source_file="res://Assets/Work/keyboard_b.png"
+dest_files=["res://.godot/imported/keyboard_b.png-662b20ce94fb9ea22df95ea6641edfb4.ctex"]
 
 [params]
 

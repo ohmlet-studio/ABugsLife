@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmoxs3vcarn7g"]
+
+[ext_resource type="Texture2D" uid="uid://bmr104jxt7vjf" path="res://Assets/Work/work.jpg" id="1_boa1l"]
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="2_1k3mw"]
+[ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
+
+[node name="WorkScene" type="Node2D"]
+
+[node name="Work" type="Sprite2D" parent="."]
+position = Vector2(449, 323)
+scale = Vector2(0.262765, 0.262765)
+texture = ExtResource("1_boa1l")
+
+[node name="InteractionPopup" parent="." instance=ExtResource("2_1k3mw")]
+position = Vector2(701, 32)
+scale = Vector2(1.12745, 1.12745)
+
+[node name="KeyboardPopup" parent="." instance=ExtResource("2_1k3mw")]
+position = Vector2(760, 325)
+scale = Vector2(1.12745, 1.12745)
+
+[node name="PhonePopup" parent="." instance=ExtResource("3_0xuk1")]
