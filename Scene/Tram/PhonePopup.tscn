@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c1oq7xevew5jw"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_aw7cm"]
-[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scene/Tram/phone_popup.gd" id="2_ccss7"]
-[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/phone.png" id="3_b74y7"]
+[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/phone_popup.gd" id="2_ccss7"]
+[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/tram/phone.png" id="3_b74y7"]
 [ext_resource type="Script" uid="uid://bf8b7abk4j6jh" path="res://Scripts/Tram/PhoneInterface.gd" id="3_wp84m"]
-[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scene/Tram/move_arm.gd" id="5_dbujg"]
+[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/move_arm.gd" id="5_dbujg"]
 
 [sub_resource type="Theme" id="Theme_3slvu"]
 
