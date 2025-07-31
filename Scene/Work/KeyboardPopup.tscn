@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdr0keyymx0jk"]
+[gd_scene load_steps=14 format=3 uid="uid://bdr0keyymx0jk"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_8e61w"]
 [ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/phone_popup.gd" id="2_dn5e4"]
 [ext_resource type="Texture2D" uid="uid://d1gux3ef6tgoi" path="res://Assets/Work/keyboard_back.png" id="3_k0q5x"]
+[ext_resource type="Script" uid="uid://bxqluiwvbqr06" path="res://Scripts/Work/keyboard.gd" id="3_kr0vn"]
 [ext_resource type="Texture2D" uid="uid://dlhhm2i0amyvi" path="res://Assets/Work/keyboard_b.png" id="4_kr0vn"]
 [ext_resource type="Texture2D" uid="uid://b856nxckucm7q" path="res://Assets/Work/keyboard_z.png" id="5_3qjao"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_pco1i"]
-[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/move_arm.gd" id="6_v20q8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr0vn"]
+size = Vector2(205, 105.5)
 
 [sub_resource type="Animation" id="Animation_guyf4"]
 resource_name = "Appear"
@@ -36,7 +39,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(125, 148)]
+"values": [Vector2(125, 291.455)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -86,11 +89,46 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(127, 158)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hands/Leg2:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hands/Leg2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(54.061, 4.2403)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Keyboard/KeyboardZ:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(127.052, 158.052)]
+}
 
 [sub_resource type="Animation" id="Animation_k0q5x"]
 resource_name = "TypeB"
 length = 0.22
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -152,11 +190,77 @@ tracks/4/keys = {
 "values": [Vector2(127, 158), Vector2(127, 169), Vector2(127, 158)]
 }
 
+[sub_resource type="Animation" id="Animation_3qjao"]
+resource_name = "TypeZ"
+length = 0.22
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hands:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, 153)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hands/Leg2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0341782, 0.100826, 0.168327),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(54.061, 4.2403), Vector2(54.061, 4.2403), Vector2(54.061, 31.515), Vector2(54.061, 4.2403)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hands/Leg2:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0341782),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0698132]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Keyboard/KeyboardZ:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0658218, 0.1, 0.165822),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(127, 158), Vector2(127, 169), Vector2(127, 158)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Keyboard/KeyboardBack:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0349066, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yuy0o"]
 _data = {
 &"Appear": SubResource("Animation_guyf4"),
 &"RESET": SubResource("Animation_y7pmg"),
-&"TypeB": SubResource("Animation_k0q5x")
+&"TypeB": SubResource("Animation_k0q5x"),
+&"TypeZ": SubResource("Animation_3qjao")
 }
 
 [node name="KeyboardPopup" instance=ExtResource("1_8e61w")]
@@ -165,25 +269,30 @@ script = ExtResource("2_dn5e4")
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background4" index="0"]
 position = Vector2(-5, -5)
 
-[node name="Keyboard" type="Node2D" parent="Popup/PanelContainer/Background4/Elements" index="0"]
+[node name="Keyboard" type="Area2D" parent="Popup/PanelContainer/Background4/Elements" index="0"]
+script = ExtResource("3_kr0vn")
 
-[node name="KeyboardBack" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="0"]
+position = Vector2(127, 160)
+shape = SubResource("RectangleShape2D_kr0vn")
+
+[node name="KeyboardBack" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="1"]
 position = Vector2(127.052, 158.052)
 scale = Vector2(0.243175, 0.243175)
 texture = ExtResource("3_k0q5x")
 
-[node name="KeyboardB" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="1"]
+[node name="KeyboardB" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="2"]
 position = Vector2(127, 158)
 scale = Vector2(0.243175, 0.243175)
 texture = ExtResource("4_kr0vn")
 
-[node name="KeyboardZ" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="2"]
+[node name="KeyboardZ" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="3"]
 position = Vector2(127.052, 158.052)
 scale = Vector2(0.243175, 0.243175)
 texture = ExtResource("5_3qjao")
 
 [node name="Hands" type="Node2D" parent="Popup/PanelContainer/Background4/Elements" index="1"]
-position = Vector2(125, 148)
+position = Vector2(125, 291.455)
 
 [node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Hands" index="0"]
 position = Vector2(-45.4948, -1.0592)
@@ -192,7 +301,6 @@ scale = Vector2(0.185202, 0.191715)
 skew = 0.0698132
 texture = ExtResource("5_pco1i")
 offset = Vector2(-128.385, 577.293)
-script = ExtResource("6_v20q8")
 
 [node name="Leg2" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Hands" index="1"]
 position = Vector2(54.061, 4.2403)
@@ -200,7 +308,6 @@ rotation = -2.88861
 scale = Vector2(0.185, -0.192)
 texture = ExtResource("5_pco1i")
 offset = Vector2(-87.6051, 558.799)
-script = ExtResource("6_v20q8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Popup/PanelContainer/Background4/Elements" index="2"]
 libraries = {
