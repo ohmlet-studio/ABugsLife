@@ -48,6 +48,13 @@ script = ExtResource("1_e6itl")
 
 [node name="TramInterior" type="Node2D" parent="."]
 
+[node name="_DEBUG_BACKGROUND" type="ColorRect" parent="TramInterior"]
+offset_left = -164.0
+offset_top = -202.0
+offset_right = -120.0
+offset_bottom = -135.0
+scale = Vector2(32.2528, 14.9475)
+
 [node name="Decor" type="TextureRect" parent="TramInterior"]
 offset_left = 79.0
 offset_top = -22.0
