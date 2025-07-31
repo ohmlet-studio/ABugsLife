@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7keennn0oycx"
-path="res://.godot/imported/windows.png-6fc38d6a798ccbf47d3d31b79d7b14b7.ctex"
+uid="uid://cadaviik482md"
+path="res://.godot/imported/night_tram_lights.png-c35efca89163db69fe8575e4b8007571.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/windows.png"
-dest_files=["res://.godot/imported/windows.png-6fc38d6a798ccbf47d3d31b79d7b14b7.ctex"]
+source_file="res://Assets/tram/night_tram_lights.png"
+dest_files=["res://.godot/imported/night_tram_lights.png-c35efca89163db69fe8575e4b8007571.ctex"]
 
 [params]
 

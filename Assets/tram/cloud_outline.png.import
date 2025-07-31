@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fwuonu31cthp"
-path="res://.godot/imported/tram_inside.png-4d09cda7cbbdf24bf04e8e9a4a65ef2a.ctex"
+uid="uid://bvdck63pb0s27"
+path="res://.godot/imported/cloud_outline.png-810e3f312a875aeb480a2886c08d16b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/tram_inside.png"
-dest_files=["res://.godot/imported/tram_inside.png-4d09cda7cbbdf24bf04e8e9a4a65ef2a.ctex"]
+source_file="res://Assets/tram/cloud_outline.png"
+dest_files=["res://.godot/imported/cloud_outline.png-810e3f312a875aeb480a2886c08d16b8.ctex"]
 
 [params]
 

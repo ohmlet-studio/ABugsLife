@@ -1,5 +1,7 @@
 extends Control
 
+@onready var popup = $"../../../../.."
+
 var notifications: Array = []
 var notification_height: float = 40.0
 var notification_spacing: float = 10.0
@@ -67,6 +69,9 @@ func remove_top_notification():
 	# Set up swipe for the new top notification
 	if notifications.size() > 0:
 		setup_swipe_for_top_notification()
+		
+	if notifications.size() == 0:
+		popup.action_completed.emit()
 
 func animate_all_notifications_up():
 	for i in range(notifications.size()):
