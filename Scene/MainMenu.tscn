@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fr56kbtu21h7"]
+[gd_scene load_steps=12 format=3 uid="uid://fr56kbtu21h7"]
 
 [ext_resource type="Script" uid="uid://bgf7wgrv5ym7j" path="res://Scripts/main_menu.gd" id="1_d4yab"]
 [ext_resource type="Texture2D" uid="uid://bcb6id5kk6h53" path="res://Assets/Menu.jpg" id="1_i26rj"]
@@ -16,6 +16,12 @@ corner_radius_bottom_right = 60
 corner_radius_bottom_left = 60
 shadow_color = Color(0, 0, 0, 0.278431)
 shadow_size = 8
+
+[sub_resource type="InputEventKey" id="InputEventKey_d4yab"]
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_o3nbu"]
+events = [SubResource("InputEventKey_d4yab")]
 
 [sub_resource type="Animation" id="Animation_qoqlk"]
 length = 0.001
@@ -237,6 +243,7 @@ theme_override_fonts/font = ExtResource("2_eiy7p")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = ExtResource("4_qoqlk")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+shortcut = SubResource("Shortcut_o3nbu")
 text = "Start Game"
 
 [node name="Credits" type="Button" parent="Control/VBoxContainer"]
