@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bdr0keyymx0jk"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_8e61w"]
-[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/phone_popup.gd" id="2_dn5e4"]
+[ext_resource type="Script" uid="uid://cevii17w6q86o" path="res://Scripts/Work/keyboard_popup.gd" id="2_k0q5x"]
 [ext_resource type="Texture2D" uid="uid://d1gux3ef6tgoi" path="res://Assets/Work/keyboard_back.png" id="3_k0q5x"]
 [ext_resource type="Script" uid="uid://bxqluiwvbqr06" path="res://Scripts/Work/keyboard.gd" id="3_kr0vn"]
 [ext_resource type="Texture2D" uid="uid://dlhhm2i0amyvi" path="res://Assets/Work/keyboard_b.png" id="4_kr0vn"]
@@ -193,7 +193,6 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_3qjao"]
 resource_name = "TypeZ"
 length = 0.22
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -264,7 +263,7 @@ _data = {
 }
 
 [node name="KeyboardPopup" instance=ExtResource("1_8e61w")]
-script = ExtResource("2_dn5e4")
+script = ExtResource("2_k0q5x")
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background4" index="0"]
 position = Vector2(-5, -5)
@@ -313,3 +312,7 @@ offset = Vector2(-87.6051, 558.799)
 libraries = {
 &"": SubResource("AnimationLibrary_yuy0o")
 }
+
+[connection signal="input_event" from="Popup/PanelContainer/Background4/Elements/Keyboard" to="Popup/PanelContainer/Background4/Elements/Keyboard" method="_on_input_event"]
+[connection signal="mouse_entered" from="Popup/PanelContainer/Background4/Elements/Keyboard" to="Popup/PanelContainer/Background4/Elements/Keyboard" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Popup/PanelContainer/Background4/Elements/Keyboard" to="Popup/PanelContainer/Background4/Elements/Keyboard" method="_on_mouse_exited"]
