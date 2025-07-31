@@ -1,7 +1,9 @@
 extends Control
 
 
-@onready var sound_player = get_parent().get_node("AudioStreamPlayer")
+@onready var sound_player = get_parent().get_parent().get_parent().get_parent().get_node("AudioStreamPlayer")
+@onready var popup = get_parent().get_parent().get_parent().get_parent()
+
 
 func fade_in_children():
 	var tween = create_tween()
@@ -23,3 +25,5 @@ func _on_gui_input(event: InputEvent) -> void:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			fade_in_children()
 			sound_player.play()
+			await get_tree().create_timer(3).timeout
+			popup.action_completed.emit()
