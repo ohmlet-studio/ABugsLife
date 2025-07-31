@@ -1,16 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://h6qs28nw2xu0"]
+[gd_scene load_steps=12 format=3 uid="uid://h6qs28nw2xu0"]
 
-[ext_resource type="Texture2D" uid="uid://dr13ctxcwfav2" path="res://Assets/metro.jpg" id="1_67yrw"]
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_e6itl"]
+[ext_resource type="Texture2D" uid="uid://mbwyt6vg5jqk" path="res://Assets/tram/buildings.png" id="2_cp53u"]
+[ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_lrxl7"]
 [ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="3_1s6la"]
+[ext_resource type="Texture2D" uid="uid://db4roper0d7la" path="res://Assets/tram/clouds.png" id="3_lrxl7"]
+[ext_resource type="Texture2D" uid="uid://fwuonu31cthp" path="res://Assets/tram/tram_inside.png" id="4_4l2dy"]
 [ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="4_xjeqg"]
+[ext_resource type="Texture2D" uid="uid://b7keennn0oycx" path="res://Assets/tram/windows.png" id="5_1nf23"]
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("..:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +31,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("..:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -46,25 +50,52 @@ _data = {
 [node name="TramScene" type="Node2D"]
 script = ExtResource("1_e6itl")
 
-[node name="TramInterior" type="Node2D" parent="."]
-
-[node name="_DEBUG_BACKGROUND" type="ColorRect" parent="TramInterior"]
+[node name="_DEBUG_BACKGROUND" type="ColorRect" parent="."]
+visible = false
 offset_left = -164.0
 offset_top = -202.0
 offset_right = -120.0
 offset_bottom = -135.0
 scale = Vector2(32.2528, 14.9475)
 
-[node name="Decor" type="TextureRect" parent="TramInterior"]
-offset_left = 79.0
-offset_top = -22.0
-offset_right = 3587.0
-offset_bottom = 2458.0
-scale = Vector2(0.284057, 0.279143)
-texture = ExtResource("1_67yrw")
+[node name="TramExterior" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="TramExterior"]
+script = ExtResource("2_lrxl7")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="TramExterior/ParallaxBackground"]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1183, 0)
+
+[node name="Clouds" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(0.462219, 0.462219)
+texture = ExtResource("3_lrxl7")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="TramExterior/ParallaxBackground"]
+motion_scale = Vector2(2, 0)
+motion_mirroring = Vector2(1183, 0)
+
+[node name="Buildings" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
+scale = Vector2(0.462219, 0.462219)
+texture = ExtResource("2_cp53u")
+centered = false
+
+[node name="TramInterior" type="Node2D" parent="."]
+
+[node name="TramInside2" type="Sprite2D" parent="TramInterior"]
+position = Vector2(-27, -15)
+scale = Vector2(0.470392, 0.470392)
+texture = ExtResource("4_4l2dy")
+centered = false
+
+[node name="Windows" type="Sprite2D" parent="TramInterior"]
+position = Vector2(-27, -15)
+scale = Vector2(0.470392, 0.470392)
+texture = ExtResource("5_1nf23")
+centered = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TramInterior"]
-root_node = NodePath("../Decor")
 libraries = {
 &"": SubResource("AnimationLibrary_1s6la")
 }
