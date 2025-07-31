@@ -11,12 +11,6 @@
 
 [node name="CalendrierPopup" instance=ExtResource("1_3ltq0")]
 
-[node name="Shadow" parent="Popup" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 247.8
-offset_bottom = 247.8
-
 [node name="Calendar" type="Sprite2D" parent="Popup/PanelContainer/Background4" index="0"]
 position = Vector2(116, 119)
 scale = Vector2(0.35049, 0.35049)

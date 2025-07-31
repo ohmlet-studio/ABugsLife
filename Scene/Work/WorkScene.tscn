@@ -15,8 +15,4 @@ texture = ExtResource("1_boa1l")
 position = Vector2(701, 32)
 scale = Vector2(1.12745, 1.12745)
 
-[node name="KeyboardPopup" parent="." instance=ExtResource("2_1k3mw")]
-position = Vector2(760, 325)
-scale = Vector2(1.12745, 1.12745)
-
-[node name="PhonePopup" parent="." instance=ExtResource("3_0xuk1")]
+[node name="KeyboardPopup" parent="." instance=ExtResource("3_0xuk1")]
