@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by7obx5t2fs20"
-path="res://.godot/imported/Layer 6.svg-dbed0c9040f3a4002e1314d5a1283aee.ctex"
+uid="uid://cd2dp1mjjqjqm"
+path="res://.godot/imported/Outline1.webp-b41e33ed2ae9fd6cb17287bf9247011a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Calendar/SVG/Layer 6.svg"
-dest_files=["res://.godot/imported/Layer 6.svg-dbed0c9040f3a4002e1314d5a1283aee.ctex"]
+source_file="res://Assets/Calendar/Outline1.webp"
+dest_files=["res://.godot/imported/Outline1.webp-b41e33ed2ae9fd6cb17287bf9247011a.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
