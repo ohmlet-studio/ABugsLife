@@ -1,49 +1,79 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1oq7xevew5jw"]
+[gd_scene load_steps=6 format=3 uid="uid://c1oq7xevew5jw"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_aw7cm"]
 [ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scene/Tram/phone_popup.gd" id="2_ccss7"]
+[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/phone.png" id="3_b74y7"]
 [ext_resource type="Script" uid="uid://bf8b7abk4j6jh" path="res://Scripts/Tram/PhoneInterface.gd" id="3_wp84m"]
 
 [sub_resource type="Theme" id="Theme_3slvu"]
 
-[node name="InteractionPopup" instance=ExtResource("1_aw7cm")]
+[node name="PhonePopup" instance=ExtResource("1_aw7cm")]
 script = ExtResource("2_ccss7")
 
 [node name="Elements" type="Node2D" parent="Popup" index="2"]
 
-[node name="Phone" type="ColorRect" parent="Popup/Elements" index="0"]
-offset_left = 48.0
-offset_top = 28.0
-offset_right = 194.0
-offset_bottom = 222.0
+[node name="Phone" type="TextureRect" parent="Popup/Elements" index="0"]
+offset_left = 54.0
+offset_top = 9.0
+offset_right = 188.0
+offset_bottom = 241.0
 theme = SubResource("Theme_3slvu")
-color = Color(0.262932, 0.262932, 0.262932, 1)
+texture = ExtResource("3_b74y7")
+expand_mode = 1
 
-[node name="Notif" type="Node2D" parent="Popup/Elements" index="1"]
-position = Vector2(56, 38)
+[node name="Notif" type="Control" parent="Popup/Elements" index="1"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 74.0
+offset_top = 38.0
+offset_right = 168.0
+offset_bottom = 231.0
 script = ExtResource("3_wp84m")
 
 [node name="Notif" type="ColorRect" parent="Popup/Elements/Notif" index="0"]
-offset_right = 133.0
-offset_bottom = 41.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0342466
+anchor_top = 0.015544
+anchor_right = 0.858459
+anchor_bottom = 0.176166
+offset_left = -3.35616
+offset_top = -3.0
+offset_right = 12.3088
+offset_bottom = -3.0
 theme = SubResource("Theme_3slvu")
 color = Color(0.695503, 0.695503, 0.695503, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Notif2" type="ColorRect" parent="Popup/Elements/Notif" index="1"]
-offset_top = 45.0
-offset_right = 133.0
-offset_bottom = 86.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0342466
+anchor_top = 0.196891
+anchor_right = 0.858459
+anchor_bottom = 0.357513
+offset_left = -3.35616
+offset_right = 12.3088
 theme = SubResource("Theme_3slvu")
 color = Color(0.695503, 0.695503, 0.695503, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Notif3" type="ColorRect" parent="Popup/Elements/Notif" index="2"]
-offset_top = 90.0
-offset_right = 133.0
-offset_bottom = 131.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0342466
+anchor_top = 0.393782
+anchor_right = 0.858459
+anchor_bottom = 0.554404
+offset_left = -3.35616
+offset_right = 12.3088
 theme = SubResource("Theme_3slvu")
 color = Color(0.695503, 0.695503, 0.695503, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Leg" type="ColorRect" parent="Popup/Elements" index="2"]
+visible = false
 offset_left = 137.0
 offset_top = 44.0
 offset_right = 168.0
