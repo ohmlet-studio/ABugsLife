@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuy62nh60ghjs"]
+
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_3ltq0"]
+[ext_resource type="Texture2D" uid="uid://ds6hbsurpin8u" path="res://Assets/Calendar/SVG/Calendrier.svg" id="2_2me87"]
+[ext_resource type="Texture2D" uid="uid://sivm28kwegx7" path="res://Assets/Calendar/SVG/Layer 3.svg" id="3_sbuch"]
+[ext_resource type="Script" uid="uid://cxkcmo3x2fxrg" path="res://Scripts/Home/calendar_click_control.gd" id="4_54w6j"]
+[ext_resource type="Texture2D" uid="uid://by7obx5t2fs20" path="res://Assets/Calendar/SVG/Layer 6.svg" id="5_sbuch"]
+[ext_resource type="AudioStream" uid="uid://bmbnxwnb5lg7o" path="res://Assets/Audio/SFX/pencil.mp3" id="6_54w6j"]
+
+[node name="CalendrierPopup" instance=ExtResource("1_3ltq0")]
+
+[node name="Calendrier" type="Sprite2D" parent="." index="2"]
+position = Vector2(122, 114)
+scale = Vector2(0.29916, 0.29916)
+texture = ExtResource("2_2me87")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("6_54w6j")
+
+[node name="CalendarClickControl" type="Control" parent="." index="4"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 148.0
+offset_top = 98.0
+offset_right = 208.0
+offset_bottom = 154.0
+script = ExtResource("4_54w6j")
+
+[node name="Layer3" type="Sprite2D" parent="CalendarClickControl" index="0"]
+position = Vector2(30.1705, 25.5)
+scale = Vector2(0.330863, 0.465909)
+texture = ExtResource("3_sbuch")
+
+[node name="Layer6" type="Sprite2D" parent="CalendarClickControl" index="1"]
+position = Vector2(27, 27)
+rotation = -1.57079
+scale = Vector2(0.230319, 0.460638)
+texture = ExtResource("5_sbuch")
+
+[connection signal="gui_input" from="CalendarClickControl" to="CalendarClickControl" method="_on_gui_input"]
