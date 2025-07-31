@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://h6qs28nw2xu0"]
+[gd_scene load_steps=22 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_e6itl"]
-[ext_resource type="Script" path="res://Scripts/Tram/parallax_background.gd" id="2_lrxl7"]
+[ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_lrxl7"]
 [ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="3_1s6la"]
 [ext_resource type="Texture2D" uid="uid://dffhqcd0ti7p" path="res://Assets/tram/day_sky.png" id="3_gtxjj"]
 [ext_resource type="Texture2D" uid="uid://bvdck63pb0s27" path="res://Assets/tram/cloud_outline.png" id="4_pqa8r"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://t5sm8seu1qpt" path="res://Assets/tram/night_buildings_front.png" id="11_ks1fj"]
 [ext_resource type="Texture2D" uid="uid://b786ak1kq2j1o" path="res://Assets/tram/day_tram_lights.png" id="11_tuk3y"]
 [ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/tram/firefly.png" id="15_6gjmk"]
+[ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_ywpfr"]
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
 length = 0.001
@@ -168,3 +169,4 @@ script = ExtResource("3_1s6la")
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("4_xjeqg")]
 position = Vector2(726, 78)
 scale = Vector2(1.34046, 1.34046)
+script = ExtResource("18_ywpfr")

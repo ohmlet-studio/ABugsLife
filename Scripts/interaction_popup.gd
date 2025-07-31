@@ -8,7 +8,7 @@ signal action_completed
 func _init() -> void:
 	action_completed.connect(make_disappear)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func reveal():

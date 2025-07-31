@@ -16,7 +16,7 @@ func _ready() -> void:
 	for child in get_children():
 		child.modulate.a = 0
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
