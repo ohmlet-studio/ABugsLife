@@ -2,7 +2,7 @@ extends Control
 
 
 @onready var sound_player = $"../AudioStreamPlayer"
-@onready var popup = $"../../.."
+@onready var popup = $"../../../.."
 
 func fade_in_children():
 	var tween = create_tween()

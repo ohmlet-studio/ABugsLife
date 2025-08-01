@@ -302,7 +302,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_vo7qm"]
 resource_name = "WindowDayToNight"
-length = 5.0
+length = 3.726
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

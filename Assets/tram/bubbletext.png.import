@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caxd17oefg76x"
-path="res://.godot/imported/bubbletext.png-5e14763645bf6a62d62b37cbf69c3002.ctex"
+uid="uid://b7nmnn1vfl5um"
+path="res://.godot/imported/bubbletext.png-e0176d2db628e58211d2decfdd87224c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/bubbletext.png"
-dest_files=["res://.godot/imported/bubbletext.png-5e14763645bf6a62d62b37cbf69c3002.ctex"]
+source_file="res://Assets/Tram/bubbletext.png"
+dest_files=["res://.godot/imported/bubbletext.png-e0176d2db628e58211d2decfdd87224c.ctex"]
 
 [params]
 

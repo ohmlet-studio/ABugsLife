@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu5lcoi50f3mq"
-path="res://.godot/imported/pole.png-c3e3b20a46b9114c262c4854c46734ef.ctex"
+uid="uid://ccfmq2bjp4vpy"
+path="res://.godot/imported/pole.png-6ebab489a39cc2b61d84e038a0612454.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/pole.png"
-dest_files=["res://.godot/imported/pole.png-c3e3b20a46b9114c262c4854c46734ef.ctex"]
+source_file="res://Assets/Tram/pole.png"
+dest_files=["res://.godot/imported/pole.png-6ebab489a39cc2b61d84e038a0612454.ctex"]
 
 [params]
 
