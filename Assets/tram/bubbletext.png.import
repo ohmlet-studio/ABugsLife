@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x7xnlh8f2q8o"
-path="res://.godot/imported/metrocard.png-11e4caba8a993507af9546df5b821813.ctex"
+uid="uid://caxd17oefg76x"
+path="res://.godot/imported/bubbletext.png-5e14763645bf6a62d62b37cbf69c3002.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/booper/metrocard.png"
-dest_files=["res://.godot/imported/metrocard.png-11e4caba8a993507af9546df5b821813.ctex"]
+source_file="res://Assets/tram/bubbletext.png"
+dest_files=["res://.godot/imported/bubbletext.png-5e14763645bf6a62d62b37cbf69c3002.ctex"]
 
 [params]
 
