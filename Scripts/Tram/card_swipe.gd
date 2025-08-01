@@ -4,6 +4,7 @@ signal action_completed
 @onready var leg = $Leg
 @onready var animation_node = $Leg/SwipeAnimationPlayer
 @onready var light_on = $"LightsOn"
+@onready var beep_sound = $"Beep sound"
 
 var is_pressed = false
 var press_timer: Timer
@@ -37,7 +38,7 @@ func _on_press_timer_timeout():
 	if is_pressed:
 		light_on.show()
 		leg.hide()
-		# TODO beep sound
+		beep_sound.play()
 		
 		await get_tree().create_timer(0.5).timeout
 		emit_signal("action_completed")

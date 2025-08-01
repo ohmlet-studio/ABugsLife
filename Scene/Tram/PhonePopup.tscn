@@ -2,19 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_aw7cm"]
 [ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/card_swipe_popup.gd" id="2_ccss7"]
-[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/Tram/phone.png" id="3_b74y7"]
+[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/tram/phone.png" id="3_b74y7"]
 [ext_resource type="Script" uid="uid://bf8b7abk4j6jh" path="res://Scripts/Tram/PhoneInterface.gd" id="3_wp84m"]
-[ext_resource type="Texture2D" uid="uid://djukbpeu8by0b" path="res://Assets/Tram/popups/message2.png" id="5_jx22u"]
+[ext_resource type="Texture2D" uid="uid://djukbpeu8by0b" path="res://Assets/tram/popups/message2.png" id="5_jx22u"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_yehpi"]
-[ext_resource type="Texture2D" uid="uid://c7wsrwdr7o4vj" path="res://Assets/Tram/popups/message3.png" id="6_vq5eu"]
-[ext_resource type="Texture2D" uid="uid://k1t4dor6fy6l" path="res://Assets/Tram/popups/message4.png" id="7_b4brb"]
-[ext_resource type="Texture2D" uid="uid://cjhp2yrr66x71" path="res://Assets/Tram/popups/message.png" id="8_rsdib"]
+[ext_resource type="Texture2D" uid="uid://c7wsrwdr7o4vj" path="res://Assets/tram/popups/message3.png" id="6_vq5eu"]
+[ext_resource type="Texture2D" uid="uid://k1t4dor6fy6l" path="res://Assets/tram/popups/message4.png" id="7_b4brb"]
+[ext_resource type="Texture2D" uid="uid://cjhp2yrr66x71" path="res://Assets/tram/popups/message.png" id="8_rsdib"]
 [ext_resource type="Script" uid="uid://bfvhj1mmd1h8c" path="res://Scripts/Tram/move_arm.gd" id="10_vq5eu"]
 
 [sub_resource type="Theme" id="Theme_3slvu"]
 
 [node name="PhonePopup" instance=ExtResource("1_aw7cm")]
 script = ExtResource("2_ccss7")
+
+[node name="Popup" parent="." index="1"]
+offset_top = 14.0
+offset_bottom = 263.0
 
 [node name="Popup_PanelContainer_Background4#Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 position = Vector2(-5, -5)
