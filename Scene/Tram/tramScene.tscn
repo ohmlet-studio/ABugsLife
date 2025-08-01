@@ -101,12 +101,14 @@ motion_scale = Vector2(2, 0)
 motion_mirroring = Vector2(1183, 0)
 
 [node name="DayBuildingsBack" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 67)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("8_gq3dt")
 centered = false
 
 [node name="NightBuildingsBack" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
 visible = false
+position = Vector2(0, 73)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("9_p687b")
 centered = false
@@ -116,12 +118,14 @@ motion_scale = Vector2(3, 0)
 motion_mirroring = Vector2(1183, 0)
 
 [node name="DayBuildingsFront" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer4"]
+position = Vector2(0, 78)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("10_ytes1")
 centered = false
 
 [node name="NightBuildingsFront" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer4"]
 visible = false
+position = Vector2(0, 85)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("11_t5ihy")
 centered = false
@@ -135,13 +139,12 @@ texture = ExtResource("12_sq7lc")
 centered = false
 
 [node name="NightShadowBox" type="ColorRect" parent="TramInterior"]
-visible = false
 offset_left = -27.0
 offset_top = -15.0
 offset_right = 1171.0
 offset_bottom = 655.0
 mouse_filter = 2
-color = Color(0, 0, 0, 0.247059)
+color = Color(0, 0, 0, 0.423529)
 
 [node name="DayLights" type="Sprite2D" parent="TramInterior"]
 position = Vector2(-27, -15)
@@ -150,7 +153,6 @@ texture = ExtResource("13_kfqh7")
 centered = false
 
 [node name="NightLights" type="Sprite2D" parent="TramInterior"]
-visible = false
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("14_xddm6")
