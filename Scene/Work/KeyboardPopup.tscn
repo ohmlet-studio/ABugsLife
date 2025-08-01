@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_8e61w"]
 [ext_resource type="Script" uid="uid://cevii17w6q86o" path="res://Scripts/Work/keyboard_popup.gd" id="2_k0q5x"]
-[ext_resource type="Texture2D" uid="uid://d1gux3ef6tgoi" path="res://Assets/Work/keyboard_back.png" id="3_k0q5x"]
+[ext_resource type="Texture2D" uid="uid://d1gux3ef6tgoi" path="res://Assets/Work/Keyboard/keyboard_back.png" id="3_k0q5x"]
 [ext_resource type="Script" uid="uid://bxqluiwvbqr06" path="res://Scripts/Work/keyboard.gd" id="3_kr0vn"]
-[ext_resource type="Texture2D" uid="uid://dlhhm2i0amyvi" path="res://Assets/Work/keyboard_b.png" id="4_kr0vn"]
-[ext_resource type="Texture2D" uid="uid://b856nxckucm7q" path="res://Assets/Work/keyboard_z.png" id="5_3qjao"]
+[ext_resource type="Texture2D" uid="uid://dlhhm2i0amyvi" path="res://Assets/Work/Keyboard/keyboard_b.png" id="4_kr0vn"]
+[ext_resource type="Texture2D" uid="uid://b856nxckucm7q" path="res://Assets/Work/Keyboard/keyboard_z.png" id="5_3qjao"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_pco1i"]
-[ext_resource type="Texture2D" uid="uid://c5pjwepgyitqx" path="res://Assets/Work/zKeycapPressed.png" id="7_y7pmg"]
-[ext_resource type="Texture2D" uid="uid://b3w43qdwhsrd" path="res://Assets/Work/bKeycapPressed.png" id="8_yuy0o"]
+[ext_resource type="Texture2D" uid="uid://c5pjwepgyitqx" path="res://Assets/Work/Keyboard/zKeycapPressed.png" id="7_y7pmg"]
+[ext_resource type="Texture2D" uid="uid://b3w43qdwhsrd" path="res://Assets/Work/Keyboard/bKeycapPressed.png" id="8_yuy0o"]
 [ext_resource type="AudioStream" uid="uid://c7h34mjrabaxe" path="res://Assets/Audio/SFX/Office/Keyboard/1.wav" id="10_qvlfx"]
 [ext_resource type="AudioStream" uid="uid://db5oh55kfw846" path="res://Assets/Audio/SFX/Office/Keyboard/2.wav" id="11_cwk6t"]
 
