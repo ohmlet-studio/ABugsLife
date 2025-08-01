@@ -6,7 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Chambre/RideauGauche.png" id="5_v3p41"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Chambre/RideauDroit.png" id="6_6nqpc"]
-[ext_resource type="Shader" uid="uid://c7vsl6mlj1vsd" path="res://Assets/blur.gdshader" id="7_6nqpc"]
+[ext_resource type="Shader" path="res://Assets/blur.gdshader" id="7_6nqpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
 bg_color = Color(0.819608, 1, 0.807843, 0.321569)
