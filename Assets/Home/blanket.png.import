@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtupql3ynwj2a"
-path="res://.godot/imported/curtains_closed.png-4243b406dae0ef32786efda3d1c5a0ce.ctex"
+uid="uid://bjypomtbo06h0"
+path="res://.godot/imported/blanket.png-37c2833b298695e6ef67819a8e6b94d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/curtains_closed.png"
-dest_files=["res://.godot/imported/curtains_closed.png-4243b406dae0ef32786efda3d1c5a0ce.ctex"]
+source_file="res://Assets/Home/blanket.png"
+dest_files=["res://.godot/imported/blanket.png-37c2833b298695e6ef67819a8e6b94d0.ctex"]
 
 [params]
 

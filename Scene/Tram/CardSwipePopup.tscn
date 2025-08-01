@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjyvghvf4eqdi"]
+
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_id3nc"]
+[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/card_swipe_popup.gd" id="2_vb4f0"]
+[ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="9_uk0q1"]
+[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/move_arm.gd" id="10_eiqyl"]
+
+[sub_resource type="Animation" id="Animation_bdgng"]
+resource_name = "PressCard"
+length = 0.035
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0347264),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0767945]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0347264),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.176, 0.176)]
+}
+
+[sub_resource type="Animation" id="Animation_6swgk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.185202, 0.191715)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oeopt"]
+_data = {
+&"PressCard": SubResource("Animation_bdgng"),
+&"RESET": SubResource("Animation_6swgk")
+}
+
+[node name="CardSwipePopup" instance=ExtResource("1_id3nc")]
+script = ExtResource("2_vb4f0")
+
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
+position = Vector2(-17, 79)
+
+[node name="ColorRect" type="ColorRect" parent="Popup/PanelContainer/Elements" index="0"]
+offset_left = 45.0
+offset_top = -41.0
+offset_right = 232.0
+offset_bottom = 151.0
+color = Color(0.466181, 0.466181, 0.466181, 1)
+
+[node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
+z_index = 1
+position = Vector2(78, 53)
+scale = Vector2(0.185202, 0.191715)
+texture = ExtResource("9_uk0q1")
+offset = Vector2(-87.6051, 558.799)
+script = ExtResource("10_eiqyl")
+
+[node name="TextureRect" type="ColorRect" parent="Popup/PanelContainer/Elements/Leg" index="0"]
+z_index = -1
+offset_left = -136.774
+offset_top = -287.185
+offset_right = -2.77422
+offset_bottom = -194.185
+scale = Vector2(5.59877, 5.59877)
+color = Color(0.892917, 0.218421, 0.734095, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="SwipeAnimationPlayer" type="AnimationPlayer" parent="Popup/PanelContainer/Elements/Leg" index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_oeopt")
+}

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvopsdjrulvbj"
-path="res://.godot/imported/room.jpg-925d580fd2b89d33fcc40b8c7c992a07.ctex"
+uid="uid://cl4a7v6r6kny7"
+path="res://.godot/imported/worm.png-9a9d6f0198e9e9587bd7031e06134eb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/room.jpg"
-dest_files=["res://.godot/imported/room.jpg-925d580fd2b89d33fcc40b8c7c992a07.ctex"]
+source_file="res://Assets/Tram/characters/background/worm.png"
+dest_files=["res://.godot/imported/worm.png-9a9d6f0198e9e9587bd7031e06134eb6.ctex"]
 
 [params]
 
