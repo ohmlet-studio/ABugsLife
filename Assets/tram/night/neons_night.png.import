@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsd8yynucub5m"
-path="res://.godot/imported/neons_night.png-379cc53905dcb4b39db4a03d47987ef3.ctex"
+path="res://.godot/imported/neons_night.png-eb0291cadeb641eac51803e6927ace05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/night/neons_night.png"
-dest_files=["res://.godot/imported/neons_night.png-379cc53905dcb4b39db4a03d47987ef3.ctex"]
+source_file="res://Assets/Tram/night/neons_night.png"
+dest_files=["res://.godot/imported/neons_night.png-eb0291cadeb641eac51803e6927ace05.ctex"]
 
 [params]
 
