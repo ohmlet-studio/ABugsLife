@@ -1,6 +1,6 @@
 extends Control
 
-@onready var popup = $"../../../../.."
+@onready var popup = $"../../../.."
 
 var notifications: Array = []
 var notification_height: float = 120.0

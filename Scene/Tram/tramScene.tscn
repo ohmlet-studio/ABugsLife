@@ -10,13 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://rlo66v4u5hha" path="res://Assets/Tram/night/night_buildings_back.png" id="9_p687b"]
 [ext_resource type="Texture2D" uid="uid://c0a7q71ls5d16" path="res://Assets/Tram/day/day_buildings_front.png" id="10_ytes1"]
 [ext_resource type="Texture2D" uid="uid://t5sm8seu1qpt" path="res://Assets/Tram/night/night_buildings_front.png" id="11_t5ihy"]
+[ext_resource type="Texture2D" uid="uid://hpg4t3hso2wv" path="res://Assets/Tram/booper.png" id="12_p687b"]
 [ext_resource type="Texture2D" uid="uid://btnu0xryoxpx8" path="res://Assets/Tram/background_tram_inside.png" id="12_sq7lc"]
 [ext_resource type="Texture2D" uid="uid://b786ak1kq2j1o" path="res://Assets/Tram/day/day_tram_lights.png" id="13_kfqh7"]
 [ext_resource type="Texture2D" uid="uid://cl4a7v6r6kny7" path="res://Assets/Tram/characters/background/worm.png" id="14_gq3dt"]
 [ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/Tram/night/night_tram_lights.png" id="14_xddm6"]
 [ext_resource type="Texture2D" uid="uid://bbmyuo2yqgkhr" path="res://Assets/Tram/characters/lulu/idle.png" id="14_xuh25"]
 [ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/characters/fifi/idle.png" id="15_wbbch"]
-[ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="16_iyawv"]
 [ext_resource type="Texture2D" uid="uid://btwi4evy3lnp" path="res://Assets/Tram/characters/fifi/idle_smile.png" id="16_pcc3a"]
 [ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="17_s6t5j"]
 [ext_resource type="Texture2D" uid="uid://bpcww57vbvc26" path="res://Assets/Tram/characters/fifi/talking.png" id="17_xuh25"]
@@ -146,6 +146,11 @@ scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("12_sq7lc")
 centered = false
 
+[node name="Booper" type="Sprite2D" parent="TramInterior"]
+position = Vector2(879, 306)
+scale = Vector2(0.544355, 0.544355)
+texture = ExtResource("12_p687b")
+
 [node name="NightShadowBox" type="ColorRect" parent="TramInterior"]
 visible = false
 offset_left = -27.0
@@ -227,9 +232,7 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
-visible = false
 position = Vector2(3, 0)
-script = ExtResource("16_iyawv")
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
 position = Vector2(726, 78)
