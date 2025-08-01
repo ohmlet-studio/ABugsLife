@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://b57pbmpwhfuaw"]
+
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_qmyck"]
+[ext_resource type="Script" uid="uid://8h82uutl31vb" path="res://Scripts/Home/Curtains.gd" id="2_00lwi"]
+[ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="3_laxh6"]
+[ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="4_e2jej"]
+
+[sub_resource type="Animation" id="Animation_laxh6"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5.25985, 22.5118), Vector2(9.69254, 22.5118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(47.1572, 23.1195), Vector2(29.6097, 23.1195)]
+}
+
+[sub_resource type="Animation" id="Animation_qmyck"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9.69254, 22.5118), Vector2(-5.25985, 22.5118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(29.6097, 23.1195), Vector2(47.1572, 23.1195)]
+}
+
+[sub_resource type="Animation" id="Animation_00lwi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.69254, 22.5118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(29.6097, 23.1195)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2jej"]
+_data = {
+&"Close": SubResource("Animation_laxh6"),
+&"Open": SubResource("Animation_qmyck"),
+&"RESET": SubResource("Animation_00lwi")
+}
+
+[node name="InteractionPopup" instance=ExtResource("1_qmyck")]
+
+[node name="PanelContainer" parent="Popup" index="0"]
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 246.0
+offset_bottom = 247.0
+
+[node name="Curtains" type="Node2D" parent="Popup/PanelContainer" index="1"]
+position = Vector2(-239, -22)
+scale = Vector2(0.762619, 0.762619)
+
+[node name="Control" type="Control" parent="Popup/PanelContainer/Curtains" index="0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 331.751
+offset_top = 45.8945
+offset_right = 371.751
+offset_bottom = 85.8945
+scale = Vector2(7.22965, 7.70465)
+script = ExtResource("2_00lwi")
+opened_default = false
+
+[node name="Right" type="Sprite2D" parent="Popup/PanelContainer/Curtains/Control" index="0"]
+position = Vector2(29.6097, 23.1195)
+scale = Vector2(0.138319, 0.129792)
+texture = ExtResource("3_laxh6")
+
+[node name="Left" type="Sprite2D" parent="Popup/PanelContainer/Curtains/Control" index="1"]
+position = Vector2(9.69254, 22.5118)
+scale = Vector2(0.138319, 0.129792)
+texture = ExtResource("4_e2jej")
+
+[node name="CurtainsAnim" type="AnimationPlayer" parent="Popup/PanelContainer/Curtains/Control" index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_e2jej")
+}
+
+[connection signal="gui_input" from="Popup/PanelContainer/Curtains/Control" to="Popup/PanelContainer/Curtains/Control" method="_on_gui_input"]
