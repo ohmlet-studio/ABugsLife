@@ -153,15 +153,18 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 249.0
 offset_bottom = 249.0
+mouse_filter = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Popup"]
 layout_mode = 0
 offset_right = 249.0
 offset_bottom = 249.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_u3xke")
 
 [node name="Background4" type="ColorRect" parent="Popup/PanelContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme = SubResource("Theme_3slvu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
