@@ -13,14 +13,11 @@ extends ParallaxBackground
 
 func _ready() -> void:
 	if GameStateManager.current_step_day == GameStateManager.TRAM_NIGHT:
-		scroll_speed *= -1
 		for node in night_elements:
 			node.show()
 	else:
 		for node in night_elements:
 			node.hide()
-		
 
 func _process(_delta: float) -> void:
 	self.scroll_offset.x += scroll_speed
-	
