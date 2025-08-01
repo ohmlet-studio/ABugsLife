@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1p4bg4ce8awr"
-path="res://.godot/imported/day_buildings_back.png-ad1b1659047b886ed2ba7b18362138c8.ctex"
+uid="uid://d3cipgy8j0xp1"
+path="res://.godot/imported/talking.png-8c4fa9c3fc548eca303fd9140af47f97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/day/day_buildings_back.png"
-dest_files=["res://.godot/imported/day_buildings_back.png-ad1b1659047b886ed2ba7b18362138c8.ctex"]
+source_file="res://Assets/Tram/characters/lulu/talking.png"
+dest_files=["res://.godot/imported/talking.png-8c4fa9c3fc548eca303fd9140af47f97.ctex"]
 
 [params]
 

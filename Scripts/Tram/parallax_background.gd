@@ -7,7 +7,7 @@ extends ParallaxBackground
 	$ParallaxLayer2/NightClouds,
 	$ParallaxLayer/NightBuildingsBack,
 	$ParallaxLayer4/NightBuildingsFront,
-	$"../../TramInterior/NightLights",
+	$"../../TramInterior/Lights/NightLights",
 	$"../../TramInterior/NightShadowBox"
 ]
 
@@ -21,6 +21,6 @@ func _ready() -> void:
 			node.hide()
 		
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	self.scroll_offset.x += scroll_speed
 	

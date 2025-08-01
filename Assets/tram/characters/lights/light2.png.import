@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1p4bg4ce8awr"
-path="res://.godot/imported/day_buildings_back.png-ad1b1659047b886ed2ba7b18362138c8.ctex"
+uid="uid://cae048nmcbjoi"
+path="res://.godot/imported/light2.png-5ebb91966c47aa8cc4de44ea17025017.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/day/day_buildings_back.png"
-dest_files=["res://.godot/imported/day_buildings_back.png-ad1b1659047b886ed2ba7b18362138c8.ctex"]
+source_file="res://Assets/Tram/characters/lights/light2.png"
+dest_files=["res://.godot/imported/light2.png-5ebb91966c47aa8cc4de44ea17025017.ctex"]
 
 [params]
 
