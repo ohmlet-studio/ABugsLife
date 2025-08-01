@@ -9,13 +9,13 @@ font_color = Color(0, 0, 0, 1)
 [node name="ScreenPopup" instance=ExtResource("1_v1qd7")]
 script = ExtResource("3_sq424")
 
-[node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background4" index="0"]
-position = Vector2(-5, -5)
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background" index="0"]
+position = Vector2(-10, -10)
 
-[node name="Label" type="Label" parent="Popup/PanelContainer/Background4/Elements" index="0"]
-offset_left = 23.0
-offset_top = 25.0
-offset_right = 227.0
-offset_bottom = 174.0
+[node name="Label" type="Label" parent="Popup/PanelContainer/Background/Elements" index="0"]
+offset_left = 28.0
+offset_top = 30.0
+offset_right = 232.0
+offset_bottom = 179.0
 label_settings = SubResource("LabelSettings_hq80x")
 autowrap_mode = 2

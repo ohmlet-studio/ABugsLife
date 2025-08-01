@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bru37ncb18ka6" path="res://Assets/Tram/booper/cardswipe_lighton.png" id="4_12aho"]
 [ext_resource type="Texture2D" uid="uid://x7xnlh8f2q8o" path="res://Assets/Tram/booper/metrocard.png" id="7_nk25v"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="9_uk0q1"]
-[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/move_arm.gd" id="10_eiqyl"]
+[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/card_swipe.gd" id="10_eiqyl"]
 
 [sub_resource type="Animation" id="Animation_bdgng"]
 resource_name = "PressCard"
@@ -74,6 +74,7 @@ script = ExtResource("2_vb4f0")
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 position = Vector2(-17, 79)
+script = ExtResource("10_eiqyl")
 
 [node name="LightsOff" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
 position = Vector2(146, 46)
@@ -92,7 +93,6 @@ position = Vector2(78, 53)
 scale = Vector2(0.185202, 0.191715)
 texture = ExtResource("9_uk0q1")
 offset = Vector2(-87.6051, 558.799)
-script = ExtResource("10_eiqyl")
 
 [node name="Card" type="Sprite2D" parent="Popup/PanelContainer/Elements/Leg" index="0"]
 z_index = -1

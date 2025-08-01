@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://h6qs28nw2xu0"]
+[gd_scene load_steps=29 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/Tram/night/night_tram_lights.png" id="14_xddm6"]
 [ext_resource type="Texture2D" uid="uid://bbmyuo2yqgkhr" path="res://Assets/Tram/characters/lulu/idle.png" id="14_xuh25"]
 [ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/characters/fifi/idle.png" id="15_wbbch"]
-[ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="16_iyawv"]
 [ext_resource type="Texture2D" uid="uid://btwi4evy3lnp" path="res://Assets/Tram/characters/fifi/idle_smile.png" id="16_pcc3a"]
 [ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="17_s6t5j"]
 [ext_resource type="Texture2D" uid="uid://bpcww57vbvc26" path="res://Assets/Tram/characters/fifi/talking.png" id="17_xuh25"]
@@ -233,9 +232,7 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
-visible = false
 position = Vector2(3, 0)
-script = ExtResource("16_iyawv")
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
 position = Vector2(726, 78)
