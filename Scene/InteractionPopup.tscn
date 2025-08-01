@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="1_u3xke"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3xke"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -141,6 +142,7 @@ _data = {
 script = ExtResource("1_u3xke")
 
 [node name="Shadow" type="ColorRect" parent="."]
+z_index = -1
 offset_left = -19.0
 offset_top = 17.0
 offset_right = 228.8
@@ -162,7 +164,7 @@ offset_bottom = 249.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_u3xke")
 
-[node name="Background4" type="ColorRect" parent="Popup/PanelContainer"]
+[node name="Background" type="ColorRect" parent="Popup/PanelContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme = SubResource("Theme_3slvu")

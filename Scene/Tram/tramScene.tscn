@@ -20,10 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="17_s6t5j"]
 [ext_resource type="Texture2D" uid="uid://bpcww57vbvc26" path="res://Assets/Tram/characters/fifi/talking.png" id="17_xuh25"]
 [ext_resource type="Texture2D" uid="uid://dknaerunqyvbt" path="res://Assets/Tram/characters/fifi/talking_blush.png" id="18_gq3dt"]
-[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="18_qlsm1"]
 [ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_rv5di"]
 [ext_resource type="Texture2D" uid="uid://d3cipgy8j0xp1" path="res://Assets/Tram/characters/lulu/talking.png" id="19_cqi5x"]
 [ext_resource type="Texture2D" uid="uid://bocr0tib0vh4v" path="res://Assets/Tram/characters/fifi/talking_smile.png" id="19_p687b"]
+[ext_resource type="PackedScene" uid="uid://cjyvghvf4eqdi" path="res://Scene/Tram/CardSwipePopup.tscn" id="24_xuh25"]
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
 length = 0.001
@@ -179,6 +179,7 @@ scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("14_xuh25")
 
 [node name="lulu_talking" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
+visible = false
 position = Vector2(911, 319)
 scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("19_cqi5x")
@@ -220,7 +221,6 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
-visible = false
 position = Vector2(3, 0)
 script = ExtResource("16_iyawv")
 
@@ -229,5 +229,6 @@ position = Vector2(726, 78)
 scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
 
-[node name="InteractionPopup" parent="Interactions" instance=ExtResource("18_qlsm1")]
-position = Vector2(348, 92)
+[node name="CardSwipePopup" parent="Interactions" instance=ExtResource("24_xuh25")]
+position = Vector2(331, 121)
+scale = Vector2(1.63348, 1.63348)
