@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkjmuejfnhqem"]
 
-[ext_resource type="PackedScene" uid="uid://dhv8vretxtnda" path="res://Scene/Office/ComputerPopup.tscn" id="1_e6515"]
+[ext_resource type="PackedScene" path="res://Scene/Office/ComputerPopup.tscn" id="1_e6515"]
 
 [node name="Home" type="Node2D"]
 
