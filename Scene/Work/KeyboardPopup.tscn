@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bdr0keyymx0jk"]
+[gd_scene load_steps=18 format=3 uid="uid://bdr0keyymx0jk"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_8e61w"]
 [ext_resource type="Script" uid="uid://cevii17w6q86o" path="res://Scripts/Work/keyboard_popup.gd" id="2_k0q5x"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dlhhm2i0amyvi" path="res://Assets/Work/keyboard_b.png" id="4_kr0vn"]
 [ext_resource type="Texture2D" uid="uid://b856nxckucm7q" path="res://Assets/Work/keyboard_z.png" id="5_3qjao"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_pco1i"]
+[ext_resource type="Texture2D" uid="uid://c5pjwepgyitqx" path="res://Assets/Work/zKeycapPressed.png" id="7_y7pmg"]
+[ext_resource type="Texture2D" uid="uid://b3w43qdwhsrd" path="res://Assets/Work/bKeycapPressed.png" id="8_yuy0o"]
+[ext_resource type="AudioStream" uid="uid://c7h34mjrabaxe" path="res://Assets/Audio/SFX/Office/Keyboard/1.wav" id="10_qvlfx"]
+[ext_resource type="AudioStream" uid="uid://db5oh55kfw846" path="res://Assets/Audio/SFX/Office/Keyboard/2.wav" id="11_cwk6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kr0vn"]
 size = Vector2(205, 105.5)
@@ -125,6 +129,54 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(127.052, 158.052)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Keyboard/KeyboardB:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Keyboard/KeyboardBPressed:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Keyboard/KeyboardZPressed:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Keyboard/KeyboardZ:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_k0q5x"]
 resource_name = "TypeB"
@@ -188,6 +240,30 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(127, 158), Vector2(127, 169), Vector2(127, 158)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Keyboard/KeyboardB:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.22),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Keyboard/KeyboardBPressed:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.22),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, false]
 }
 
 [sub_resource type="Animation" id="Animation_3qjao"]
@@ -253,6 +329,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0, 0.0, 0.0349066, 0.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Keyboard/KeyboardZPressed:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.22),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Keyboard/KeyboardZ:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.22),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yuy0o"]
 _data = {
@@ -290,12 +390,32 @@ position = Vector2(127.052, 158.052)
 scale = Vector2(0.243175, 0.243175)
 texture = ExtResource("5_3qjao")
 
+[node name="KeyboardZPressed" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="4"]
+visible = false
+position = Vector2(128, 159)
+scale = Vector2(0.238588, 0.238588)
+texture = ExtResource("7_y7pmg")
+
+[node name="KeyboardBPressed" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="5"]
+visible = false
+position = Vector2(129, 157)
+scale = Vector2(0.244472, 0.244472)
+texture = ExtResource("8_yuy0o")
+
+[node name="Sound1" type="AudioStreamPlayer2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="6"]
+position = Vector2(333, 80)
+stream = ExtResource("10_qvlfx")
+
+[node name="Sound2" type="AudioStreamPlayer2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="7"]
+position = Vector2(332, 82)
+stream = ExtResource("11_cwk6t")
+
 [node name="Hands" type="Node2D" parent="Popup/PanelContainer/Background4/Elements" index="1"]
 position = Vector2(125, 291.455)
 
 [node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Hands" index="0"]
 position = Vector2(-45.4948, -1.0592)
-rotation = -0.249336
+rotation = 0.187329
 scale = Vector2(0.185202, 0.191715)
 skew = 0.0698132
 texture = ExtResource("5_pco1i")
@@ -303,7 +423,7 @@ offset = Vector2(-128.385, 577.293)
 
 [node name="Leg2" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements/Hands" index="1"]
 position = Vector2(54.061, 4.2403)
-rotation = -2.88861
+rotation = -3.33307
 scale = Vector2(0.185, -0.192)
 texture = ExtResource("5_pco1i")
 offset = Vector2(-87.6051, 558.799)
