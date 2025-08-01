@@ -414,6 +414,16 @@ position = Vector2(675, 379.5)
 scale = Vector2(1, 1)
 texture = ExtResource("6_ywev4")
 
+[node name="Junkfood" type="Sprite2D" parent="Room"]
+position = Vector2(1154.29, 291.5)
+scale = Vector2(0.645572, 0.645572)
+texture = ExtResource("16_vo7qm")
+
+[node name="Mothman" type="Sprite2D" parent="Room"]
+position = Vector2(134.628, 149.847)
+scale = Vector2(0.751065, 0.751065)
+texture = ExtResource("17_5uhx5")
+
 [node name="Curtairs" type="Node2D" parent="Room"]
 
 [node name="Right" type="Sprite2D" parent="Room/Curtairs"]
@@ -454,17 +464,6 @@ position = Vector2(122.922, 557.245)
 scale = Vector2(0.7123, 0.7123)
 texture = SubResource("CompressedTexture2D_ve0fl")
 
-[node name="Interactions" type="Node2D" parent="."]
-visible = false
-
-[node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]
-position = Vector2(675, 75)
-
-[node name="RoomAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_4nqop")
-}
-
 [node name="Sink" type="Node2D" parent="."]
 position = Vector2(534, 441)
 scale = Vector2(0.419329, 0.419329)
@@ -481,12 +480,12 @@ texture = ExtResource("14_01aj8")
 position = Vector2(-15, 270.5)
 texture = ExtResource("15_vo7qm")
 
-[node name="Junkfood" type="Sprite2D" parent="."]
-position = Vector2(986, 249)
-scale = Vector2(0.551449, 0.551449)
-texture = ExtResource("16_vo7qm")
+[node name="Interactions" type="Node2D" parent="."]
 
-[node name="Mothman" type="Sprite2D" parent="."]
-position = Vector2(115, 128)
-scale = Vector2(0.641562, 0.641562)
-texture = ExtResource("17_5uhx5")
+[node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]
+position = Vector2(675, 75)
+
+[node name="RoomAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4nqop")
+}
