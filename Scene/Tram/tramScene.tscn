@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://h6qs28nw2xu0"]
+[gd_scene load_steps=28 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
@@ -13,10 +13,17 @@
 [ext_resource type="Texture2D" uid="uid://btnu0xryoxpx8" path="res://Assets/Tram/background_tram_inside.png" id="12_sq7lc"]
 [ext_resource type="Texture2D" uid="uid://b786ak1kq2j1o" path="res://Assets/Tram/day/day_tram_lights.png" id="13_kfqh7"]
 [ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/Tram/night/night_tram_lights.png" id="14_xddm6"]
-[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/firefly.png" id="15_wbbch"]
+[ext_resource type="Texture2D" uid="uid://bbmyuo2yqgkhr" path="res://Assets/Tram/characters/lulu/idle.png" id="14_xuh25"]
+[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/characters/fifi/idle.png" id="15_wbbch"]
 [ext_resource type="Script" uid="uid://wusueic5wnd8" path="res://Scripts/Tram/interactions.gd" id="16_iyawv"]
+[ext_resource type="Texture2D" uid="uid://btwi4evy3lnp" path="res://Assets/Tram/characters/fifi/idle_smile.png" id="16_pcc3a"]
 [ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="17_s6t5j"]
+[ext_resource type="Texture2D" uid="uid://bpcww57vbvc26" path="res://Assets/Tram/characters/fifi/talking.png" id="17_xuh25"]
+[ext_resource type="Texture2D" uid="uid://dknaerunqyvbt" path="res://Assets/Tram/characters/fifi/talking_blush.png" id="18_gq3dt"]
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="18_qlsm1"]
 [ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_rv5di"]
+[ext_resource type="Texture2D" uid="uid://d3cipgy8j0xp1" path="res://Assets/Tram/characters/lulu/talking.png" id="19_cqi5x"]
+[ext_resource type="Texture2D" uid="uid://bocr0tib0vh4v" path="res://Assets/Tram/characters/fifi/talking_smile.png" id="19_p687b"]
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
 length = 0.001
@@ -101,12 +108,14 @@ motion_scale = Vector2(2, 0)
 motion_mirroring = Vector2(1183, 0)
 
 [node name="DayBuildingsBack" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 67)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("8_gq3dt")
 centered = false
 
 [node name="NightBuildingsBack" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer"]
 visible = false
+position = Vector2(0, 73)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("9_p687b")
 centered = false
@@ -116,19 +125,21 @@ motion_scale = Vector2(3, 0)
 motion_mirroring = Vector2(1183, 0)
 
 [node name="DayBuildingsFront" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer4"]
+position = Vector2(0, 78)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("10_ytes1")
 centered = false
 
 [node name="NightBuildingsFront" type="Sprite2D" parent="TramExterior/ParallaxBackground/ParallaxLayer4"]
 visible = false
+position = Vector2(0, 85)
 scale = Vector2(0.462219, 0.462219)
 texture = ExtResource("11_t5ihy")
 centered = false
 
 [node name="TramInterior" type="Node2D" parent="."]
 
-[node name="TramInside2" type="Sprite2D" parent="TramInterior"]
+[node name="TramInside" type="Sprite2D" parent="TramInterior"]
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("12_sq7lc")
@@ -137,36 +148,79 @@ centered = false
 [node name="NightShadowBox" type="ColorRect" parent="TramInterior"]
 visible = false
 offset_left = -27.0
-offset_top = -15.0
+offset_top = -17.0
 offset_right = 1171.0
 offset_bottom = 655.0
 mouse_filter = 2
-color = Color(0, 0, 0, 0.247059)
+color = Color(0, 0, 0, 0.423529)
 
-[node name="DayLights" type="Sprite2D" parent="TramInterior"]
+[node name="Lights" type="Node2D" parent="TramInterior"]
+
+[node name="DayLights" type="Sprite2D" parent="TramInterior/Lights"]
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("13_kfqh7")
 centered = false
 
-[node name="NightLights" type="Sprite2D" parent="TramInterior"]
+[node name="NightLights" type="Sprite2D" parent="TramInterior/Lights"]
 visible = false
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("14_xddm6")
 centered = false
 
-[node name="Firefly" type="Sprite2D" parent="TramInterior"]
+[node name="Characters" type="Node2D" parent="TramInterior"]
+
+[node name="Lulu" type="Node2D" parent="TramInterior/Characters"]
+
+[node name="lulu_idle" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
+position = Vector2(911, 319)
+scale = Vector2(0.280516, 0.280516)
+texture = ExtResource("14_xuh25")
+
+[node name="lulu_talking" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
+position = Vector2(911, 319)
+scale = Vector2(0.280516, 0.280516)
+texture = ExtResource("19_cqi5x")
+
+[node name="Fifi" type="Node2D" parent="TramInterior/Characters"]
+
+[node name="fifi_idle" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
 position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("15_wbbch")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TramInterior"]
+[node name="fifi_smile" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
+visible = false
+position = Vector2(303, 372)
+scale = Vector2(0.320213, 0.320213)
+texture = ExtResource("16_pcc3a")
+
+[node name="fifi_talk" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
+visible = false
+position = Vector2(303, 372)
+scale = Vector2(0.320213, 0.320213)
+texture = ExtResource("17_xuh25")
+
+[node name="fifi_talking" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
+visible = false
+position = Vector2(303, 372)
+scale = Vector2(0.320213, 0.320213)
+texture = ExtResource("19_p687b")
+
+[node name="fifi_talking_blush" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
+visible = false
+position = Vector2(303, 372)
+scale = Vector2(0.320213, 0.320213)
+texture = ExtResource("18_gq3dt")
+
+[node name="TramAnimationPlayer" type="AnimationPlayer" parent="TramInterior"]
 libraries = {
 &"": SubResource("AnimationLibrary_1s6la")
 }
 
 [node name="Interactions" type="Node2D" parent="."]
+visible = false
 position = Vector2(3, 0)
 script = ExtResource("16_iyawv")
 
@@ -174,3 +228,6 @@ script = ExtResource("16_iyawv")
 position = Vector2(726, 78)
 scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
+
+[node name="InteractionPopup" parent="Interactions" instance=ExtResource("18_qlsm1")]
+position = Vector2(348, 92)

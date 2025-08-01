@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcb6id5kk6h53"
-path="res://.godot/imported/Menu.jpg-01f72c94770b9db21022e018c5547696.ctex"
+uid="uid://bpcww57vbvc26"
+path="res://.godot/imported/talking.png-9558afbee1e471d98493104104cf9fbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu.jpg"
-dest_files=["res://.godot/imported/Menu.jpg-01f72c94770b9db21022e018c5547696.ctex"]
+source_file="res://Assets/Tram/characters/fifi/talking.png"
+dest_files=["res://.godot/imported/talking.png-9558afbee1e471d98493104104cf9fbf.ctex"]
 
 [params]
 

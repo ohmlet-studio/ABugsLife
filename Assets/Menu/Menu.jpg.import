@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyjpmqg7s2dwe"
-path="res://.godot/imported/firefly.png-72615ee2b1163ff8bd2e3a52988f39f5.ctex"
+uid="uid://bcb6id5kk6h53"
+path="res://.godot/imported/Menu.jpg-d76ee3274b1c084627545efcfd4093d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/firefly.png"
-dest_files=["res://.godot/imported/firefly.png-72615ee2b1163ff8bd2e3a52988f39f5.ctex"]
+source_file="res://Assets/Menu/Menu.jpg"
+dest_files=["res://.godot/imported/Menu.jpg-d76ee3274b1c084627545efcfd4093d3.ctex"]
 
 [params]
 
