@@ -403,11 +403,9 @@ scale = Vector2(0.244472, 0.244472)
 texture = ExtResource("8_yuy0o")
 
 [node name="Sound1" type="AudioStreamPlayer2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="6"]
-position = Vector2(333, 80)
 stream = ExtResource("10_qvlfx")
 
 [node name="Sound2" type="AudioStreamPlayer2D" parent="Popup/PanelContainer/Background4/Elements/Keyboard" index="7"]
-position = Vector2(332, 82)
 stream = ExtResource("11_cwk6t")
 
 [node name="Hands" type="Node2D" parent="Popup/PanelContainer/Background4/Elements" index="1"]
