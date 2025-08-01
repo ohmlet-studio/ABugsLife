@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjerhvotj2ffo"
-path="res://.godot/imported/RoomDay.webp-baddec3418d8965f51d484c4e54e93dc.ctex"
+uid="uid://4jcwafy8ukdc"
+path="res://.godot/imported/WindowNight.png-105dc29a36537d3fa0da23e226abc8a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Room/RoomDay.webp"
-dest_files=["res://.godot/imported/RoomDay.webp-baddec3418d8965f51d484c4e54e93dc.ctex"]
+source_file="res://Assets/Home/WindowNight.png"
+dest_files=["res://.godot/imported/WindowNight.png-105dc29a36537d3fa0da23e226abc8a5.ctex"]
 
 [params]
 

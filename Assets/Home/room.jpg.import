@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5rxivguq5i4m"
-path="res://.godot/imported/RideauDroit.png-f070a991836f2288c2bf865f998d355f.ctex"
+uid="uid://bvopsdjrulvbj"
+path="res://.godot/imported/room.jpg-925d580fd2b89d33fcc40b8c7c992a07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Room/RideauDroit.png"
-dest_files=["res://.godot/imported/RideauDroit.png-f070a991836f2288c2bf865f998d355f.ctex"]
+source_file="res://Assets/Home/room.jpg"
+dest_files=["res://.godot/imported/room.jpg-925d580fd2b89d33fcc40b8c7c992a07.ctex"]
 
 [params]
 

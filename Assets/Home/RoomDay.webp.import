@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnjxhclpb5l74"
-path="res://.godot/imported/RideauGauche.png-83fdcbfe1cbd9ea0fc4aa190e54696c3.ctex"
+uid="uid://cjerhvotj2ffo"
+path="res://.godot/imported/RoomDay.webp-013d157a676ceba6ea8cac03d5dc6656.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Room/RideauGauche.png"
-dest_files=["res://.godot/imported/RideauGauche.png-83fdcbfe1cbd9ea0fc4aa190e54696c3.ctex"]
+source_file="res://Assets/Home/RoomDay.webp"
+dest_files=["res://.godot/imported/RoomDay.webp-013d157a676ceba6ea8cac03d5dc6656.ctex"]
 
 [params]
 

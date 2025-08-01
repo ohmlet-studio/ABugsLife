@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvmclmnqqw4s5"
-path="res://.godot/imported/Moon.png-503b999acb0c6e724548c2079e7b6cad.ctex"
+uid="uid://bjlyu3vs6c20y"
+path="res://.godot/imported/mothman.png-f2717a7a92ab8ff7da24a7ee632f303c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Room/Moon.png"
-dest_files=["res://.godot/imported/Moon.png-503b999acb0c6e724548c2079e7b6cad.ctex"]
+source_file="res://Assets/Home/mothman.png"
+dest_files=["res://.godot/imported/mothman.png-f2717a7a92ab8ff7da24a7ee632f303c.ctex"]
 
 [params]
 

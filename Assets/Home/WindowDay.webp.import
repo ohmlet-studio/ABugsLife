@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvdsqk6sy0h7j"
-path="res://.godot/imported/WindowStars.png-13d5537c664931b4ec541fd617deef62.ctex"
+uid="uid://cs5govecmsb5w"
+path="res://.godot/imported/WindowDay.webp-ae947fb3231bb4e9997964fdf393a253.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Room/WindowStars.png"
-dest_files=["res://.godot/imported/WindowStars.png-13d5537c664931b4ec541fd617deef62.ctex"]
+source_file="res://Assets/Home/WindowDay.webp"
+dest_files=["res://.godot/imported/WindowDay.webp-ae947fb3231bb4e9997964fdf393a253.ctex"]
 
 [params]
 

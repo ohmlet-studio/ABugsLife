@@ -1,14 +1,132 @@
-[gd_scene load_steps=17 format=3 uid="uid://bokubbsgfwush"]
+[gd_scene load_steps=17 format=3 uid="uid://dyeei0gpvfuhs"]
 
-[ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Room/WindowDay.webp" id="1_p6w8n"]
+[ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
 [ext_resource type="PackedScene" uid="uid://cuy62nh60ghjs" path="res://Scene/Home/CalendarPopup.tscn" id="1_upts1"]
-[ext_resource type="Texture2D" uid="uid://cvdsqk6sy0h7j" path="res://Assets/Room/WindowStars.png" id="2_4yki3"]
-[ext_resource type="Texture2D" uid="uid://4jcwafy8ukdc" path="res://Assets/Room/WindowNight.png" id="3_fdyi5"]
-[ext_resource type="Texture2D" uid="uid://bvmclmnqqw4s5" path="res://Assets/Room/Moon.png" id="4_ve0fl"]
-[ext_resource type="Texture2D" uid="uid://cjerhvotj2ffo" path="res://Assets/Room/RoomDay.webp" id="5_ywev4"]
-[ext_resource type="Texture2D" uid="uid://gsyaco1su08m" path="res://Assets/Room/RoomNight.png" id="6_j41wq"]
-[ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Room/RideauDroit.png" id="7_sdpr3"]
-[ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Room/RideauGauche.png" id="8_01aj8"]
+[ext_resource type="Texture2D" uid="uid://cvdsqk6sy0h7j" path="res://Assets/Home/WindowStars.png" id="2_4yki3"]
+[ext_resource type="Texture2D" uid="uid://4jcwafy8ukdc" path="res://Assets/Home/WindowNight.png" id="3_fdyi5"]
+[ext_resource type="Texture2D" uid="uid://bvmclmnqqw4s5" path="res://Assets/Home/Moon.png" id="4_ve0fl"]
+[ext_resource type="Texture2D" uid="uid://cjerhvotj2ffo" path="res://Assets/Home/RoomDay.webp" id="5_ywev4"]
+[ext_resource type="Texture2D" uid="uid://gsyaco1su08m" path="res://Assets/Home/RoomNight.png" id="6_j41wq"]
+[ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="7_sdpr3"]
+[ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="8_01aj8"]
+
+[sub_resource type="Animation" id="Animation_ve0fl"]
+resource_name = "CloseCurtains"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room/RideauDroit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(612.267, 220.088)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Room/RideauGauche:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(327.791, 215.406)]
+}
+
+[sub_resource type="Animation" id="Animation_4yki3"]
+resource_name = "NightToDay"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window/Moon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.966667, 1.36667, 1.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.811765, 0.439216, 1), Color(1, 0.811765, 0.439216, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Window/Moon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 1.23333, 2.13333, 2.33333, 3.83333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(674.313, 383.984), Vector2(674.313, 215.406), Vector2(674.313, 215.406), Vector2(674.313, 215.406), Vector2(664.947, 309.06)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Window/WindowDay:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0666667, 2.19167),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Window/WindowNight:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0666667, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Window/WindowStars:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0666667, 1.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Room/RideauDroit:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0666667, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.494854, 0.494855, 0.494854, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Room/RideauGauche:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0666667, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.494854, 0.494855, 0.494854, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fdyi5"]
+resource_name = "OpenCurtains"
 
 [sub_resource type="Animation" id="Animation_5uhx5"]
 length = 0.001
@@ -145,6 +263,57 @@ tracks/10/keys = {
 "values": [Vector2(327.791, 215.406)]
 }
 
+[sub_resource type="Animation" id="Animation_p6w8n"]
+resource_name = "RoomDayToNight"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room/RoomDay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Room/RoomNight:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Room/RideauDroit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Room/RideauGauche:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_vo7qm"]
 resource_name = "WindowDayToNight"
 length = 5.0
@@ -207,175 +376,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_p6w8n"]
-resource_name = "RoomDayToNight"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Room/RoomDay:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Room/RoomNight:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Room/RideauDroit:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Room/RideauGauche:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_4yki3"]
-resource_name = "NightToDay"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Window/Moon:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.966667, 1.36667, 1.96667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0.811765, 0.439216, 1), Color(1, 0.811765, 0.439216, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Window/Moon:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.0666667, 1.23333, 2.13333, 2.33333, 3.83333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(674.313, 383.984), Vector2(674.313, 215.406), Vector2(674.313, 215.406), Vector2(674.313, 215.406), Vector2(664.947, 309.06)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Window/WindowDay:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.0666667, 2.19167),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Window/WindowNight:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.0666667, 2.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Window/WindowStars:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.0666667, 1.46667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Room/RideauDroit:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0.0666667, 2.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.494854, 0.494855, 0.494854, 1), Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Room/RideauGauche:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.0666667, 2.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.494854, 0.494855, 0.494854, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_fdyi5"]
-resource_name = "OpenCurtains"
-
-[sub_resource type="Animation" id="Animation_ve0fl"]
-resource_name = "CloseCurtains"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Room/RideauDroit:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(612.267, 220.088)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Room/RideauGauche:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(327.791, 215.406)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4nqop"]

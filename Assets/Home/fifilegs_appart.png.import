@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4jcwafy8ukdc"
-path="res://.godot/imported/WindowNight.png-2d9bd228aebf448e7c6043849bc0de0d.ctex"
+uid="uid://dvms76dgxcnhw"
+path="res://.godot/imported/fifilegs_appart.png-8633e3130ef2934912522c43bdad80db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Room/WindowNight.png"
-dest_files=["res://.godot/imported/WindowNight.png-2d9bd228aebf448e7c6043849bc0de0d.ctex"]
+source_file="res://Assets/Home/fifilegs_appart.png"
+dest_files=["res://.godot/imported/fifilegs_appart.png-8633e3130ef2934912522c43bdad80db.ctex"]
 
 [params]
 
