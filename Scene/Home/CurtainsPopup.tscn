@@ -5,6 +5,33 @@
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="3_laxh6"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="4_e2jej"]
 
+[sub_resource type="Animation" id="Animation_laxh6"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5.25985, 22.5118), Vector2(9.69254, 22.5118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(47.1572, 23.1195), Vector2(29.6097, 23.1195)]
+}
+
 [sub_resource type="Animation" id="Animation_qmyck"]
 resource_name = "Open"
 tracks/0/type = "value"
@@ -59,33 +86,6 @@ tracks/1/keys = {
 "values": [Vector2(29.6097, 23.1195)]
 }
 
-[sub_resource type="Animation" id="Animation_laxh6"]
-resource_name = "Close"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Left:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.366667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-5.25985, 22.5118), Vector2(9.69254, 22.5118)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Right:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.0333333, 0.366667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(47.1572, 23.1195), Vector2(29.6097, 23.1195)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e2jej"]
 _data = {
 &"Close": SubResource("Animation_laxh6"),
@@ -101,9 +101,6 @@ offset_top = -2.0
 offset_right = 246.0
 offset_bottom = 247.0
 
-[node name="Background" parent="Popup/PanelContainer" index="0"]
-color = Color(0, 0, 0, 1)
-
 [node name="Curtains" type="Node2D" parent="Popup/PanelContainer" index="1"]
 position = Vector2(-239, -22)
 scale = Vector2(0.762619, 0.762619)
@@ -117,6 +114,7 @@ offset_right = 371.751
 offset_bottom = 85.8945
 scale = Vector2(7.22965, 7.70465)
 script = ExtResource("2_00lwi")
+opened_default = false
 
 [node name="Right" type="Sprite2D" parent="Popup/PanelContainer/Curtains/Control" index="0"]
 position = Vector2(29.6097, 23.1195)
