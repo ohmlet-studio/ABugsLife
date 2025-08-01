@@ -1,30 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1oq7xevew5jw"]
+[gd_scene load_steps=12 format=3 uid="uid://c1oq7xevew5jw"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_aw7cm"]
-[ext_resource type="Script" path="res://Scene/Tram/phone_popup.gd" id="2_ccss7"]
-[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/phone.png" id="3_b74y7"]
+[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/phone_popup.gd" id="2_ccss7"]
+[ext_resource type="Texture2D" uid="uid://dim6dsvg6ft53" path="res://Assets/Tram/phone.png" id="3_b74y7"]
 [ext_resource type="Script" uid="uid://bf8b7abk4j6jh" path="res://Scripts/Tram/PhoneInterface.gd" id="3_wp84m"]
-[ext_resource type="Script" path="res://Scene/Tram/move_arm.gd" id="5_dbujg"]
+[ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/move_arm.gd" id="5_dbujg"]
+[ext_resource type="Texture2D" uid="uid://djukbpeu8by0b" path="res://Assets/Tram/popups/message2.png" id="5_jx22u"]
+[ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_yehpi"]
+[ext_resource type="Texture2D" uid="uid://c7wsrwdr7o4vj" path="res://Assets/Tram/popups/message3.png" id="6_vq5eu"]
+[ext_resource type="Texture2D" uid="uid://k1t4dor6fy6l" path="res://Assets/Tram/popups/message4.png" id="7_b4brb"]
+[ext_resource type="Texture2D" uid="uid://cjhp2yrr66x71" path="res://Assets/Tram/popups/message.png" id="8_rsdib"]
 
 [sub_resource type="Theme" id="Theme_3slvu"]
 
 [node name="PhonePopup" instance=ExtResource("1_aw7cm")]
 script = ExtResource("2_ccss7")
 
-[node name="Shadow" parent="Popup" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 247.8
-offset_bottom = 247.8
-
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background4" index="0"]
 position = Vector2(-5, -5)
 
 [node name="Phone" type="TextureRect" parent="Popup/PanelContainer/Background4/Elements" index="0"]
 offset_left = 54.0
-offset_top = 9.0
+offset_top = 8.53793
 offset_right = 188.0
-offset_bottom = 241.0
+offset_bottom = 240.538
 theme = SubResource("Theme_3slvu")
 texture = ExtResource("3_b74y7")
 expand_mode = 1
@@ -33,61 +32,57 @@ expand_mode = 1
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
-offset_left = 74.0
-offset_top = 38.0
-offset_right = 168.0
-offset_bottom = 231.0
+offset_left = 66.0
+offset_top = 35.0
+offset_right = 410.0
+offset_bottom = 634.0
+scale = Vector2(0.317, 0.317)
 script = ExtResource("3_wp84m")
 
-[node name="Notif" type="ColorRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="0"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0342466
-anchor_top = 0.015544
-anchor_right = 0.858459
-anchor_bottom = 0.176166
-offset_left = -3.35616
-offset_top = -3.0
-offset_right = 12.3088
-offset_bottom = -3.0
-theme = SubResource("Theme_3slvu")
-color = Color(0.695503, 0.695503, 0.695503, 1)
+[node name="Notif" type="TextureRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="0"]
+layout_mode = 0
+offset_top = 4.0
+offset_bottom = 4.0
+texture = ExtResource("5_jx22u")
 metadata/_edit_use_anchors_ = true
 
-[node name="Notif2" type="ColorRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="1"]
+[node name="Notif2" type="TextureRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="1"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0342466
-anchor_top = 0.196891
-anchor_right = 0.858459
-anchor_bottom = 0.357513
-offset_left = -3.35616
-offset_right = 12.3088
-theme = SubResource("Theme_3slvu")
-color = Color(0.695503, 0.695503, 0.695503, 1)
+anchor_top = 0.169057
+anchor_right = 1.00581
+anchor_bottom = 0.40111
+offset_top = 47.0
+offset_bottom = 47.0
+texture = ExtResource("6_vq5eu")
 metadata/_edit_use_anchors_ = true
 
-[node name="Notif3" type="ColorRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="2"]
+[node name="Notif3" type="TextureRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0342466
-anchor_top = 0.393782
-anchor_right = 0.858459
-anchor_bottom = 0.554404
-offset_left = -3.35616
-offset_right = 12.3088
-theme = SubResource("Theme_3slvu")
-color = Color(0.695503, 0.695503, 0.695503, 1)
+anchor_top = 0.362518
+anchor_right = 1.00581
+anchor_bottom = 0.594571
+offset_top = 92.0
+offset_bottom = 92.0
+texture = ExtResource("7_b4brb")
 metadata/_edit_use_anchors_ = true
 
-[node name="Leg" type="ColorRect" parent="Popup/PanelContainer/Background4/Elements" index="2"]
-offset_left = 89.9916
-offset_top = 49.3574
-offset_right = 120.992
-offset_bottom = 288.357
+[node name="Notif4" type="TextureRect" parent="Popup/PanelContainer/Background4/Elements/Notif" index="3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.531317
+anchor_right = 1.00581
+anchor_bottom = 0.76337
+offset_top = 136.0
+offset_bottom = 136.0
+texture = ExtResource("8_rsdib")
+metadata/_edit_use_anchors_ = true
+
+[node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Background4/Elements" index="2"]
+position = Vector2(78, 53)
 rotation = -0.225498
-pivot_offset = Vector2(15.1354, 9.70146)
-mouse_filter = 2
-theme = SubResource("Theme_3slvu")
-color = Color(0.650618, 0.412791, 0.15247, 1)
+scale = Vector2(0.185202, 0.191715)
+texture = ExtResource("5_yehpi")
+offset = Vector2(-87.6051, 558.799)
 script = ExtResource("5_dbujg")

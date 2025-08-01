@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyeei0gpvfuhs"]
-
-[ext_resource type="PackedScene" uid="uid://cuy62nh60ghjs" path="res://Scene/Home/CalendarPopup.tscn" id="1_upts1"]
-
-[node name="Home" type="Node2D"]
-
-[node name="Interactions" type="Node2D" parent="."]
-
-[node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]

@@ -3,8 +3,8 @@ extends Control
 @onready var popup = $"../../../../.."
 
 var notifications: Array = []
-var notification_height: float = 40.0
-var notification_spacing: float = 10.0
+var notification_height: float = 120.0
+var notification_spacing: float = 25.0
 var screen_width: float = 400.0
 var top_position: float = 0.0
 
@@ -26,7 +26,7 @@ func arrange_notifications():
 		var target_y = top_position + (i * (notification_height + notification_spacing))
 		notif.position = Vector2(0, target_y)
 
-func move_notif_up(notif_node: Control, target_position: Vector2, duration: float = 0.3):
+func move_notif_up(notif_node, target_position: Vector2, duration: float = 0.3):
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_BACK)
@@ -34,7 +34,7 @@ func move_notif_up(notif_node: Control, target_position: Vector2, duration: floa
 	tween.tween_property(notif_node, "position", target_position, duration)
 	return tween
 
-func swipe_notif_away(notif_node: Control, direction: int = 1):
+func swipe_notif_away(notif_node, direction: int = 1):
 	# Kill any existing tween for this notification
 	if active_tweens.has(notif_node):
 		active_tweens[notif_node].kill()
@@ -56,7 +56,7 @@ func swipe_notif_away(notif_node: Control, direction: int = 1):
 	# Pass the specific notification to be removed
 	tween.tween_callback(func(): remove_notification(notif_node))
 
-func remove_notification(notif_node: Control):
+func remove_notification(notif_node):
 	var notif_index = notifications.find(notif_node)
 	if notif_index == -1:
 		return
@@ -105,7 +105,7 @@ func setup_swipe_for_all_notifications():
 			"original_pos": notif.position
 		}
 
-func _on_notification_input(notif_node: Control, event: InputEvent):
+func _on_notification_input(notif_node, event: InputEvent):
 	if not swipe_data.has(notif_node):
 		return
 	
@@ -129,7 +129,7 @@ func _on_notification_input(notif_node: Control, event: InputEvent):
 	elif event is InputEventMouseMotion and data.is_swiping:
 		handle_swipe_drag(event.position, notif_node)
 
-func handle_swipe_drag(current_pos: Vector2, notif_node: Control):
+func handle_swipe_drag(current_pos: Vector2, notif_node):
 	var data = swipe_data[notif_node]
 	
 	if current_pos.x < data.start_pos.x:
@@ -160,7 +160,7 @@ func get_notification_target_y(index: int) -> float:
 	"""Helper function to get the target Y position for a notification at given index"""
 	return top_position + (index * (notification_height + notification_spacing))
 
-func handle_swipe_end(end_pos: Vector2, notif_node: Control):
+func handle_swipe_end(end_pos: Vector2, notif_node):
 	"""Handle the end of a swipe gesture"""
 	var data = swipe_data[notif_node]
 	var swipe_distance = end_pos.x - data.start_pos.x
@@ -173,7 +173,7 @@ func handle_swipe_end(end_pos: Vector2, notif_node: Control):
 		# Snap back to original position
 		snap_back_notification(notif_node)
 
-func snap_back_notification(notif_node: Control):
+func snap_back_notification(notif_node):
 	# Kill any existing tween for this notification
 	if active_tweens.has(notif_node):
 		active_tweens[notif_node].kill()
