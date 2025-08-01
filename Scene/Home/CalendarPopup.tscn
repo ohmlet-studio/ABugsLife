@@ -51,5 +51,6 @@ texture = ExtResource("6_6d3vw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("6_54w6j")
+volume_db = -80.0
 
 [connection signal="gui_input" from="Popup/PanelContainer/Background4/CalendarClickControl" to="Popup/PanelContainer/Background4/CalendarClickControl" method="_on_gui_input"]

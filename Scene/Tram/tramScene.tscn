@@ -134,21 +134,30 @@ scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("12_sq7lc")
 centered = false
 
-[node name="DayLights" type="Sprite2D" parent="TramInterior"]
+[node name="NightShadowBox" type="ColorRect" parent="TramInterior"]
 visible = false
+offset_left = -27.0
+offset_top = -15.0
+offset_right = 1171.0
+offset_bottom = 655.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.247059)
+
+[node name="DayLights" type="Sprite2D" parent="TramInterior"]
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("13_kfqh7")
 centered = false
 
 [node name="NightLights" type="Sprite2D" parent="TramInterior"]
+visible = false
 position = Vector2(-27, -15)
 scale = Vector2(0.470392, 0.470392)
 texture = ExtResource("14_xddm6")
 centered = false
 
 [node name="Firefly" type="Sprite2D" parent="TramInterior"]
-position = Vector2(250, 369)
+position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("15_wbbch")
 
@@ -158,9 +167,10 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
+position = Vector2(3, 0)
 script = ExtResource("16_iyawv")
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
 position = Vector2(726, 78)
-scale = Vector2(1.34046, 1.34046)
+scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
