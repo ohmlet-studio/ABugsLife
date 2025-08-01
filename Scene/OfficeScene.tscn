@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkjmuejfnhqem"]
+
+[ext_resource type="PackedScene" uid="uid://dhv8vretxtnda" path="res://Scene/Office/ComputerPopup.tscn" id="1_e6515"]
+
+[node name="Home" type="Node2D"]
+
+[node name="Interactions" type="Node2D" parent="."]
+
+[node name="ComputerPopup" parent="Interactions" instance=ExtResource("1_e6515")]
+position = Vector2(443, 212)
