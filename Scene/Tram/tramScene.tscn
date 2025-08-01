@@ -173,7 +173,7 @@ centered = false
 [node name="Characters" type="Node2D" parent="TramInterior"]
 
 [node name="passengers" type="Sprite2D" parent="TramInterior/Characters"]
-position = Vector2(1, 364)
+position = Vector2(0, 365)
 scale = Vector2(0.273, 0.273)
 texture = ExtResource("14_gq3dt")
 

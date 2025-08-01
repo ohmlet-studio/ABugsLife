@@ -1,21 +1,32 @@
-[gd_scene load_steps=17 format=3 uid="uid://dyeei0gpvfuhs"]
+[gd_scene load_steps=26 format=3 uid="uid://dyeei0gpvfuhs"]
 
 [ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
 [ext_resource type="PackedScene" uid="uid://cuy62nh60ghjs" path="res://Scene/Home/CalendarPopup.tscn" id="1_upts1"]
 [ext_resource type="Texture2D" uid="uid://cvdsqk6sy0h7j" path="res://Assets/Home/WindowStars.png" id="2_4yki3"]
 [ext_resource type="Texture2D" uid="uid://4jcwafy8ukdc" path="res://Assets/Home/WindowNight.png" id="3_fdyi5"]
 [ext_resource type="Texture2D" uid="uid://bvmclmnqqw4s5" path="res://Assets/Home/Moon.png" id="4_ve0fl"]
-[ext_resource type="Texture2D" uid="uid://cjerhvotj2ffo" path="res://Assets/Home/RoomDay.webp" id="5_ywev4"]
-[ext_resource type="Texture2D" uid="uid://gsyaco1su08m" path="res://Assets/Home/RoomNight.png" id="6_j41wq"]
+[ext_resource type="Texture2D" uid="uid://c6ja5ugc6053t" path="res://Assets/Home/background_appart.png" id="5_ve0fl"]
+[ext_resource type="Texture2D" uid="uid://cfb4vodtc4jdi" path="res://Assets/Home/RoomNightLights.png" id="6_ywev4"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="7_sdpr3"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="8_01aj8"]
+[ext_resource type="Texture2D" uid="uid://cpq2mdy57a56u" path="res://Assets/Home/calendrier1.png" id="9_j41wq"]
+[ext_resource type="Texture2D" uid="uid://c8awmhp8pnqxy" path="res://Assets/Home/calendrier2.png" id="10_sdpr3"]
+[ext_resource type="Texture2D" uid="uid://ck4y4oixoq2lf" path="res://Assets/Home/calendrier3.png" id="11_01aj8"]
+[ext_resource type="Texture2D" uid="uid://doy07hjf0mt2y" path="res://Assets/Home/fifi_appart.png" id="13_sdpr3"]
+[ext_resource type="Texture2D" uid="uid://b3glfe4aoak7j" path="res://Assets/Home/sink.png" id="14_01aj8"]
+[ext_resource type="Texture2D" uid="uid://dvms76dgxcnhw" path="res://Assets/Home/fifilegs_appart.png" id="15_vo7qm"]
+[ext_resource type="Texture2D" uid="uid://cuqouy2l63dag" path="res://Assets/Home/junkfood_.png" id="16_vo7qm"]
+[ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
+load_path = "res://.godot/imported/couverture_up.png-cfebea05150bfda6fe5a9af10d5bd1e3.ctex"
 
 [sub_resource type="Animation" id="Animation_ve0fl"]
 resource_name = "CloseCurtains"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Room/RideauDroit:position")
+tracks/0/path = NodePath("Room/Curtairs/Right:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +38,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Room/RideauGauche:position")
+tracks/1/path = NodePath("Room/Curtairs/Left:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -103,7 +114,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Room/RideauDroit:modulate")
+tracks/5/path = NodePath("Room/Curtairs/Right:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -115,7 +126,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Room/RideauGauche:modulate")
+tracks/6/path = NodePath("Room/Curtairs/Left:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -205,19 +216,19 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Room/RoomNight:modulate")
+tracks/6/path = NodePath("Room/Curtairs/Right:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Room/RideauDroit:modulate")
+tracks/7/path = NodePath("Room/Curtairs/Left:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -229,34 +240,22 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Room/RideauGauche:modulate")
+tracks/8/path = NodePath("Room/Curtairs/Right:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(612.267, 220.088)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Room/RideauDroit:position")
+tracks/9/path = NodePath("Room/Curtairs/Left:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(612.267, 220.088)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Room/RideauGauche:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -280,34 +279,22 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Room/RoomNight:modulate")
+tracks/1/path = NodePath("Room/Curtairs/Right:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Room/RideauDroit:modulate")
+tracks/2/path = NodePath("Room/Curtairs/Left:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Room/RideauGauche:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -391,6 +378,7 @@ _data = {
 [node name="Room" type="Node2D"]
 
 [node name="Window" type="Node2D" parent="."]
+position = Vector2(16, -6)
 scale = Vector2(0.854203, 0.854203)
 
 [node name="WindowDay" type="Sprite2D" parent="Window"]
@@ -416,23 +404,58 @@ texture = ExtResource("4_ve0fl")
 scale = Vector2(0.854203, 0.854203)
 
 [node name="RoomDay" type="Sprite2D" parent="Room"]
-position = Vector2(675, 379.5)
-texture = ExtResource("5_ywev4")
+position = Vector2(674.646, 379.301)
+scale = Vector2(0.526807, 0.526807)
+texture = ExtResource("5_ve0fl")
 
-[node name="RoomNight" type="Sprite2D" parent="Room"]
-modulate = Color(1, 1, 1, 0)
+[node name="NightLights" type="Sprite2D" parent="Room"]
+visible = false
 position = Vector2(675, 379.5)
-texture = ExtResource("6_j41wq")
+scale = Vector2(1, 1)
+texture = ExtResource("6_ywev4")
 
-[node name="RideauDroit" type="Sprite2D" parent="Room"]
+[node name="Curtairs" type="Node2D" parent="Room"]
+
+[node name="Right" type="Sprite2D" parent="Room/Curtairs"]
 position = Vector2(612.267, 220.088)
 texture = ExtResource("7_sdpr3")
 
-[node name="RideauGauche" type="Sprite2D" parent="Room"]
+[node name="Left" type="Sprite2D" parent="Room/Curtairs"]
 position = Vector2(327.791, 215.406)
 texture = ExtResource("8_01aj8")
 
+[node name="Calendar" type="Node2D" parent="Room"]
+
+[node name="Calendrier1" type="Sprite2D" parent="Room/Calendar"]
+position = Vector2(779.063, 134.62)
+scale = Vector2(0.735564, 0.735564)
+texture = ExtResource("9_j41wq")
+
+[node name="Calendrier2" type="Sprite2D" parent="Room/Calendar"]
+position = Vector2(779.063, 134.62)
+scale = Vector2(0.735564, 0.735564)
+texture = ExtResource("10_sdpr3")
+
+[node name="Calendrier3" type="Sprite2D" parent="Room/Calendar"]
+position = Vector2(779.063, 134.62)
+scale = Vector2(0.735564, 0.735564)
+texture = ExtResource("11_01aj8")
+
+[node name="Blanket" type="Node2D" parent="Room"]
+
+[node name="BlanketDown" type="Sprite2D" parent="Room/Blanket"]
+position = Vector2(39.8032, 647.387)
+scale = Vector2(0.7123, 0.7123)
+texture = SubResource("CompressedTexture2D_ve0fl")
+
+[node name="BlanketUp" type="Sprite2D" parent="Room/Blanket"]
+visible = false
+position = Vector2(122.922, 557.245)
+scale = Vector2(0.7123, 0.7123)
+texture = SubResource("CompressedTexture2D_ve0fl")
+
 [node name="Interactions" type="Node2D" parent="."]
+visible = false
 
 [node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]
 position = Vector2(675, 75)
@@ -441,3 +464,29 @@ position = Vector2(675, 75)
 libraries = {
 &"": SubResource("AnimationLibrary_4nqop")
 }
+
+[node name="Sink" type="Node2D" parent="."]
+position = Vector2(534, 441)
+scale = Vector2(0.419329, 0.419329)
+
+[node name="FifiAppart" type="Sprite2D" parent="Sink"]
+position = Vector2(-10, -179.5)
+texture = ExtResource("13_sdpr3")
+
+[node name="Sink" type="Sprite2D" parent="Sink"]
+position = Vector2(25, 394.5)
+texture = ExtResource("14_01aj8")
+
+[node name="FifilegsAppart" type="Sprite2D" parent="Sink"]
+position = Vector2(-15, 270.5)
+texture = ExtResource("15_vo7qm")
+
+[node name="Junkfood" type="Sprite2D" parent="."]
+position = Vector2(986, 249)
+scale = Vector2(0.551449, 0.551449)
+texture = ExtResource("16_vo7qm")
+
+[node name="Mothman" type="Sprite2D" parent="."]
+position = Vector2(115, 128)
+scale = Vector2(0.641562, 0.641562)
+texture = ExtResource("17_5uhx5")
