@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bokubbsgfwush"]
+[gd_scene load_steps=26 format=3 uid="uid://dyeei0gpvfuhs"]
 
 [ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
 [ext_resource type="PackedScene" uid="uid://cuy62nh60ghjs" path="res://Scene/Home/CalendarPopup.tscn" id="1_upts1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4jcwafy8ukdc" path="res://Assets/Home/WindowNight.png" id="3_fdyi5"]
 [ext_resource type="Texture2D" uid="uid://bvmclmnqqw4s5" path="res://Assets/Home/Moon.png" id="4_ve0fl"]
 [ext_resource type="Texture2D" uid="uid://c6ja5ugc6053t" path="res://Assets/Home/background_appart.png" id="5_ve0fl"]
+[ext_resource type="Texture2D" uid="uid://cfb4vodtc4jdi" path="res://Assets/Home/RoomNightLights.png" id="6_ywev4"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="7_sdpr3"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="8_01aj8"]
 [ext_resource type="Texture2D" uid="uid://cpq2mdy57a56u" path="res://Assets/Home/calendrier1.png" id="9_j41wq"]
@@ -14,62 +15,36 @@
 [ext_resource type="Texture2D" uid="uid://doy07hjf0mt2y" path="res://Assets/Home/fifi_appart.png" id="13_sdpr3"]
 [ext_resource type="Texture2D" uid="uid://b3glfe4aoak7j" path="res://Assets/Home/sink.png" id="14_01aj8"]
 [ext_resource type="Texture2D" uid="uid://dvms76dgxcnhw" path="res://Assets/Home/fifilegs_appart.png" id="15_vo7qm"]
-[ext_resource type="PackedScene" uid="uid://b57pbmpwhfuaw" path="res://Scene/Home/CurtainsPopup.tscn" id="16_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://cuqouy2l63dag" path="res://Assets/Home/junkfood_.png" id="16_vo7qm"]
 [ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
-load_path = "res://.godot/imported/couverture_up.png-cfebea05150bfda6fe5a9af10d5bd1e3.ctex"
 
 [sub_resource type="Animation" id="Animation_ve0fl"]
 resource_name = "CloseCurtains"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Inside/Room/Curtains/Right:position")
+tracks/0/path = NodePath("Room/Curtairs/Right:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(612.267, 220.088), Vector2(543.196, 220.088)]
+"values": [Vector2(612.267, 220.088)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Inside/Room/Curtains/Left:position")
+tracks/1/path = NodePath("Room/Curtairs/Left:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(327.791, 215.406), Vector2(399.203, 215.406)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Inside/Room/Curtains/Left:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.85, 1), Vector2(0.85, 1), Vector2(1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Inside/Room/Curtains/Right:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.85, 1), Vector2(0.85, 1), Vector2(1, 1)]
+"values": [Vector2(327.791, 215.406)]
 }
 
 [sub_resource type="Animation" id="Animation_4yki3"]
@@ -78,7 +53,7 @@ length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Outside/Moon:modulate")
+tracks/0/path = NodePath("Window/Moon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -90,7 +65,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Outside/Moon:position")
+tracks/1/path = NodePath("Window/Moon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -102,7 +77,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Outside/WindowDay:modulate")
+tracks/2/path = NodePath("Window/WindowDay:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -114,7 +89,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Outside/WindowNight:modulate")
+tracks/3/path = NodePath("Window/WindowNight:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -126,7 +101,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Outside/WindowStars:modulate")
+tracks/4/path = NodePath("Window/WindowStars:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -138,11 +113,11 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Inside/Room/Curtains/Right:modulate")
+tracks/5/path = NodePath("Room/Curtairs/Right:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.0666667, 0.433333),
+"times": PackedFloat32Array(0.0666667, 2.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.494854, 0.494855, 0.494854, 1), Color(1, 1, 1, 1)]
@@ -150,97 +125,25 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Inside/Room/Curtains/Left:modulate")
+tracks/6/path = NodePath("Room/Curtairs/Left:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.0666667, 0.433333),
+"times": PackedFloat32Array(0.0666667, 2.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.494854, 0.494855, 0.494854, 1), Color(1, 1, 1, 1)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Inside/Room:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 2.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.219501, 0.219501, 0.219501, 1), Color(0.394353, 0.394353, 0.394353, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_fdyi5"]
 resource_name = "OpenCurtains"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Inside/Room/Curtains/Right:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.233333, 0.366667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.85, 1), Vector2(0.85, 1), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Inside/Room/Curtains/Left:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.233333, 0.366667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.85, 1), Vector2(0.85, 1), Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Inside/Room/Curtains/Right:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.366667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(543.196, 220.088), Vector2(612.267, 220.088)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Inside/Room/Curtains/Left:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.366667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(399.203, 215.406), Vector2(327.791, 215.406)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Inside/Room:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.394353, 0.394353, 0.394353, 1), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_5uhx5"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Outside/Moon:modulate")
+tracks/0/path = NodePath("Window/Moon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -252,7 +155,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Outside/Moon:position")
+tracks/1/path = NodePath("Window/Moon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -264,7 +167,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Outside/WindowDay:modulate")
+tracks/2/path = NodePath("Window/WindowDay:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -276,7 +179,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Outside/WindowNight:modulate")
+tracks/3/path = NodePath("Window/WindowNight:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -288,7 +191,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Outside/WindowStars:modulate")
+tracks/4/path = NodePath("Window/WindowStars:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -300,7 +203,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Inside/Room:modulate")
+tracks/5/path = NodePath("Room/RoomDay:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -312,7 +215,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Inside/Room/Curtains/Right:modulate")
+tracks/6/path = NodePath("Room/Curtairs/Right:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -324,7 +227,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Inside/Room/Curtains/Left:modulate")
+tracks/7/path = NodePath("Room/Curtairs/Left:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -336,7 +239,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Inside/Room/Curtains/Right:position")
+tracks/8/path = NodePath("Room/Curtairs/Right:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -348,7 +251,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Inside/Room/Curtains/Left:position")
+tracks/9/path = NodePath("Room/Curtairs/Left:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -357,49 +260,25 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(327.791, 215.406)]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Inside/Room/Curtains/Left:scale")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Inside/Room/Curtains/Right:scale")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_p6w8n"]
 resource_name = "RoomDayToNight"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Inside/Room:modulate")
+tracks/0/path = NodePath("Room/RoomDay:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.219501, 0.219501, 0.219501, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Inside/Room/Curtains/Right:modulate")
+tracks/1/path = NodePath("Room/Curtairs/Right:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -411,7 +290,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Inside/Room/Curtains/Left:modulate")
+tracks/2/path = NodePath("Room/Curtairs/Left:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -427,7 +306,7 @@ length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Outside/Moon:modulate")
+tracks/0/path = NodePath("Window/Moon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -439,7 +318,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Outside/Moon:position")
+tracks/1/path = NodePath("Window/Moon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -451,7 +330,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Outside/WindowDay:modulate")
+tracks/2/path = NodePath("Window/WindowDay:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -463,7 +342,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Outside/WindowNight:modulate")
+tracks/3/path = NodePath("Window/WindowNight:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -475,7 +354,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Outside/WindowStars:modulate")
+tracks/4/path = NodePath("Window/WindowStars:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -497,119 +376,111 @@ _data = {
 
 [node name="Room" type="Node2D"]
 
-[node name="Outside" type="Node2D" parent="."]
+[node name="Window" type="Node2D" parent="."]
 position = Vector2(16, -6)
 scale = Vector2(0.854203, 0.854203)
 
-[node name="WindowDay" type="Sprite2D" parent="Outside"]
+[node name="WindowDay" type="Sprite2D" parent="Window"]
 position = Vector2(675, 379.5)
 texture = ExtResource("1_p6w8n")
 
-[node name="WindowStars" type="Sprite2D" parent="Outside"]
+[node name="WindowStars" type="Sprite2D" parent="Window"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(674.313, 383.984)
 texture = ExtResource("2_4yki3")
 
-[node name="WindowNight" type="Sprite2D" parent="Outside"]
+[node name="WindowNight" type="Sprite2D" parent="Window"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(675, 379.5)
 texture = ExtResource("3_fdyi5")
 
-[node name="Moon" type="Sprite2D" parent="Outside"]
+[node name="Moon" type="Sprite2D" parent="Window"]
 modulate = Color(1, 0.811765, 0.439216, 1)
 position = Vector2(664.947, 309.06)
 texture = ExtResource("4_ve0fl")
 
-[node name="Inside" type="Node2D" parent="."]
+[node name="Room" type="Node2D" parent="."]
 scale = Vector2(0.854203, 0.854203)
 
-[node name="Room" type="Sprite2D" parent="Inside"]
+[node name="RoomDay" type="Sprite2D" parent="Room"]
 position = Vector2(674.646, 379.301)
 scale = Vector2(0.526807, 0.526807)
 texture = ExtResource("5_ve0fl")
 
-[node name="Junkfood" type="Sprite2D" parent="Inside/Room"]
-position = Vector2(910.479, -166.667)
-scale = Vector2(1.22544, 1.22544)
+[node name="NightLights" type="Sprite2D" parent="Room"]
+visible = false
+position = Vector2(675, 379.5)
+texture = ExtResource("6_ywev4")
+
+[node name="Junkfood" type="Sprite2D" parent="Room"]
+position = Vector2(1154.29, 291.5)
+scale = Vector2(0.645572, 0.645572)
 texture = ExtResource("16_vo7qm")
 
-[node name="Mothman" type="Sprite2D" parent="Inside/Room"]
-position = Vector2(-1025.08, -435.556)
-scale = Vector2(1.42569, 1.42569)
+[node name="Mothman" type="Sprite2D" parent="Room"]
+position = Vector2(134.628, 149.847)
+scale = Vector2(0.751065, 0.751065)
 texture = ExtResource("17_5uhx5")
 
-[node name="Curtains" type="Node2D" parent="Inside/Room"]
-position = Vector2(-1280.63, -720)
-scale = Vector2(1.89823, 1.89823)
+[node name="Curtairs" type="Node2D" parent="Room"]
 
-[node name="Right" type="Sprite2D" parent="Inside/Room/Curtains"]
+[node name="Right" type="Sprite2D" parent="Room/Curtairs"]
 position = Vector2(612.267, 220.088)
 texture = ExtResource("7_sdpr3")
 
-[node name="Left" type="Sprite2D" parent="Inside/Room/Curtains"]
+[node name="Left" type="Sprite2D" parent="Room/Curtairs"]
 position = Vector2(327.791, 215.406)
 texture = ExtResource("8_01aj8")
 
-[node name="Calendar" type="Node2D" parent="Inside/Room"]
-position = Vector2(-1280.63, -720)
-scale = Vector2(1.89823, 1.89823)
+[node name="Calendar" type="Node2D" parent="Room"]
 
-[node name="Calendrier1" type="Sprite2D" parent="Inside/Room/Calendar"]
+[node name="Calendrier1" type="Sprite2D" parent="Room/Calendar"]
 position = Vector2(779.063, 134.62)
 scale = Vector2(0.735564, 0.735564)
 texture = ExtResource("9_j41wq")
 
-[node name="Calendrier2" type="Sprite2D" parent="Inside/Room/Calendar"]
+[node name="Calendrier2" type="Sprite2D" parent="Room/Calendar"]
 position = Vector2(779.063, 134.62)
 scale = Vector2(0.735564, 0.735564)
 texture = ExtResource("10_sdpr3")
 
-[node name="Calendrier3" type="Sprite2D" parent="Inside/Room/Calendar"]
+[node name="Calendrier3" type="Sprite2D" parent="Room/Calendar"]
 position = Vector2(779.063, 134.62)
 scale = Vector2(0.735564, 0.735564)
 texture = ExtResource("11_01aj8")
 
-[node name="Sink" type="Node2D" parent="Inside/Room"]
-position = Vector2(-93.9656, 260)
-scale = Vector2(0.931842, 0.931842)
+[node name="Blanket" type="Node2D" parent="Room"]
 
-[node name="FifiAppart" type="Sprite2D" parent="Inside/Room/Sink"]
-visible = false
-position = Vector2(-10, -179.5)
-texture = ExtResource("13_sdpr3")
-
-[node name="Sink" type="Sprite2D" parent="Inside/Room/Sink"]
-position = Vector2(25, 394.5)
-texture = ExtResource("14_01aj8")
-
-[node name="FifilegsAppart" type="Sprite2D" parent="Inside/Room/Sink"]
-visible = false
-position = Vector2(-15, 270.5)
-texture = ExtResource("15_vo7qm")
-
-[node name="Blanket" type="Node2D" parent="Inside/Room"]
-position = Vector2(-1280.63, -720)
-scale = Vector2(1.89823, 1.89823)
-
-[node name="BlanketDown" type="Sprite2D" parent="Inside/Room/Blanket"]
-visible = false
+[node name="BlanketDown" type="Sprite2D" parent="Room/Blanket"]
 position = Vector2(39.8032, 647.387)
 scale = Vector2(0.7123, 0.7123)
 texture = SubResource("CompressedTexture2D_ve0fl")
 
-[node name="BlanketUp" type="Sprite2D" parent="Inside/Room/Blanket"]
+[node name="BlanketUp" type="Sprite2D" parent="Room/Blanket"]
+visible = false
 position = Vector2(122.922, 557.245)
 scale = Vector2(0.7123, 0.7123)
 texture = SubResource("CompressedTexture2D_ve0fl")
 
+[node name="Sink" type="Node2D" parent="."]
+position = Vector2(534, 441)
+scale = Vector2(0.419329, 0.419329)
+
+[node name="FifiAppart" type="Sprite2D" parent="Sink"]
+position = Vector2(-10, -179.5)
+texture = ExtResource("13_sdpr3")
+
+[node name="Sink" type="Sprite2D" parent="Sink"]
+position = Vector2(25, 394.5)
+texture = ExtResource("14_01aj8")
+
+[node name="FifilegsAppart" type="Sprite2D" parent="Sink"]
+position = Vector2(-15, 270.5)
+texture = ExtResource("15_vo7qm")
+
 [node name="Interactions" type="Node2D" parent="."]
 
-[node name="InteractionPopup" parent="Interactions" instance=ExtResource("16_5uhx5")]
-visible = false
-position = Vector2(465, 193)
-
 [node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]
-visible = false
 position = Vector2(675, 75)
 
 [node name="RoomAnimation" type="AnimationPlayer" parent="."]

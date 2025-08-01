@@ -1,6 +1,6 @@
 extends Interaction
 
-@onready var label = $Popup/PanelContainer/Background4/Elements/Label
+@onready var label = $Popup/PanelContainer/Background/Elements/Label
 
 var words_needed = 15
 var word_count = 0
