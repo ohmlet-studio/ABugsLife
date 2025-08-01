@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5rxivguq5i4m"
-path="res://.godot/imported/RideauDroit.png-0268ca07166fa1cc83f6de9b9048f1d2.ctex"
+uid="uid://cfb4vodtc4jdi"
+path="res://.godot/imported/RoomNightLights.png-dca6da9d63767b398579d0ed3ff74a8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Chambre/RideauDroit.png"
-dest_files=["res://.godot/imported/RideauDroit.png-0268ca07166fa1cc83f6de9b9048f1d2.ctex"]
+source_file="res://Assets/Room/RoomNightLights.png"
+dest_files=["res://.godot/imported/RoomNightLights.png-dca6da9d63767b398579d0ed3ff74a8f.ctex"]
 
 [params]
 

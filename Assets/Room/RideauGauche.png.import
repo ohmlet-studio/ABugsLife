@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnjxhclpb5l74"
-path="res://.godot/imported/RideauGauche.png-feda60457dd164aa02942fed0c6b72dc.ctex"
+path="res://.godot/imported/RideauGauche.png-83fdcbfe1cbd9ea0fc4aa190e54696c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Chambre/RideauGauche.png"
-dest_files=["res://.godot/imported/RideauGauche.png-feda60457dd164aa02942fed0c6b72dc.ctex"]
+source_file="res://Assets/Room/RideauGauche.png"
+dest_files=["res://.godot/imported/RideauGauche.png-83fdcbfe1cbd9ea0fc4aa190e54696c3.ctex"]
 
 [params]
 

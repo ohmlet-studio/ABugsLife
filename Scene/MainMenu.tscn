@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dhne28h6pf04o" path="res://Assets/Menu/FondMenu.webp" id="2_d4yab"]
 [ext_resource type="SystemFont" uid="uid://biaqrm2p8wpgf" path="res://Assets/Menu/MetaAccantis.tres" id="2_eiy7p"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
-[ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Chambre/RideauGauche.png" id="5_v3p41"]
-[ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Chambre/RideauDroit.png" id="6_6nqpc"]
+[ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Room/RideauGauche.png" id="5_v3p41"]
+[ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Room/RideauDroit.png" id="6_6nqpc"]
 [ext_resource type="Shader" uid="uid://c7vsl6mlj1vsd" path="res://Assets/blur.gdshader" id="7_6nqpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
