@@ -1,11 +1,15 @@
 extends Sprite2D
 signal action_completed
+
 @onready var animation_node = $SwipeAnimationPlayer
+@onready var light_on = $"../LightsOn"
 
 var is_pressed = false
 var press_timer: Timer
 
 func _ready():
+	light_on.hide()
+	
 	press_timer = Timer.new()
 	press_timer.wait_time = 0.5
 	press_timer.one_shot = true
@@ -30,4 +34,9 @@ func _input(event):
 
 func _on_press_timer_timeout():
 	if is_pressed:
+		light_on.show()
+		hide()
+		# TODO beep sound
+		
+		await get_tree().create_timer(0.5).timeout
 		emit_signal("action_completed")
