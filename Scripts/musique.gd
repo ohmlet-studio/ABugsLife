@@ -2,7 +2,7 @@ extends AudioStreamPlayer
 
 const level_music = preload("res://Assets/Audio/theme.wav")
 
-func _play_music(music: AudioStream, volume = -6.0):
+func _play_music(music: AudioStream, volume = -8.0):
 	if stream == music:
 		return
 	stream = music

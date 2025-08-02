@@ -78,7 +78,8 @@ func _on_badge_out_action_completed():
 	get_tree().change_scene_to_file("res://Scene/Tram/TramScene.tscn")
 
 func _on_keyboard_pressed():
-	screen_popup.add_random_word()
+	if is_instance_valid(screen_popup):
+		screen_popup.add_random_word()
 
 func _on_screen_action_completed():
 	await get_tree().create_timer(.3).timeout
