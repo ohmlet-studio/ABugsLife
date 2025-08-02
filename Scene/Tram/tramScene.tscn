@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://h6qs28nw2xu0"]
+[gd_scene load_steps=32 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
@@ -23,8 +23,10 @@
 [ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_rv5di"]
 [ext_resource type="Texture2D" uid="uid://d3cipgy8j0xp1" path="res://Assets/tram/characters/lulu/talking.png" id="19_cqi5x"]
 [ext_resource type="Texture2D" uid="uid://bocr0tib0vh4v" path="res://Assets/tram/characters/fifi/talking_smile.png" id="19_p687b"]
+[ext_resource type="Texture2D" uid="uid://b7nmnn1vfl5um" path="res://Assets/tram/bubbletext.png" id="22_t5ihy"]
 [ext_resource type="PackedScene" uid="uid://cjyvghvf4eqdi" path="res://Scene/Tram/CardSwipePopup.tscn" id="24_xuh25"]
 [ext_resource type="AudioStream" uid="uid://c1cdjojqrehg7" path="res://Assets/Audio/SFX/Metro/metro.mp3" id="25_wy2ft"]
+[ext_resource type="PackedScene" uid="uid://30hx2dk0m2we" path="res://Scene/Tram/TalkPopup.tscn" id="25_ytes1"]
 [ext_resource type="AudioStream" uid="uid://douhvcu7g0sbd" path="res://Assets/Audio/SFX/Metro/Notif.mp3" id="26_vau31"]
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
@@ -226,22 +228,41 @@ position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("18_gq3dt")
 
+[node name="Bubbles" type="Node2D" parent="TramInterior/Characters"]
+visible = false
+
+[node name="BubbleFifi" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
+position = Vector2(431, 193)
+scale = Vector2(0.348328, 0.348328)
+texture = ExtResource("22_t5ihy")
+
+[node name="BubbleLulu" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
+position = Vector2(769, 174)
+scale = Vector2(-0.348, 0.348)
+texture = ExtResource("22_t5ihy")
+
 [node name="TramAnimationPlayer" type="AnimationPlayer" parent="TramInterior"]
 libraries = {
 &"": SubResource("AnimationLibrary_1s6la")
 }
 
 [node name="Interactions" type="Node2D" parent="."]
+visible = false
 position = Vector2(3, 0)
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
+visible = false
 position = Vector2(726, 78)
 scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
 
 [node name="CardSwipePopup" parent="Interactions" instance=ExtResource("24_xuh25")]
+visible = false
 position = Vector2(331, 121)
 scale = Vector2(1.63348, 1.63348)
+
+[node name="TalkPopup" parent="Interactions" instance=ExtResource("25_ytes1")]
+position = Vector2(380, 131)
 
 [node name="metro sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_wy2ft")

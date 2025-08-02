@@ -17,7 +17,5 @@ func reveal():
 
 func make_disappear():
 	animation_player.play("Disappear")
-	animation_player.animation_finished.connect(
-		func ():
-			self.queue_free()
-	)
+	await animation_player.animation_finished
+	queue_free()
