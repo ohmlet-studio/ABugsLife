@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hpg4t3hso2wv"
-path="res://.godot/imported/booper.png-0b5f3aadd368c8c05c709a7501ac7ab4.ctex"
+path="res://.godot/imported/booper.png-2a1f57741a6199dc47e94de6b5001b67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/booper.png"
-dest_files=["res://.godot/imported/booper.png-0b5f3aadd368c8c05c709a7501ac7ab4.ctex"]
+source_file="res://Assets/Tram/booper.png"
+dest_files=["res://.godot/imported/booper.png-2a1f57741a6199dc47e94de6b5001b67.ctex"]
 
 [params]
 

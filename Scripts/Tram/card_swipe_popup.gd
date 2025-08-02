@@ -23,6 +23,9 @@ func _process(delta: float) -> void:
 		leg.global_position = get_global_mouse_position()
 
 func _input(event):
+	if not popup_ready:
+		return
+		
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed and not is_pressed:
