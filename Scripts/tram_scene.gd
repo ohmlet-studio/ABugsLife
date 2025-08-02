@@ -30,7 +30,8 @@ func _ready():
 	await get_tree().create_timer(1).timeout
 	
 	card_popup.reveal()
-	
+
+
 func _process(delta: float) -> void:
 	var base_speed = 1 if is_tram_moving else 0
 	
@@ -62,11 +63,10 @@ func _on_card_popup_finished():
 
 func _on_phone_popup_finished():
 	await get_tree().create_timer(0.5).timeout
-	
+
 	is_tram_moving = false
-	
 	interior_animation_player.pause()
-	
+
 	await get_tree().create_timer(acceleration_time).timeout
 	sound_ambiance.stop()
 	
@@ -77,5 +77,7 @@ func _on_phone_popup_finished():
 func change_scene():
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
 		get_tree().change_scene_to_file("res://Scene/Work/WorkScene.tscn")
+		GameStateManager.current_step_day == GameStateManager.WORK
 	else:
 		get_tree().change_scene_to_file("res://Scene/Home/HomeScene.tscn")
+		GameStateManager.current_step_day == GameStateManager.ROOM_NIGHT

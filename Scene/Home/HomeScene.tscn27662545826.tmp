@@ -681,7 +681,6 @@ color = Color(0, 0, 0, 0.552941)
 
 [node name="Outline" type="PanelContainer" parent="Interactions/CurtainPopup"]
 z_index = 4096
-layout_mode = 0
 offset_left = -6.04375
 offset_top = -6.04375
 offset_right = 242.956

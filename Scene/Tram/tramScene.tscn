@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://beuylvweuw043"]
+[gd_scene load_steps=32 format=3 uid="uid://bjm46fi165t4m"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]

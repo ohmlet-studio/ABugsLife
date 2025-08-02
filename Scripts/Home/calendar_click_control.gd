@@ -6,13 +6,23 @@ extends Control
 
 func fade_in_children():
 	var tween = create_tween()
-	for child in get_children():
+	var formatted_day = "Jour%o" % (GameStateManager.current_day + 1)
+	var day = get_node(formatted_day)
+	for child in day.get_children():
 		var delay: float = randf_range(.2, .7)
 		tween.tween_property(child, "modulate:a", 1.0, delay)
 
 func _ready() -> void:
+	GameStateManager.current_day += 1
+	for i in GameStateManager.current_day:
+		var formatted_day = "Jour%o" % (i + 1)
+
+
 	for child in get_children():
-		child.modulate.a = 0
+		for sub_child in child.get_children():
+			sub_child.modulate.a = 0
+
+
 
 func _process(_delta: float) -> void:
 	pass
