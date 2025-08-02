@@ -1,30 +1,69 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=12 format=3 uid="uid://cmoxs3vcarn7g"]
 
-[ext_resource type="Texture2D" uid="uid://bmr104jxt7vjf" path="res://Assets/Work/work.jpg" id="1_boa1l"]
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
-[ext_resource type="Script" uid="uid://c10fkd6hrvmcs" path="res://Scripts/Work/interactions.gd" id="2_wa4v1"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
 [ext_resource type="PackedScene" uid="uid://y7rcpv3use5d" path="res://Scene/Work/ScreenPopup.tscn" id="4_t0oj5"]
+[ext_resource type="PackedScene" uid="uid://de5g3p5nfqdl" path="res://Scene/Work/BadgePopup.tscn" id="5_0syg0"]
+[ext_resource type="Texture2D" uid="uid://thl2clw3gk0h" path="res://Assets/Work/work.png" id="6_u4nlu"]
 [ext_resource type="AudioStream" uid="uid://cqpqmtekvu3ms" path="res://Assets/Audio/SFX/Office/Office 1.mp3" id="6_ud7g6"]
+[ext_resource type="Texture2D" uid="uid://ccmhgflgeikv7" path="res://Assets/Work/guirlande.png" id="7_0syg0"]
+[ext_resource type="Texture2D" uid="uid://cuilt5rvjnrh6" path="res://Assets/Work/fifi.png" id="8_ueeem"]
+[ext_resource type="Texture2D" uid="uid://2p5jwy3nmmdo" path="res://Assets/Work/hat.png" id="9_66vlb"]
+[ext_resource type="Texture2D" uid="uid://bv824p8b0vu" path="res://Assets/Work/chenille.png" id="10_hdcrf"]
+[ext_resource type="Texture2D" uid="uid://bv6xtj4bdatxv" path="res://Assets/Work/worm.png" id="11_1ejuh"]
 
 [node name="WorkScene" type="Node2D"]
 script = ExtResource("1_t0oj5")
 
 [node name="Work" type="Sprite2D" parent="."]
-position = Vector2(555, 323)
-scale = Vector2(0.262765, 0.262765)
-texture = ExtResource("1_boa1l")
+position = Vector2(577, 324)
+scale = Vector2(0.45426, 0.45426)
+texture = ExtResource("6_u4nlu")
+
+[node name="Guirlande" type="Sprite2D" parent="Work"]
+position = Vector2(26.4166, -239.951)
+scale = Vector2(1.01123, 1.01123)
+texture = ExtResource("7_0syg0")
+
+[node name="Fifi" type="Sprite2D" parent="Work"]
+position = Vector2(-198.124, 204.729)
+scale = Vector2(1.00793, 1.00793)
+texture = ExtResource("8_ueeem")
+
+[node name="Hat" type="Sprite2D" parent="Work/Fifi"]
+position = Vector2(-4.36816, -157.253)
+scale = Vector2(1.44526, 1.44526)
+texture = ExtResource("9_66vlb")
+
+[node name="Chenille" type="Sprite2D" parent="Work"]
+position = Vector2(873.949, 125.479)
+scale = Vector2(0.899009, 0.899009)
+texture = ExtResource("10_hdcrf")
+
+[node name="Worm" type="Sprite2D" parent="Work"]
+position = Vector2(-1171.14, 92.4581)
+scale = Vector2(1.18235, 1.18235)
+texture = ExtResource("11_1ejuh")
 
 [node name="Interactions" type="Node2D" parent="."]
 position = Vector2(748, 36)
 scale = Vector2(1.25125, 1.25125)
-script = ExtResource("2_wa4v1")
 
-[node name="KeyboardPopup" parent="Interactions" instance=ExtResource("3_0xuk1")]
+[node name="Laptop" type="Node2D" parent="Interactions"]
+
+[node name="KeyboardPopup" parent="Interactions/Laptop" instance=ExtResource("3_0xuk1")]
 position = Vector2(52.7474, 245.355)
 scale = Vector2(0.799202, 0.799202)
 
-[node name="ScreenPopup" parent="Interactions" instance=ExtResource("4_t0oj5")]
+[node name="ScreenPopup" parent="Interactions/Laptop" instance=ExtResource("4_t0oj5")]
+
+[node name="BadgePopupIn" parent="Interactions" instance=ExtResource("5_0syg0")]
+position = Vector2(-574.625, 74.3257)
+scale = Vector2(1.23114, 1.23114)
+
+[node name="BadgePopupOut" parent="Interactions" instance=ExtResource("5_0syg0")]
+position = Vector2(-574.625, 74.3257)
+scale = Vector2(1.23114, 1.23114)
 
 [node name="Office sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ud7g6")

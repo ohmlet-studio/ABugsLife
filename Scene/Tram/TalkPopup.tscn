@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://30hx2dk0m2we"]
+
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_d4qw5"]
+[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/card_swipe_popup.gd" id="2_0704w"]
+
+[node name="CardSwipePopup" instance=ExtResource("1_d4qw5")]
+script = ExtResource("2_0704w")
+
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
+position = Vector2(-17, 79)
