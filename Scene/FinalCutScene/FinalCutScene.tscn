@@ -1,103 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://bal1ox5f2nxlk"]
+[gd_scene load_steps=18 format=3 uid="uid://bal1ox5f2nxlk"]
 
+[ext_resource type="Script" uid="uid://xxhiupwih85k" path="res://Scripts/FinalCutScene/final_cut_scene.gd" id="1_3g3ys"]
 [ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_48wjr"]
 [ext_resource type="Texture2D" uid="uid://hdfu171ns70" path="res://Assets/End/fifi_dos.png" id="2_xr8ot"]
 [ext_resource type="Texture2D" uid="uid://cepdfot70or3d" path="res://Assets/End/fond1.png" id="3_n6srg"]
 [ext_resource type="Texture2D" uid="uid://4xgnkhy1w0ud" path="res://Assets/End/fond3.png" id="4_3g3ys"]
+[ext_resource type="Texture2D" uid="uid://dpin40c5qjjr5" path="res://Assets/End/Test.webp" id="5_n6srg"]
 [ext_resource type="Texture2D" uid="uid://cgy2xovoen5a0" path="res://Assets/End/hill.png" id="5_savin"]
 [ext_resource type="Texture2D" uid="uid://bt5mjrx7hdamm" path="res://Assets/End/fond2.png" id="5_xr8ot"]
 [ext_resource type="Texture2D" uid="uid://cmg8yt44y0ydu" path="res://Assets/End/lulu_dos.png" id="6_ptmbj"]
 [ext_resource type="Texture2D" uid="uid://dmt5uyfhvlb1i" path="res://Assets/End/lulu_side.png" id="7_tsjip"]
 [ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="9_d3xal"]
+[ext_resource type="Script" uid="uid://cllgxxbdrv5w7" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="13_savin"]
 
-[sub_resource type="Animation" id="Animation_48wjr"]
-resource_name = "SceneEnter"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Hill:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.53333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(573.052, 525.525), Vector2(573.052, 583)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Fond1:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3.53333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(574, 618), Vector2(574, 457)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Fond3:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.53333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(573.052, 450), Vector2(573.052, 410)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Lune:position")
-tracks/3/interp = 2
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 3.56667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(90, 106.19), Vector2(89.9999, 90)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Nuages:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 3.6, 10),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(769, 185.53), Vector2(651.1, 147.51), Vector2(370, 157)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Ciel:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 9.86667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(573.052, -9.00006), Vector2(573.052, 241.65)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Fond2:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 3.63333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(574, 475), Vector2(574, 418)]
-}
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3g3ys"]
 
 [sub_resource type="Animation" id="Animation_xr8ot"]
 length = 0.001
@@ -140,50 +57,210 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Lune:position")
+tracks/3/path = NodePath("Fond2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(89.9999, 90)]
+"values": [Vector2(574, 418)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Nuages:position")
+tracks/4/path = NodePath("FifiDos:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(769, 157)]
+"values": [Vector2(479, 464)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Ciel:position")
+tracks/5/path = NodePath("FifiDos:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(573.052, 540.285)]
+"values": [0.261799]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Fond2:position")
+tracks/6/path = NodePath("Hill/LuluDos:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Hill/LuluSide:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Test:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(574, 418)]
+"values": [Color(1, 1, 1, 0.4)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ParallaxBackground/ParallaxLayer4/Lune:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.84823]
+}
+
+[sub_resource type="Animation" id="Animation_48wjr"]
+resource_name = "SceneEnter"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hill:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, 525.525), Vector2(573.052, 583)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fond1:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(574, 618), Vector2(574, 457)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fond3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, 450), Vector2(573.052, 410)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fond2:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.63333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(574, 475), Vector2(574, 418)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FifiDos:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.291667, 0.4, 0.5, 0.6, 0.691667, 0.8, 0.9, 1, 1.09167, 1.2, 1.3, 1.4, 1.49167, 1.56667, 1.66667, 1.76667, 1.85833, 1.96667, 2.06667, 2.16667, 2.25833, 2.33398, 2.43397, 2.53398, 2.62564, 2.73398, 2.83398, 2.93398, 3.02564, 3.13333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464), Vector2(479, 454), Vector2(479, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FifiDos:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.291667, 0.4, 0.5, 0.6, 0.691667, 0.8, 0.9, 1, 1.09167, 1.2, 1.3, 1.4, 1.49167, 1.56667, 1.66667, 1.76667, 1.85833, 1.96667, 2.06667, 2.16667, 2.25833, 2.33398, 2.43397, 2.53398, 2.62564, 2.73398, 2.83398, 2.93398, 3.02564, 3.13333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0, 0.174533, 0.0, -0.174533, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hill/LuluDos:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4.73333, 4.96667, 7.65148),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Hill/LuluSide:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4.74852, 4.96667, 7.66667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Test:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.66667, 9.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.4)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ParallaxBackground/ParallaxLayer4/Lune:rotation")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 13.1667, 25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.219911, 0.84823, -0.305433]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6srg"]
@@ -193,19 +270,34 @@ _data = {
 }
 
 [node name="FinalCutScene" type="Node2D"]
+z_index = 2000
+script = ExtResource("1_3g3ys")
 
-[node name="Ciel" type="Sprite2D" parent="."]
-position = Vector2(573.052, 540.285)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("13_savin")
+scroll_speed = 0.7
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1143.83, 1423.98)
+
+[node name="Ciel" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(573.052, -9.00006)
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("1_48wjr")
 
-[node name="Lune" type="Sprite2D" parent="."]
-position = Vector2(89.9999, 90)
+[node name="Lune" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(111, 34)
+rotation = 0.84823
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("8_tl7l5")
 
-[node name="Nuages" type="Sprite2D" parent="."]
-position = Vector2(769, 157)
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1578.04, 0)
+
+[node name="Nuages" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(769, 185.53)
 scale = Vector2(0.616506, 0.616506)
 texture = ExtResource("9_d3xal")
 
@@ -213,6 +305,12 @@ texture = ExtResource("9_d3xal")
 position = Vector2(573.052, 457)
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("4_3g3ys")
+
+[node name="Test" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(579, 382)
+scale = Vector2(0.800739, 0.800739)
+texture = ExtResource("5_n6srg")
 
 [node name="Fond2" type="Sprite2D" parent="."]
 position = Vector2(574, 418)
@@ -229,21 +327,23 @@ position = Vector2(573.052, 507)
 scale = Vector2(0.447066, 0.447066)
 texture = ExtResource("5_savin")
 
-[node name="FifiDos" type="Sprite2D" parent="."]
-position = Vector2(479, 464)
-scale = Vector2(0.447697, 0.447697)
-texture = ExtResource("2_xr8ot")
-
-[node name="LuluDos" type="Sprite2D" parent="."]
-position = Vector2(620.656, 446.114)
-scale = Vector2(0.447697, 0.447697)
+[node name="LuluDos" type="Sprite2D" parent="Hill"]
+position = Vector2(106.483, -306.186)
+scale = Vector2(1.00141, 1.00141)
 texture = ExtResource("6_ptmbj")
 
-[node name="LuluSide" type="Sprite2D" parent="."]
+[node name="LuluSide" type="Sprite2D" parent="Hill"]
 visible = false
-position = Vector2(620.656, 446.114)
-scale = Vector2(0.447697, 0.447697)
+material = SubResource("ShaderMaterial_3g3ys")
+position = Vector2(106.483, -306.186)
+scale = Vector2(1.00141, 1.00141)
 texture = ExtResource("7_tsjip")
+
+[node name="FifiDos" type="Sprite2D" parent="."]
+position = Vector2(479, 464)
+rotation = 0.261799
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("2_xr8ot")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

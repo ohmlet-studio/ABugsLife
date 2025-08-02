@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameStateManager="*res://Scripts/GameStateManager.gd"
 Musique="*res://Scene/Musique.tscn"
+FilmGrain="*res://Scene/FilmGrain.tscn"
 
 [rendering]
 

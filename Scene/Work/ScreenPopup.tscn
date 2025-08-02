@@ -1,9 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://y7rcpv3use5d"]
+[gd_scene load_steps=5 format=3 uid="uid://y7rcpv3use5d"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_v1qd7"]
 [ext_resource type="Script" uid="uid://hfk2rbjyla37" path="res://Scripts/Work/ScreenWriter.gd" id="3_sq424"]
 
+[sub_resource type="FontFile" id="FontFile_hylao"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
 [sub_resource type="LabelSettings" id="LabelSettings_hq80x"]
+font = SubResource("FontFile_hylao")
 font_color = Color(0, 0, 0, 1)
 
 [node name="ScreenPopup" instance=ExtResource("1_v1qd7")]
