@@ -9,12 +9,18 @@ extends Node2D
 @onready var guirlance = $Work/Guirlande
 @onready var fifi = $Work/Fifi
 @onready var hat = $Work/Fifi/Hat
+@onready var guirlande = $Work/Guirlande
+@onready var guirlande_off = $Work/GuirlandeOff
 @onready var chenille = $Work/Chenille
 @onready var worm = $Work/Worm
+@onready var darken_rect = $DarkenRect
 
 func _ready():
 	fifi.hide()
 	hat.hide()
+	guirlande.hide()
+	guirlande_off.hide()
+	
 	chenille.hide()
 	worm.hide()
 	badge_popup_in.hide()
@@ -33,9 +39,16 @@ func _ready():
 	screen_popup.visible = false
 	
 	badge_popup_in.reveal()
+	
+	if GameStateManager.current_day == 3:
+		hat.show()
+		guirlande.show()
 
 func _on_badge_in_action_completed():
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
+	darken_rect.modulate.a = 0 # TODO modulate from alpha 0 to alpha 1 in one second
+	
+	await get_tree().create_timer(0.5).timeout
 	fifi.show()
 	
 	await get_tree().create_timer(0.5).timeout
@@ -54,7 +67,6 @@ func _on_badge_in_action_completed():
 	
 	await get_tree().create_timer(1.5).timeout
 	worm.show()
-
 
 func _on_keyboard_action_completed():
 	await get_tree().create_timer(1.0).timeout

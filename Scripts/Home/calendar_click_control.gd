@@ -28,9 +28,9 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func fade_in_children():
-	var tween         = create_tween()
+	var tween = create_tween()
 	var formatted_day = "Jour%o" % (GameStateManager.current_day + 1)
-	var day           = get_node(formatted_day)
+	var day = get_node(formatted_day)
 	for child in day.get_children():
 		var delay: float = randf_range(.2, .7)
 		tween.tween_property(child, "modulate:a", 1.0, delay)
