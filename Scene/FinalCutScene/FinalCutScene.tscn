@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://bal1ox5f2nxlk"]
+
+[ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_48wjr"]
+[ext_resource type="Texture2D" uid="uid://hdfu171ns70" path="res://Assets/End/fifi_dos.png" id="2_xr8ot"]
+[ext_resource type="Texture2D" uid="uid://cepdfot70or3d" path="res://Assets/End/fond1.png" id="3_n6srg"]
+[ext_resource type="Texture2D" uid="uid://4xgnkhy1w0ud" path="res://Assets/End/fond3.png" id="4_3g3ys"]
+[ext_resource type="Texture2D" uid="uid://cgy2xovoen5a0" path="res://Assets/End/hill.png" id="5_savin"]
+[ext_resource type="Texture2D" uid="uid://cmg8yt44y0ydu" path="res://Assets/End/lulu_dos.png" id="6_ptmbj"]
+[ext_resource type="Texture2D" uid="uid://dmt5uyfhvlb1i" path="res://Assets/End/lulu_side.png" id="7_tsjip"]
+[ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
+[ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="9_d3xal"]
+
+[node name="FinalCutScene" type="Node2D"]
+
+[node name="Ciel" type="Sprite2D" parent="."]
+position = Vector2(573.052, 540.285)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("1_48wjr")
+
+[node name="Nuages" type="Sprite2D" parent="."]
+position = Vector2(565, 257)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("9_d3xal")
+
+[node name="Fond1" type="Sprite2D" parent="."]
+position = Vector2(574, 395)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("3_n6srg")
+
+[node name="Fond3" type="Sprite2D" parent="."]
+position = Vector2(573.052, 540.285)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("4_3g3ys")
+
+[node name="Hill" type="Sprite2D" parent="."]
+position = Vector2(573.052, 540.285)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("5_savin")
+
+[node name="Lune" type="Sprite2D" parent="."]
+position = Vector2(966, 126)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("8_tl7l5")
+
+[node name="FifiDos" type="Sprite2D" parent="."]
+position = Vector2(479, 464)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("2_xr8ot")
+
+[node name="LuluDos" type="Sprite2D" parent="."]
+position = Vector2(620.656, 446.114)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("6_ptmbj")
+
+[node name="LuluSide" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(620.656, 446.114)
+scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("7_tsjip")
