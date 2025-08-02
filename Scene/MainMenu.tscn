@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://c4s7toi7jdcxn"]
 
-[ext_resource type="Script" uid="uid://cpymkor1mjw1e" path="res://Scripts/main_menu.gd" id="1_d4yab"]
+[ext_resource type="Script" uid="uid://bgf7wgrv5ym7j" path="res://Scripts/Menus/main_menu.gd" id="1_d4yab"]
 [ext_resource type="Texture2D" uid="uid://dhne28h6pf04o" path="res://Assets/Menu/FondMenu.webp" id="2_d4yab"]
 [ext_resource type="SystemFont" uid="uid://biaqrm2p8wpgf" path="res://Assets/Menu/MetaAccantis.tres" id="2_eiy7p"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="5_v3p41"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="6_6nqpc"]
-[ext_resource type="Shader" uid="uid://c7vsl6mlj1vsd" path="res://Assets/blur.gdshader" id="7_6nqpc"]
+[ext_resource type="Shader" path="res://Assets/blur.gdshader" id="7_6nqpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
 bg_color = Color(0.819608, 1, 0.807843, 0.321569)
