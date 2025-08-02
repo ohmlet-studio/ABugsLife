@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dr5a6rft5hncx"]
+[gd_scene load_steps=33 format=3 uid="uid://dr5a6rft5hncx"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
@@ -28,6 +28,9 @@
 [ext_resource type="AudioStream" uid="uid://c1cdjojqrehg7" path="res://Assets/Audio/SFX/Metro/metro.mp3" id="25_wy2ft"]
 [ext_resource type="PackedScene" uid="uid://30hx2dk0m2we" path="res://Scene/Tram/TalkPopup.tscn" id="25_ytes1"]
 [ext_resource type="AudioStream" uid="uid://douhvcu7g0sbd" path="res://Assets/Audio/SFX/Metro/Notif.mp3" id="26_vau31"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t5ihy"]
+font_size = 121
 
 [sub_resource type="Animation" id="Animation_xjeqg"]
 length = 0.001
@@ -185,15 +188,17 @@ scale = Vector2(0.273, 0.273)
 texture = ExtResource("14_gq3dt")
 
 [node name="Lulu" type="Node2D" parent="TramInterior/Characters"]
+position = Vector2(733, 126)
+scale = Vector2(1.16082, 1.16082)
 
 [node name="lulu_idle" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
-position = Vector2(911, 319)
+position = Vector2(123, 212)
 scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("14_xuh25")
 
 [node name="lulu_talking" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
 visible = false
-position = Vector2(911, 319)
+position = Vector2(123, 212)
 scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("19_cqi5x")
 
@@ -229,17 +234,38 @@ scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("18_gq3dt")
 
 [node name="Bubbles" type="Node2D" parent="TramInterior/Characters"]
-visible = false
 
 [node name="BubbleFifi" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
 position = Vector2(431, 193)
 scale = Vector2(0.348328, 0.348328)
 texture = ExtResource("22_t5ihy")
 
+[node name="Label2" type="Label" parent="TramInterior/Characters/Bubbles/BubbleFifi"]
+offset_left = -200.96
+offset_top = -134.93
+offset_right = 216.04
+offset_bottom = 31.0697
+text = "..."
+label_settings = SubResource("LabelSettings_t5ihy")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="BubbleLulu" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
+visible = false
 position = Vector2(769, 174)
 scale = Vector2(-0.348, 0.348)
 texture = ExtResource("22_t5ihy")
+
+[node name="Label" type="Label" parent="TramInterior/Characters/Bubbles/BubbleLulu"]
+offset_left = 218.391
+offset_top = -134.0
+offset_right = 635.391
+offset_bottom = 32.0
+scale = Vector2(-1, 1)
+text = "bzz !"
+label_settings = SubResource("LabelSettings_t5ihy")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="TramAnimationPlayer" type="AnimationPlayer" parent="TramInterior"]
 libraries = {
