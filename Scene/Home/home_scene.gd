@@ -31,6 +31,9 @@ func _on_calendar_popup_finished():
 func morning():
 	AnimPlayer.play("NightToDay")
 	await AnimPlayer.animation_finished
+	await get_tree().create_timer(2).timeout
+	AnimPlayer.play("AuReveil")
+	await AnimPlayer.animation_finished
 	open_curtain_popup()
 
 
@@ -58,13 +61,18 @@ func _on_curtain_popup_curtains_completed() -> void:
 		AnimPlayer.play("RoomDayToNight")
 		await AnimPlayer.animation_finished
 		CurtainPopup.hide()
+		AnimPlayer.play("AuDodo")
+		await AnimPlayer.animation_finished
 		await get_tree().create_timer(2).timeout
+
 		GameStateManager.current_day += 1
 		GameStateManager.current_step_day = GameStateManager.ROOM_MORNING
 		await morning()
 
 	elif GameStateManager.current_step_day == GameStateManager.ROOM_MORNING:
 		CurtainPopup.hide()
+		AnimPlayer.play("FenetreToCalendar")
+		await AnimPlayer.animation_finished
 		await get_tree().create_timer(1).timeout
 		CalendrierPopup.action_completed.connect(_on_calendar_popup_finished)
 		CalendrierPopup.reveal()
