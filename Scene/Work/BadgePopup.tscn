@@ -1,15 +1,19 @@
 [gd_scene load_steps=8 format=3 uid="uid://de5g3p5nfqdl"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_bubo2"]
-[ext_resource type="Script" uid="uid://cqessqgvtlauq" path="res://Scene/Work/badge_popup.gd" id="2_jhlxn"]
-[ext_resource type="Texture2D" uid="uid://c17a4ojkciib4" path="res://Assets/Tram/booper/cardswipe_lightoff.png" id="4_xc1qx"]
-[ext_resource type="Texture2D" uid="uid://bru37ncb18ka6" path="res://Assets/Tram/booper/cardswipe_lighton.png" id="5_qsn7r"]
+[ext_resource type="Script" uid="uid://dgtrgu5x6o7cn" path="res://Scene/Work/badge_popup.gd" id="2_jhlxn"]
+[ext_resource type="Texture2D" uid="uid://c17a4ojkciib4" path="res://Assets/tram/booper/cardswipe_lightoff.png" id="4_xc1qx"]
+[ext_resource type="Texture2D" uid="uid://bru37ncb18ka6" path="res://Assets/tram/booper/cardswipe_lighton.png" id="5_qsn7r"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="6_025dg"]
-[ext_resource type="Texture2D" uid="uid://x7xnlh8f2q8o" path="res://Assets/Tram/booper/metrocard.png" id="7_kjgjn"]
+[ext_resource type="Texture2D" uid="uid://x7xnlh8f2q8o" path="res://Assets/tram/booper/metrocard.png" id="7_kjgjn"]
 [ext_resource type="AudioStream" uid="uid://g6deoiosewwm" path="res://Assets/Audio/SFX/Metro/beep beep.mp3" id="8_l8kln"]
 
 [node name="BadgePopup" instance=ExtResource("1_bubo2")]
 script = ExtResource("2_jhlxn")
+
+[node name="Popup" parent="." index="1"]
+offset_top = 14.0
+offset_bottom = 263.0
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
