@@ -5,10 +5,10 @@ extends Control
 
 
 func _ready() -> void:
-    visibility_changed.connect(init_calendar)
+    visibility_changed.connect(refresh_calendar)
 
 
-func init_calendar() -> void:
+func refresh_calendar() -> void:
     for child in get_children():
         var child_day = child.name.replace("Jour", "").to_int()
         for sub_child in child.get_children():
