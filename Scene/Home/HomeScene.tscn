@@ -590,12 +590,12 @@ position = Vector2(-1280.63, -720)
 scale = Vector2(1.89823, 1.89823)
 
 [node name="BlanketDown" type="Sprite2D" parent="Inside/Room/Blanket"]
-visible = false
 position = Vector2(39.8032, 647.387)
 scale = Vector2(0.7123, 0.7123)
 texture = SubResource("CompressedTexture2D_ve0fl")
 
 [node name="BlanketUp" type="Sprite2D" parent="Inside/Room/Blanket"]
+visible = false
 position = Vector2(122.922, 557.245)
 scale = Vector2(0.7123, 0.7123)
 texture = SubResource("CompressedTexture2D_ve0fl")
