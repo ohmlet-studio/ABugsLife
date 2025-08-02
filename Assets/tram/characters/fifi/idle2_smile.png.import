@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdghng3haijh"
-path="res://.godot/imported/idle2_smile.png-6bfb29dd1deac209cec2cd16a3ca223b.ctex"
+path="res://.godot/imported/idle2_smile.png-5da602a67320fd6d4e9e1a2db446e5e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/fifi/idle2_smile.png"
-dest_files=["res://.godot/imported/idle2_smile.png-6bfb29dd1deac209cec2cd16a3ca223b.ctex"]
+source_file="res://Assets/Tram/characters/fifi/idle2_smile.png"
+dest_files=["res://.godot/imported/idle2_smile.png-5da602a67320fd6d4e9e1a2db446e5e8.ctex"]
 
 [params]
 

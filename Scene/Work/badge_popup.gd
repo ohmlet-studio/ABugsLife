@@ -2,9 +2,12 @@ extends Interaction
 
 @onready var panel_container = $Popup/PanelContainer
 @onready var leg = $Popup/PanelContainer/Elements/Leg
-@onready var light_on = $"Popup/PanelContainer/Elements/LightsOn"
+@onready var light_in = $"Popup/PanelContainer/Elements/LightsIn"
+@onready var light_out = $"Popup/PanelContainer/Elements/LightsOut"
 @onready var beep_sound = $"Popup/PanelContainer/Elements/Beep sound"
 @onready var max_y = $Popup/PanelContainer/Elements/MaxYMovement.global_position.y
+
+@export var going_in = false
 
 var is_pressed = false
 var press_timer: Timer
@@ -13,7 +16,8 @@ var badge_swiped = false
 var mouse_valid_once = false
 
 func _ready():
-	light_on.hide()
+	light_in.hide()
+	light_out.hide()
 	press_timer = Timer.new()
 	add_child(press_timer)
 
@@ -41,7 +45,11 @@ func is_mouse_in_valid_area(mouse_pos: Vector2) -> bool:
 	return parent_global_rect.has_point(mouse_pos)
 
 func _badge_swiped():
-	light_on.show()
+	if going_in:
+		light_in.show()
+	else:
+		light_out.show()
+
 	beep_sound.play()
 	
 	await get_tree().create_timer(0.5).timeout

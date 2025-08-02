@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=13 format=3 uid="uid://cmoxs3vcarn7g"]
 
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
+[ext_resource type="Texture2D" uid="uid://74uojp0qojvm" path="res://Assets/Work/guirlande_off.png" id="4_0syg0"]
 [ext_resource type="PackedScene" uid="uid://y7rcpv3use5d" path="res://Scene/Work/ScreenPopup.tscn" id="4_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://de5g3p5nfqdl" path="res://Scene/Work/BadgePopup.tscn" id="5_0syg0"]
 [ext_resource type="Texture2D" uid="uid://c3ioe3fi1g54a" path="res://Assets/Work/work.png" id="6_u4nlu"]
@@ -24,6 +25,12 @@ position = Vector2(26.4166, -239.951)
 scale = Vector2(1.01123, 1.01123)
 texture = ExtResource("7_0syg0")
 
+[node name="GuirlandeOff" type="Sprite2D" parent="Work"]
+visible = false
+position = Vector2(26.4166, -239.951)
+scale = Vector2(1.01123, 1.01123)
+texture = ExtResource("4_0syg0")
+
 [node name="Fifi" type="Sprite2D" parent="Work"]
 position = Vector2(-198.124, 204.729)
 scale = Vector2(1.00793, 1.00793)
@@ -45,6 +52,7 @@ scale = Vector2(1.18235, 1.18235)
 texture = ExtResource("11_1ejuh")
 
 [node name="Interactions" type="Node2D" parent="."]
+visible = false
 position = Vector2(748, 36)
 scale = Vector2(1.25125, 1.25125)
 
@@ -59,6 +67,7 @@ scale = Vector2(0.799202, 0.799202)
 [node name="BadgePopupIn" parent="Interactions" instance=ExtResource("5_0syg0")]
 position = Vector2(-574.625, 74.3257)
 scale = Vector2(1.23114, 1.23114)
+going_in = true
 
 [node name="BadgePopupOut" parent="Interactions" instance=ExtResource("5_0syg0")]
 position = Vector2(-574.625, 74.3257)

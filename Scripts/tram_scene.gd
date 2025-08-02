@@ -71,23 +71,38 @@ func _on_phone_popup_finished():
 	if GameStateManager.current_day < 2:
 		return await change_scene()
 	
+	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
+		_play_talking_anim()
+	else:
+		change_scene()
+	
+func _play_talking_anim():
 	await get_tree().create_timer(0.5).timeout
 	
 	lulu.show()
 	lulu.get_node("lulu_idle").show()
 	
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1).timeout
 	
 	lulu.get_node("lulu_idle").hide()
 	lulu.get_node("lulu_talking").show()
 	
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.7).timeout
 	
 	bubble_lulu.show() # TODO animation
+	
+	await get_tree().create_timer(0.7).timeout
 
 	talk_popup.reveal()
 	
 func _on_talk_finished():
+	bubble_lulu.hide()
+	
+	fifi.get_node("fifi_idle").hide()
+	fifi.get_node("fifi_talk").show()
+	
+	lulu.get_node("lulu_idle").show()
+	lulu.get_node("lulu_talking").hide()
 	change_scene()
 	
 func change_scene():

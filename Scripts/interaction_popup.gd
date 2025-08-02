@@ -17,6 +17,7 @@ func reveal():
 	popup_ready = true
 
 func make_disappear():
+	popup_ready = false
 	animation_player.play("Disappear")
 	await animation_player.animation_finished
 	queue_free()

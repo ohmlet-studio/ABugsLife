@@ -20,7 +20,11 @@ func set_calendar_visibility():
 	for child in CalendarArr.get_children():
 		child.hide()
 	var format = "Calendrier%o"
-	CalendarArr.get_node(format % (GameStateManager.current_day+1)).show()
+	
+	var calendar_node = CalendarArr.get_node(format % (GameStateManager.current_day+1))
+	
+	if calendar_node:
+		calendar_node.show()
 
 
 func _on_calendar_popup_finished():

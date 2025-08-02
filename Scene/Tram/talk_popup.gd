@@ -11,8 +11,6 @@ func reveal():
 	
 	await get_tree().create_timer(0.3)
 	bubble.show()
-	
-	action_completed.emit()
 
 func _on_background_input(event: InputEvent):
 	if not popup_ready:
@@ -22,6 +20,7 @@ func _on_background_input(event: InputEvent):
 		shoot_bubble_up()
 
 func shoot_bubble_up():
+	print("SHOOTING UP BUBBLE")
 	var tween = create_tween()
 	
 	var start_pos = bubble.position
