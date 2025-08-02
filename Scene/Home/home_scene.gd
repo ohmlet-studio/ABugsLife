@@ -17,7 +17,6 @@ func _ready():
 
 
 func set_calendar_visibility():
-	print(GameStateManager.current_day)
 	for child in CalendarArr.get_children():
 		child.hide()
 	var format = "Calendrier%o"
@@ -69,6 +68,3 @@ func _on_curtain_popup_curtains_completed() -> void:
 		await get_tree().create_timer(1).timeout
 		CalendrierPopup.action_completed.connect(_on_calendar_popup_finished)
 		CalendrierPopup.reveal()
-
-	else:
-		print(GameStateManager.current_step_day)
