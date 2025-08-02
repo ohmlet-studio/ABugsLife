@@ -55,6 +55,7 @@ func _on_badge_in_action_completed():
 	await get_tree().create_timer(1.5).timeout
 	worm.show()
 
+
 func _on_keyboard_action_completed():
 	await get_tree().create_timer(1.0).timeout
 	badge_popup_out.reveal()

@@ -18,6 +18,9 @@ func _ready():
 	add_child(press_timer)
 
 func _process(delta: float) -> void:
+	if not popup_ready:
+		return
+	
 	var mouse_pos = get_global_mouse_position()
 	
 	if is_mouse_in_valid_area(mouse_pos):
