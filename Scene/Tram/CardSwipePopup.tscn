@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjyvghvf4eqdi"]
+[gd_scene load_steps=12 format=3 uid="uid://cjyvghvf4eqdi"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_id3nc"]
 [ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/card_swipe_popup.gd" id="2_vb4f0"]
-[ext_resource type="Texture2D" uid="uid://c17a4ojkciib4" path="res://Assets/Tram/booper/cardswipe_lightoff.png" id="3_qv6yx"]
-[ext_resource type="Texture2D" uid="uid://bru37ncb18ka6" path="res://Assets/Tram/booper/cardswipe_lighton.png" id="4_12aho"]
-[ext_resource type="Texture2D" uid="uid://x7xnlh8f2q8o" path="res://Assets/Tram/booper/metrocard.png" id="7_nk25v"]
+[ext_resource type="Texture2D" uid="uid://c17a4ojkciib4" path="res://Assets/tram/booper/cardswipe_lightoff.png" id="3_qv6yx"]
+[ext_resource type="Texture2D" uid="uid://bru37ncb18ka6" path="res://Assets/tram/booper/cardswipe_lighton.png" id="4_12aho"]
+[ext_resource type="Texture2D" uid="uid://x7xnlh8f2q8o" path="res://Assets/tram/booper/metrocard.png" id="7_nk25v"]
+[ext_resource type="AudioStream" uid="uid://g6deoiosewwm" path="res://Assets/Audio/SFX/Metro/beep beep.mp3" id="8_12aho"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="9_uk0q1"]
 [ext_resource type="Script" uid="uid://cfrvugpgxuch6" path="res://Scripts/Tram/card_swipe.gd" id="10_eiqyl"]
 
@@ -106,3 +107,7 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 &"": SubResource("AnimationLibrary_oeopt")
 }
+
+[node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="3"]
+stream = ExtResource("8_12aho")
+volume_db = -14.99

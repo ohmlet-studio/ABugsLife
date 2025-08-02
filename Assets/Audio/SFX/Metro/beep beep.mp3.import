@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g6deoiosewwm"
+path="res://.godot/imported/beep beep.mp3-e55328dbda6b34e2efb05d9a099df116.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Metro/beep beep.mp3"
+dest_files=["res://.godot/imported/beep beep.mp3-e55328dbda6b34e2efb05d9a099df116.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
