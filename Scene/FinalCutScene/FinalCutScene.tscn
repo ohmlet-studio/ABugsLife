@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bal1ox5f2nxlk"]
+[gd_scene load_steps=14 format=3 uid="uid://bal1ox5f2nxlk"]
 
 [ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_48wjr"]
 [ext_resource type="Texture2D" uid="uid://hdfu171ns70" path="res://Assets/End/fifi_dos.png" id="2_xr8ot"]
 [ext_resource type="Texture2D" uid="uid://cepdfot70or3d" path="res://Assets/End/fond1.png" id="3_n6srg"]
 [ext_resource type="Texture2D" uid="uid://4xgnkhy1w0ud" path="res://Assets/End/fond3.png" id="4_3g3ys"]
 [ext_resource type="Texture2D" uid="uid://cgy2xovoen5a0" path="res://Assets/End/hill.png" id="5_savin"]
+[ext_resource type="Texture2D" uid="uid://bt5mjrx7hdamm" path="res://Assets/End/fond2.png" id="5_xr8ot"]
 [ext_resource type="Texture2D" uid="uid://cmg8yt44y0ydu" path="res://Assets/End/lulu_dos.png" id="6_ptmbj"]
 [ext_resource type="Texture2D" uid="uid://dmt5uyfhvlb1i" path="res://Assets/End/lulu_side.png" id="7_tsjip"]
 [ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
@@ -23,7 +24,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3.53333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(573.052, 507), Vector2(573.052, 583)]
+"values": [Vector2(573.052, 525.525), Vector2(573.052, 583)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -47,7 +48,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 3.53333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(573.052, 507), Vector2(573.052, 457)]
+"values": [Vector2(573.052, 450), Vector2(573.052, 410)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -65,13 +66,37 @@ tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/path = NodePath("Nuages:position")
-tracks/4/interp = 2
+tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 3.6, 10),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(769, 185.53), Vector2(651.1, 147.51), Vector2(370, 157)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Ciel:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, -9.00006), Vector2(573.052, 241.65)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Fond2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.63333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(574, 475), Vector2(574, 418)]
 }
 
 [sub_resource type="Animation" id="Animation_xr8ot"]
@@ -136,6 +161,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(769, 157)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Ciel:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(573.052, 540.285)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Fond2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(574, 418)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6srg"]
 _data = {
@@ -164,6 +213,11 @@ texture = ExtResource("9_d3xal")
 position = Vector2(573.052, 457)
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("4_3g3ys")
+
+[node name="Fond2" type="Sprite2D" parent="."]
+position = Vector2(574, 418)
+scale = Vector2(0.449807, 0.449807)
+texture = ExtResource("5_xr8ot")
 
 [node name="Fond1" type="Sprite2D" parent="."]
 position = Vector2(574, 618)
