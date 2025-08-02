@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://63wtvg4dglbx"
-path="res://.godot/imported/workcard.png-59655d76d03304d1bcedb9dca4920249.ctex"
+uid="uid://74uojp0qojvm"
+path="res://.godot/imported/guirlande_off.png-14c6a0ab085b3c0b2f0676614e92ef3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Work/Pointeuse/workcard.png"
-dest_files=["res://.godot/imported/workcard.png-59655d76d03304d1bcedb9dca4920249.ctex"]
+source_file="res://Assets/Work/guirlande_off.png"
+dest_files=["res://.godot/imported/guirlande_off.png-14c6a0ab085b3c0b2f0676614e92ef3e.ctex"]
 
 [params]
 

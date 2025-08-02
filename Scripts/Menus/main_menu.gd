@@ -12,4 +12,4 @@ func _on_start_pressed() -> void:
 
 "res://Scene/Tram/TramScene.tscn"
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/Credits.tscn")
+	get_tree().change_scene_to_file("res://Scene/Menus/Credits.tscn")
