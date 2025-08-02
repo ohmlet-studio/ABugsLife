@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://cdghng3haijh"
+path="res://.godot/imported/idle2_smile.png-6bfb29dd1deac209cec2cd16a3ca223b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/tram/characters/fifi/idle2_smile.png"
+dest_files=["res://.godot/imported/idle2_smile.png-6bfb29dd1deac209cec2cd16a3ca223b.ctex"]
 
 [params]
 

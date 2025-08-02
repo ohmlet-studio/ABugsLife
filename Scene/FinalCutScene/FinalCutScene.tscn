@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bal1ox5f2nxlk"]
+[gd_scene load_steps=13 format=3 uid="uid://bal1ox5f2nxlk"]
 
 [ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_48wjr"]
 [ext_resource type="Texture2D" uid="uid://hdfu171ns70" path="res://Assets/End/fifi_dos.png" id="2_xr8ot"]
@@ -10,6 +10,139 @@
 [ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="9_d3xal"]
 
+[sub_resource type="Animation" id="Animation_48wjr"]
+resource_name = "SceneEnter"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hill:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, 507), Vector2(573.052, 583)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fond1:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(574, 618), Vector2(574, 457)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fond3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, 507), Vector2(573.052, 457)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lune:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(90, 106.19), Vector2(89.9999, 90)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Nuages:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.6, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(769, 185.53), Vector2(651.1, 147.51), Vector2(370, 157)]
+}
+
+[sub_resource type="Animation" id="Animation_xr8ot"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hill:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(573.052, 507)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fond1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(574, 618)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fond3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(573.052, 457)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Lune:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(89.9999, 90)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Nuages:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(769, 157)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6srg"]
+_data = {
+&"RESET": SubResource("Animation_xr8ot"),
+&"SceneEnter": SubResource("Animation_48wjr")
+}
+
 [node name="FinalCutScene" type="Node2D"]
 
 [node name="Ciel" type="Sprite2D" parent="."]
@@ -17,30 +150,30 @@ position = Vector2(573.052, 540.285)
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("1_48wjr")
 
-[node name="Nuages" type="Sprite2D" parent="."]
-position = Vector2(565, 257)
+[node name="Lune" type="Sprite2D" parent="."]
+position = Vector2(89.9999, 90)
 scale = Vector2(0.447697, 0.447697)
+texture = ExtResource("8_tl7l5")
+
+[node name="Nuages" type="Sprite2D" parent="."]
+position = Vector2(769, 157)
+scale = Vector2(0.616506, 0.616506)
 texture = ExtResource("9_d3xal")
 
-[node name="Fond1" type="Sprite2D" parent="."]
-position = Vector2(574, 395)
-scale = Vector2(0.447697, 0.447697)
-texture = ExtResource("3_n6srg")
-
 [node name="Fond3" type="Sprite2D" parent="."]
-position = Vector2(573.052, 540.285)
+position = Vector2(573.052, 457)
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("4_3g3ys")
 
-[node name="Hill" type="Sprite2D" parent="."]
-position = Vector2(573.052, 540.285)
+[node name="Fond1" type="Sprite2D" parent="."]
+position = Vector2(574, 618)
 scale = Vector2(0.447697, 0.447697)
-texture = ExtResource("5_savin")
+texture = ExtResource("3_n6srg")
 
-[node name="Lune" type="Sprite2D" parent="."]
-position = Vector2(966, 126)
-scale = Vector2(0.447697, 0.447697)
-texture = ExtResource("8_tl7l5")
+[node name="Hill" type="Sprite2D" parent="."]
+position = Vector2(573.052, 507)
+scale = Vector2(0.447066, 0.447066)
+texture = ExtResource("5_savin")
 
 [node name="FifiDos" type="Sprite2D" parent="."]
 position = Vector2(479, 464)
@@ -57,3 +190,8 @@ visible = false
 position = Vector2(620.656, 446.114)
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("7_tsjip")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_n6srg")
+}

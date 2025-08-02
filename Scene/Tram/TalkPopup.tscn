@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://30hx2dk0m2we"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_d4qw5"]
-[ext_resource type="Script" uid="uid://c2rxtix621x5t" path="res://Scene/Tram/talk_popup.gd" id="2_tbwpq"]
+[ext_resource type="Script" uid="uid://c1a84b6elmwyv" path="res://Scene/Tram/talk_popup.gd" id="2_tbwpq"]
 [ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/characters/fifi/idle.png" id="3_tbwpq"]
 [ext_resource type="Texture2D" uid="uid://5sa8e0oscjlv" path="res://Assets/Tram/bubble_no_tail.png" id="4_dhw25"]
 

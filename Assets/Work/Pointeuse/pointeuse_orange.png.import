@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://b3v0axljbgg5q"
+path="res://.godot/imported/pointeuse_orange.png-7d8e0dca6c144d8b5c941d8c675b31c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/Work/Pointeuse/pointeuse_orange.png"
+dest_files=["res://.godot/imported/pointeuse_orange.png-7d8e0dca6c144d8b5c941d8c675b31c6.ctex"]
 
 [params]
 

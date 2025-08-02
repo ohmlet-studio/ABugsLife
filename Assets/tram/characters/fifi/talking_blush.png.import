@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dknaerunqyvbt"
-path="res://.godot/imported/talking_blush.png-87e1a325014467c7a170381b35e0f795.ctex"
+path="res://.godot/imported/talking_blush.png-d5bb6119afa888b0014a741f8f82b3c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/characters/fifi/talking_blush.png"
-dest_files=["res://.godot/imported/talking_blush.png-87e1a325014467c7a170381b35e0f795.ctex"]
+source_file="res://Assets/tram/characters/fifi/talking_blush.png"
+dest_files=["res://.godot/imported/talking_blush.png-d5bb6119afa888b0014a741f8f82b3c7.ctex"]
 
 [params]
 
