@@ -191,12 +191,12 @@ texture = ExtResource("14_gq3dt")
 position = Vector2(733, 126)
 scale = Vector2(1.16082, 1.16082)
 
-[node name="lulu_idle" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
+[node name="lulu_talking" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
 position = Vector2(123, 212)
 scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("14_xuh25")
 
-[node name="lulu_talking" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
+[node name="lulu_idle" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
 visible = false
 position = Vector2(123, 212)
 scale = Vector2(0.280516, 0.280516)
@@ -252,7 +252,7 @@ autowrap_mode = 2
 
 [node name="BubbleLulu" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
 visible = false
-position = Vector2(769, 174)
+position = Vector2(713, 191)
 scale = Vector2(-0.348, 0.348)
 texture = ExtResource("22_t5ihy")
 
@@ -273,7 +273,6 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
-visible = false
 position = Vector2(3, 0)
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
@@ -288,6 +287,7 @@ position = Vector2(331, 121)
 scale = Vector2(1.63348, 1.63348)
 
 [node name="TalkPopup" parent="Interactions" instance=ExtResource("25_ytes1")]
+visible = false
 position = Vector2(380, 131)
 
 [node name="metro sound" type="AudioStreamPlayer" parent="."]
