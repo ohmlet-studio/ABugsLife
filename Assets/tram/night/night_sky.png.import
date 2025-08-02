@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vaurujj3dx2e"
-path="res://.godot/imported/night_sky.png-93fdbd14246c87dbfee345921d14f05a.ctex"
+path="res://.godot/imported/night_sky.png-fa015163f9afb5c23aea81e583392c88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/night/night_sky.png"
-dest_files=["res://.godot/imported/night_sky.png-93fdbd14246c87dbfee345921d14f05a.ctex"]
+source_file="res://Assets/tram/night/night_sky.png"
+dest_files=["res://.godot/imported/night_sky.png-fa015163f9afb5c23aea81e583392c88.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://dyeei0gpvfuhs"]
+[gd_scene load_steps=36 format=3 uid="uid://dyeei0gpvfuhs"]
 
+[ext_resource type="Script" uid="uid://c7psoygv16m7c" path="res://Scripts/Home/home_scene.gd" id="1_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
 [ext_resource type="PackedScene" uid="uid://cuy62nh60ghjs" path="res://Scene/Home/CalendarPopup.tscn" id="1_upts1"]
 [ext_resource type="Texture2D" uid="uid://cvdsqk6sy0h7j" path="res://Assets/Home/WindowStars.png" id="2_4yki3"]
@@ -15,9 +16,126 @@
 [ext_resource type="Texture2D" uid="uid://b3glfe4aoak7j" path="res://Assets/Home/sink.png" id="14_01aj8"]
 [ext_resource type="Texture2D" uid="uid://dvms76dgxcnhw" path="res://Assets/Home/fifilegs_appart.png" id="15_vo7qm"]
 [ext_resource type="Texture2D" uid="uid://cuqouy2l63dag" path="res://Assets/Home/junkfood_.png" id="16_vo7qm"]
+[ext_resource type="Texture2D" uid="uid://bjypomtbo06h0" path="res://Assets/Home/blanket.png" id="17_4nqop"]
 [ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
+[ext_resource type="Texture2D" uid="uid://dslpxinwwtkk5" path="res://Assets/Home/KafkaDodo.webp" id="17_fkqow"]
+[ext_resource type="Script" uid="uid://bnnvicoaydpkf" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
+[ext_resource type="Texture2D" uid="uid://b3kyrgmwwimnn" path="res://Assets/Home/DeboutDeDos.webp" id="21_vcg4d"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nqop"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_4nqop"]
+resource_name = "AppearCurtainPopup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Interactions/CurtainPopup:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.506885),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vcg4d"]
+resource_name = "AuDodo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Inside/Room/Lit/KafkaDodo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Inside/Room/Lit/BlanketDown:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Inside/Room/Lit/BlanketDown:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18.7297, 558.415), Vector2(91.312, 557.244)]
+}
+
+[sub_resource type="Animation" id="Animation_olto7"]
+resource_name = "AuReveil"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DeboutDeDos:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Inside/Room/Lit/KafkaDodo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Inside/Room/Lit/BlanketDown:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(91.312, 557.244), Vector2(18.7298, 628.656)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Inside/Room/Lit/BlanketDown:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ve0fl"]
 resource_name = "CloseCurtains"
@@ -70,6 +188,48 @@ tracks/3/keys = {
 "values": [Vector2(1, 1), Vector2(0.85, 1), Vector2(0.85, 1), Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_fkqow"]
+resource_name = "DisappearCurtainPopup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Interactions/CurtainPopup:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.536997),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s4wpn"]
+resource_name = "FenetreToCalendar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DeboutDeDosCalendrier:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DeboutDeDos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_4yki3"]
 resource_name = "NightToDay"
 length = 5.0
@@ -80,7 +240,7 @@ tracks/0/path = NodePath("Outside/Moon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.966667, 1.36667, 1.96667),
+"times": PackedFloat32Array(0.966667, 1.36667, 2.96667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 0.811765, 0.439216, 1), Color(1, 0.811765, 0.439216, 1)]
@@ -238,31 +398,31 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Outside/Moon:modulate")
+tracks/0/path = NodePath("Outside/WindowDay:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 0.811765, 0.439216, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Outside/Moon:position")
+tracks/1/path = NodePath("Outside/WindowStars:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(664.947, 309.06)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Outside/WindowDay:modulate")
+tracks/2/path = NodePath("Outside/WindowNight:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -274,26 +434,26 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Outside/WindowNight:modulate")
+tracks/3/path = NodePath("Outside/Moon:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(674.313, 383.984)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Outside/WindowStars:modulate")
+tracks/4/path = NodePath("Outside/Moon:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -310,74 +470,146 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Inside/Room/Curtains/Right:modulate")
+tracks/6/path = NodePath("Inside/Room/Curtains/Right:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(612.267, 220.088)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Inside/Room/Curtains/Left:modulate")
+tracks/7/path = NodePath("Inside/Room/Curtains/Left:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(327.791, 215.406)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Inside/Room/Curtains/Right:position")
+tracks/8/path = NodePath("Inside/Room/Curtains/Left:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(612.267, 220.088)]
+"values": [Vector2(1, 1)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Inside/Room/Curtains/Left:position")
+tracks/9/path = NodePath("Inside/Room/Curtains/Right:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(327.791, 215.406)]
+"values": [Vector2(1, 1)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Inside/Room/Curtains/Left:scale")
+tracks/10/path = NodePath("Inside/Room/Curtains/Right:modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Inside/Room/Curtains/Right:scale")
+tracks/11/path = NodePath("Inside/Room/Curtains/Left:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Interactions/CurtainPopup:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Inside/Room/Lit/KafkaDodo:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Inside/Room/Lit/BlanketDown:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Inside/Room/Lit/BlanketDown:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18.7297, 558.415)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("DeboutDeDos:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("DeboutDeDosCalendrier:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_p6w8n"]
@@ -417,6 +649,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0.494854, 0.494855, 0.494854, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DeboutDeDos:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vo7qm"]
@@ -485,7 +729,12 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4nqop"]
 _data = {
+&"AppearCurtainPopup": SubResource("Animation_4nqop"),
+&"AuDodo": SubResource("Animation_vcg4d"),
+&"AuReveil": SubResource("Animation_olto7"),
 &"CloseCurtains": SubResource("Animation_ve0fl"),
+&"DisappearCurtainPopup": SubResource("Animation_fkqow"),
+&"FenetreToCalendar": SubResource("Animation_s4wpn"),
 &"NightToDay": SubResource("Animation_4yki3"),
 &"OpenCurtains": SubResource("Animation_fdyi5"),
 &"RESET": SubResource("Animation_5uhx5"),
@@ -494,28 +743,27 @@ _data = {
 }
 
 [node name="Room" type="Node2D"]
+script = ExtResource("1_5uhx5")
 
 [node name="Outside" type="Node2D" parent="."]
 position = Vector2(16, -6)
 scale = Vector2(0.854203, 0.854203)
 
 [node name="WindowDay" type="Sprite2D" parent="Outside"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(675, 379.5)
 texture = ExtResource("1_p6w8n")
 
 [node name="WindowStars" type="Sprite2D" parent="Outside"]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(674.313, 383.984)
 texture = ExtResource("2_4yki3")
 
 [node name="WindowNight" type="Sprite2D" parent="Outside"]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(675, 379.5)
 texture = ExtResource("3_fdyi5")
 
 [node name="Moon" type="Sprite2D" parent="Outside"]
-modulate = Color(1, 0.811765, 0.439216, 1)
-position = Vector2(664.947, 309.06)
+position = Vector2(674.313, 383.984)
 texture = ExtResource("4_ve0fl")
 
 [node name="Inside" type="Node2D" parent="."]
@@ -585,20 +833,36 @@ visible = false
 position = Vector2(-15, 270.5)
 texture = ExtResource("15_vo7qm")
 
-[node name="Blanket" type="Node2D" parent="Inside/Room"]
+[node name="Lit" type="Node2D" parent="Inside/Room"]
 position = Vector2(-1280.63, -720)
 scale = Vector2(1.89823, 1.89823)
 
-[node name="BlanketDown" type="Sprite2D" parent="Inside/Room/Blanket"]
-position = Vector2(39.8032, 647.387)
-scale = Vector2(0.7123, 0.7123)
-texture = SubResource("CompressedTexture2D_ve0fl")
+[node name="KafkaDodo" type="Sprite2D" parent="Inside/Room/Lit"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(50.3381, 497.539)
+scale = Vector2(0.499769, 0.499769)
+texture = ExtResource("17_fkqow")
 
-[node name="BlanketUp" type="Sprite2D" parent="Inside/Room/Blanket"]
-visible = false
+[node name="BlanketDown" type="Sprite2D" parent="Inside/Room/Lit"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(18.7297, 558.415)
+texture = ExtResource("17_4nqop")
+
+[node name="BlanketUp" type="Sprite2D" parent="Inside/Room/Lit"]
 position = Vector2(122.922, 557.245)
 scale = Vector2(0.7123, 0.7123)
 texture = SubResource("CompressedTexture2D_ve0fl")
+
+[node name="DeboutDeDos" type="Sprite2D" parent="."]
+position = Vector2(549, 212)
+scale = Vector2(1.17343, 1.17343)
+texture = ExtResource("21_vcg4d")
+
+[node name="DeboutDeDosCalendrier" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(809, 218)
+scale = Vector2(1.17343, 1.17343)
+texture = ExtResource("21_vcg4d")
 
 [node name="Interactions" type="Node2D" parent="."]
 
@@ -606,7 +870,41 @@ texture = SubResource("CompressedTexture2D_ve0fl")
 visible = false
 position = Vector2(675, 75)
 
+[node name="CurtainPopup" type="Control" parent="Interactions"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 196.0
+offset_top = 9.0
+offset_right = 485.0
+offset_bottom = 298.0
+scale = Vector2(1.40387, 1.23846)
+script = ExtResource("19_4nqop")
+
+[node name="Shadow" type="ColorRect" parent="Interactions/CurtainPopup"]
+z_index = -1
+layout_mode = 2
+offset_left = -21.3695
+offset_top = 72.6708
+offset_right = 217.63
+offset_bottom = 311.671
+color = Color(0, 0, 0, 0.552941)
+
+[node name="Outline" type="PanelContainer" parent="Interactions/CurtainPopup"]
+z_index = 4096
+layout_mode = 0
+offset_left = -6.04375
+offset_top = -6.04375
+offset_right = 242.956
+offset_bottom = 242.956
+scale = Vector2(1.20875, 1.20875)
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_4nqop")
+
 [node name="RoomAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_4nqop")
 }
+
+[connection signal="curtains_completed" from="Interactions/CurtainPopup" to="." method="_on_curtain_popup_curtains_completed"]
+[connection signal="gui_input" from="Interactions/CurtainPopup" to="Interactions/CurtainPopup" method="_on_gui_input"]

@@ -2,7 +2,7 @@ extends Interaction
 
 @onready var label = $Popup/PanelContainer/Background/Elements/Label
 
-var words_needed = 15
+var words_needed = 20
 var word_count = 0
 
 var words = ["BZZ ", "BZZBZZ ", "BZ ", "BZZZ ", "BZZZ ", "BZZBZ "]
