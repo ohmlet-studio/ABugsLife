@@ -1,10 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://30hx2dk0m2we"]
+[gd_scene load_steps=6 format=3 uid="uid://30hx2dk0m2we"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_d4qw5"]
-[ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/card_swipe_popup.gd" id="2_0704w"]
+[ext_resource type="Script" uid="uid://c2rxtix621x5t" path="res://Scene/Tram/talk_popup.gd" id="2_tbwpq"]
+[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/characters/fifi/idle.png" id="3_tbwpq"]
+[ext_resource type="Texture2D" uid="uid://5sa8e0oscjlv" path="res://Assets/Tram/bubble_no_tail.png" id="4_dhw25"]
 
-[node name="CardSwipePopup" instance=ExtResource("1_d4qw5")]
-script = ExtResource("2_0704w")
+[sub_resource type="LabelSettings" id="LabelSettings_t5wt6"]
+font_size = 121
+
+[node name="TalkPopup" instance=ExtResource("1_d4qw5")]
+script = ExtResource("2_tbwpq")
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 position = Vector2(-17, 79)
+
+[node name="Idle" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
+position = Vector2(206, 264)
+scale = Vector2(0.604063, 0.604063)
+texture = ExtResource("3_tbwpq")
+
+[node name="Bubbletext" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
+position = Vector2(142, 132)
+scale = Vector2(0.268317, 0.268317)
+texture = ExtResource("4_dhw25")
+
+[node name="Label" type="Label" parent="Popup/PanelContainer/Elements/Bubbletext" index="0"]
+offset_left = -205.0
+offset_top = -134.0
+offset_right = 212.0
+offset_bottom = 32.0
+text = "..."
+label_settings = SubResource("LabelSettings_t5wt6")
+horizontal_alignment = 1
+autowrap_mode = 2

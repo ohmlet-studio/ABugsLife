@@ -69,6 +69,12 @@ func _on_phone_popup_finished():
 	
 	await get_tree().create_timer(acceleration_time).timeout
 	sound_ambiance.stop()
+	
+	if GameStateManager.current_day < 2:
+		change_scene()
+		return
+	
+func change_scene():
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
 		get_tree().change_scene_to_file("res://Scene/Work/WorkScene.tscn")
 	else:
