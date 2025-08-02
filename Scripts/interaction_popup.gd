@@ -2,7 +2,6 @@ extends Node2D
 class_name Interaction
 
 @onready var animation_player = $AnimationPlayer
-
 signal action_completed
 
 func _init() -> void:

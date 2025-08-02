@@ -2,8 +2,10 @@ extends Node2D
 
 @onready var interactions = $Interactions
 @onready var keyboard_popup = $Interactions/KeyboardPopup
+@onready var office_sounds = $"Office sound"
 
 func _ready():
+	office_sounds.play()
 	interactions.interaction_finished.connect(_on_interaction_finished)
 
 func _on_interaction_finished():

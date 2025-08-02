@@ -2,6 +2,9 @@ extends Control
 
 @onready var animation_player = $AnimationPlayer
 
+func _ready() -> void:
+	Musique.play_music_level()
+
 func _on_start_pressed() -> void:
 	animation_player.play("ZoomInMenu")
 	await get_tree().create_timer(3.0).timeout

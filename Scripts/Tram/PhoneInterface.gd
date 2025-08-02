@@ -14,7 +14,6 @@ var active_tweens: Dictionary = {}  # Track tweens for each notification
 
 func _ready():
 	notifications = get_children()
-	
 	arrange_notifications()
 	
 	# Setup swipe for all notifications

@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
-load_path = "res://.godot/imported/couverture_up.png-cfebea05150bfda6fe5a9af10d5bd1e3.ctex"
 
 [sub_resource type="Animation" id="Animation_ve0fl"]
 resource_name = "CloseCurtains"

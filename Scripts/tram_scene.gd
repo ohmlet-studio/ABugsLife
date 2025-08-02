@@ -7,6 +7,8 @@ extends Node2D
 @onready var lulu = $TramInterior/Characters/Lulu
 @onready var fifi = $TramInterior/Characters/Fifi
 @onready var parallax = $TramExterior/ParallaxBackground
+@onready var sound_ambiance = $"metro sound"
+@onready var notif = $notif
 
 signal scene_completed
 var is_tram_moving = false
@@ -52,18 +54,21 @@ func _on_card_popup_finished():
 	await get_tree().create_timer(0.5).timeout
 	fifi.show()
 	is_tram_moving = true
+	sound_ambiance.play()
 	interior_animation_player.play("TramMovement")
 	await get_tree().create_timer(2).timeout
 	phone_popup.reveal()
+	notif.play()
 
 func _on_phone_popup_finished():
 	await get_tree().create_timer(0.5).timeout
 	
 	is_tram_moving = false
-	interior_animation_player.pause()
-
-	await get_tree().create_timer(acceleration_time).timeout
 	
+	interior_animation_player.pause()
+	
+	await get_tree().create_timer(acceleration_time).timeout
+	sound_ambiance.stop()
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
 		get_tree().change_scene_to_file("res://Scene/Work/WorkScene.tscn")
 	else:
