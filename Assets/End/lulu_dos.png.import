@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://co8ix52jdg6d8"
+path="res://.godot/imported/lulu_dos.png-0cbad02a4c5a7bd230c2c44e969e4803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/End/lulu_dos.png"
+dest_files=["res://.godot/imported/lulu_dos.png-0cbad02a4c5a7bd230c2c44e969e4803.ctex"]
 
 [params]
 

@@ -1,19 +1,20 @@
 extends Control
 
+@onready var Left = $"../../Inside/Room/Curtains/Left"
+@onready var Right = $"../../Inside/Room/Curtains/Right"
+@onready var Anim: AnimationPlayer = $"../../RoomAnimation"
 
-@onready var Left = $Left
-@onready var Right = $Right
-@onready var Anim = $CurtainsAnim
-
-@export var opened_default: bool = true
+@export var closed_default: bool = false
+signal curtains_completed
 
 var is_swiping: bool = false
 var swipe_start_pos: Vector2
-var swipe_threshold: float = 10.0
-var curtain_width: float = 50.0
-var animation_duration: float = .8
+var swipe_threshold: float = 5.0
+var swiped = false
 
 func start_swipe(pos: Vector2):
+	if swiped:
+		return
 	is_swiping = true
 	swipe_start_pos = pos
 
@@ -24,21 +25,24 @@ func end_swipe(end_pos: Vector2):
 	var swipe_distance = end_pos - swipe_start_pos
 	var swipe_length = abs(swipe_distance.x)
 	if swipe_length >= swipe_threshold:
-		if swipe_distance.x > 0 and not opened_default:
-			Anim.play("Open")
-		elif swipe_distance.x < 0 and opened_default:
-			Anim.play("Close")
-		else:
-			animate_to_current_state()
+		animate_to_current_state()
 
 func animate_to_current_state():
-	if opened_default:
-		Anim.play("Open")
+	print(closed_default)
+	if closed_default:
+		Anim.play("OpenCurtains")
+		await Anim.animation_finished
+		curtains_completed.emit()
 	else:
-		Anim.play("Close")
+		Anim.play("CloseCurtains")
+		await Anim.animation_finished
+		curtains_completed.emit()
+	closed_default = !closed_default
+	swiped = true
 
 func _on_gui_input(event):
 	handle_swipe_input(event)
+
 
 func handle_swipe_input(event):
 	if event is InputEventMouseButton:

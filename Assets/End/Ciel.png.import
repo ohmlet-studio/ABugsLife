@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://bsalm5ipm51e5"
+path="res://.godot/imported/Ciel.png-36811068b1b16db8a702e12c52eae0b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/End/Ciel.png"
+dest_files=["res://.godot/imported/Ciel.png-36811068b1b16db8a702e12c52eae0b2.ctex"]
 
 [params]
 
