@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3cipgy8j0xp1"
-path="res://.godot/imported/talking.png-4a128caabb10dad737bc1b4de9288b7e.ctex"
+path="res://.godot/imported/talking.png-8c4fa9c3fc548eca303fd9140af47f97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lulu/talking.png"
-dest_files=["res://.godot/imported/talking.png-4a128caabb10dad737bc1b4de9288b7e.ctex"]
+source_file="res://Assets/Tram/characters/lulu/talking.png"
+dest_files=["res://.godot/imported/talking.png-8c4fa9c3fc548eca303fd9140af47f97.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c17a4ojkciib4"
-path="res://.godot/imported/cardswipe_lightoff.png-7b015e49fe8bdcd67b425d468979396c.ctex"
+path="res://.godot/imported/cardswipe_lightoff.png-c1bdc01517699273258e00b3ab69e2ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/booper/cardswipe_lightoff.png"
-dest_files=["res://.godot/imported/cardswipe_lightoff.png-7b015e49fe8bdcd67b425d468979396c.ctex"]
+source_file="res://Assets/Tram/booper/cardswipe_lightoff.png"
+dest_files=["res://.godot/imported/cardswipe_lightoff.png-c1bdc01517699273258e00b3ab69e2ea.ctex"]
 
 [params]
 
