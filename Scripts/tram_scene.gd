@@ -4,9 +4,12 @@ extends Node2D
 @onready var interactions = $Interactions
 @onready var phone_popup = $Interactions/PhonePopup
 @onready var card_popup = $Interactions/CardSwipePopup
+@onready var talk_popup = $Interactions/TalkPopup
 @onready var lulu = $TramInterior/Characters/Lulu
 @onready var fifi = $TramInterior/Characters/Fifi
 @onready var parallax = $TramExterior/ParallaxBackground
+@onready var bubble_lulu = $TramInterior/Characters/Bubbles/BubbleLulu
+@onready var bubble_fifi = $TramInterior/Characters/Bubbles/BubbleFifi
 @onready var sound_ambiance = $"metro sound"
 @onready var notif = $notif
 
@@ -20,10 +23,13 @@ var acceleration_time = 2.0
 func _ready():
 	phone_popup.hide()
 	card_popup.hide()
+	talk_popup.hide()
+	
 	lulu.hide()
 	fifi.hide()
 	interactions.show()
 	
+	talk_popup.action_completed.connect(_on_talk_finished)
 	card_popup.action_completed.connect(_on_card_popup_finished)
 	phone_popup.action_completed.connect(_on_phone_popup_finished)
 	
@@ -62,6 +68,29 @@ func _on_card_popup_finished():
 	notif.play()
 
 func _on_phone_popup_finished():
+	if GameStateManager.current_day < 2:
+		return await change_scene()
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	lulu.show()
+	lulu.get_node("lulu_idle").show()
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	lulu.get_node("lulu_idle").hide()
+	lulu.get_node("lulu_talking").show()
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	bubble_lulu.show() # TODO animation
+
+	talk_popup.reveal()
+	
+func _on_talk_finished():
+	change_scene()
+	
+func change_scene():
 	await get_tree().create_timer(0.5).timeout
 
 	is_tram_moving = false
@@ -70,11 +99,6 @@ func _on_phone_popup_finished():
 	await get_tree().create_timer(acceleration_time).timeout
 	sound_ambiance.stop()
 	
-	if GameStateManager.current_day < 2:
-		change_scene()
-		return
-	
-func change_scene():
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
 		get_tree().change_scene_to_file("res://Scene/Work/WorkScene.tscn")
 		GameStateManager.current_step_day == GameStateManager.WORK

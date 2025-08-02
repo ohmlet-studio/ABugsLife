@@ -15,6 +15,9 @@ func reveal():
 	action_completed.emit()
 
 func _on_background_input(event: InputEvent):
+	if not popup_ready:
+		return
+		
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		shoot_bubble_up()
 

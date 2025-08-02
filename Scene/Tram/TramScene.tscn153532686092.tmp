@@ -188,17 +188,15 @@ scale = Vector2(0.273, 0.273)
 texture = ExtResource("14_gq3dt")
 
 [node name="Lulu" type="Node2D" parent="TramInterior/Characters"]
-position = Vector2(733, 126)
-scale = Vector2(1.16082, 1.16082)
 
 [node name="lulu_idle" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
-position = Vector2(123, 212)
+position = Vector2(911, 319)
 scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("14_xuh25")
 
 [node name="lulu_talking" type="Sprite2D" parent="TramInterior/Characters/Lulu"]
 visible = false
-position = Vector2(123, 212)
+position = Vector2(911, 319)
 scale = Vector2(0.280516, 0.280516)
 texture = ExtResource("19_cqi5x")
 
@@ -236,22 +234,12 @@ texture = ExtResource("18_gq3dt")
 [node name="Bubbles" type="Node2D" parent="TramInterior/Characters"]
 
 [node name="BubbleFifi" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
+visible = false
 position = Vector2(431, 193)
 scale = Vector2(0.348328, 0.348328)
 texture = ExtResource("22_t5ihy")
 
-[node name="Label2" type="Label" parent="TramInterior/Characters/Bubbles/BubbleFifi"]
-offset_left = -200.96
-offset_top = -134.93
-offset_right = 216.04
-offset_bottom = 31.0697
-text = "..."
-label_settings = SubResource("LabelSettings_t5ihy")
-horizontal_alignment = 1
-autowrap_mode = 2
-
 [node name="BubbleLulu" type="Sprite2D" parent="TramInterior/Characters/Bubbles"]
-visible = false
 position = Vector2(769, 174)
 scale = Vector2(-0.348, 0.348)
 texture = ExtResource("22_t5ihy")
@@ -273,7 +261,6 @@ libraries = {
 }
 
 [node name="Interactions" type="Node2D" parent="."]
-visible = false
 position = Vector2(3, 0)
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
