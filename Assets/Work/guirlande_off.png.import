@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://dcvd8ln58v8bx"
+path="res://.godot/imported/guirlande_off.png-14c6a0ab085b3c0b2f0676614e92ef3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/Work/guirlande_off.png"
+dest_files=["res://.godot/imported/guirlande_off.png-14c6a0ab085b3c0b2f0676614e92ef3e.ctex"]
 
 [params]
 
