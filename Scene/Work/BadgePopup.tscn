@@ -1,48 +1,66 @@
-[gd_scene load_steps=8 format=3 uid="uid://de5g3p5nfqdl"]
+[gd_scene load_steps=10 format=3 uid="uid://de5g3p5nfqdl"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_bubo2"]
 [ext_resource type="Script" uid="uid://cqessqgvtlauq" path="res://Scene/Work/badge_popup.gd" id="2_jhlxn"]
-[ext_resource type="Texture2D" uid="uid://c17a4ojkciib4" path="res://Assets/Tram/booper/cardswipe_lightoff.png" id="4_xc1qx"]
-[ext_resource type="Texture2D" uid="uid://bru37ncb18ka6" path="res://Assets/Tram/booper/cardswipe_lighton.png" id="5_qsn7r"]
+[ext_resource type="Texture2D" uid="uid://bssb4wkba1ri7" path="res://Assets/Work/Pointeuse/pointeuse_back.png" id="3_8d4vx"]
+[ext_resource type="Texture2D" uid="uid://b2sb7og8lkvm7" path="res://Assets/Work/Pointeuse/pointeuse.png" id="4_bf0x5"]
+[ext_resource type="Texture2D" uid="uid://c0wxv5xm8l4r" path="res://Assets/Work/Pointeuse/pointeuse_green.png" id="5_16hkb"]
+[ext_resource type="Texture2D" uid="uid://b3v0axljbgg5q" path="res://Assets/Work/Pointeuse/pointeuse_orange.png" id="6_7vyrx"]
+[ext_resource type="Texture2D" uid="uid://63wtvg4dglbx" path="res://Assets/Work/Pointeuse/workcard.png" id="6_8d4vx"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="6_025dg"]
-[ext_resource type="Texture2D" uid="uid://x7xnlh8f2q8o" path="res://Assets/Tram/booper/metrocard.png" id="7_kjgjn"]
 [ext_resource type="AudioStream" uid="uid://g6deoiosewwm" path="res://Assets/Audio/SFX/Metro/beep beep.mp3" id="8_l8kln"]
 
 [node name="BadgePopup" instance=ExtResource("1_bubo2")]
 script = ExtResource("2_jhlxn")
+going_in = false
+
+[node name="Popup" parent="." index="1"]
+offset_top = 14.0
+offset_bottom = 263.0
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
-[node name="LightsOff" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
-position = Vector2(125, 124)
-scale = Vector2(0.227778, 0.227778)
-texture = ExtResource("4_xc1qx")
+[node name="Back" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
+position = Vector2(121, 81)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("3_8d4vx")
 
-[node name="LightsOn" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
-visible = false
-position = Vector2(125, 124)
-scale = Vector2(0.227778, 0.227778)
-texture = ExtResource("5_qsn7r")
-
-[node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
+[node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
 z_index = 1
-position = Vector2(124.164, -48)
+position = Vector2(120.402, -41)
 rotation = 0.536542
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_025dg")
-offset = Vector2(-328.563, 233.507)
+offset = Vector2(-276.065, 315.925)
 
 [node name="Card" type="Sprite2D" parent="Popup/PanelContainer/Elements/Leg" index="0"]
 z_index = -1
-position = Vector2(-122.736, -193.108)
+position = Vector2(-86.7889, -134.542)
 rotation = -5.23598
-scale = Vector2(1.4207, 1.4207)
-texture = ExtResource("7_kjgjn")
+scale = Vector2(1.53914, 1.53914)
+texture = ExtResource("6_8d4vx")
 metadata/_edit_use_anchors_ = true
 
-[node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="3"]
+[node name="FrontPlate" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
+position = Vector2(125, 136.201)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("4_bf0x5")
+
+[node name="LightsIn" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="3"]
+visible = false
+position = Vector2(125, 136.201)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("5_16hkb")
+
+[node name="LightsOut" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="4"]
+visible = false
+position = Vector2(125, 136.201)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("6_7vyrx")
+
+[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="5"]
+position = Vector2(120, 142)
+
+[node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="6"]
 stream = ExtResource("8_l8kln")
 volume_db = -14.99
-
-[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="4"]
-position = Vector2(120, 203)

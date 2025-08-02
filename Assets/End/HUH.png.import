@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://udu4be8v1wii"
-path="res://.godot/imported/idle2.png-6abf5d6aa2b126cd645813ce22c44570.ctex"
+uid="uid://7afjlqns5ud4"
+path="res://.godot/imported/HUH.png-35091f9c6d7c569d985052b3bc936b87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/characters/fifi/idle2.png"
-dest_files=["res://.godot/imported/idle2.png-6abf5d6aa2b126cd645813ce22c44570.ctex"]
+source_file="res://Assets/End/HUH.png"
+dest_files=["res://.godot/imported/HUH.png-35091f9c6d7c569d985052b3bc936b87.ctex"]
 
 [params]
 

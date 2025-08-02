@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcxuostqlh3xg"]
+
+[ext_resource type="Texture2D" uid="uid://c36kikkfiew7i" path="res://Assets/End/DOOR.png" id="1_3vjj8"]
+
+[node name="DoorPopup" type="Node2D"]
+
+[node name="Popup" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Popup"]
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 249.0
+
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
+position = Vector2(134.642, 137.112)
+scale = Vector2(0.571727, 0.571727)
+texture = ExtResource("1_3vjj8")

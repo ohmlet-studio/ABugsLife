@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba4bxnlhdl212"]
+
+[ext_resource type="Texture2D" uid="uid://7afjlqns5ud4" path="res://Assets/End/HUH.png" id="1_gfl6u"]
+
+[node name="HuhPopup" type="Node2D"]
+
+[node name="Popup" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Popup"]
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 249.0
+
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
+position = Vector2(124, 126.425)
+scale = Vector2(0.616915, 0.616915)
+texture = ExtResource("1_gfl6u")
