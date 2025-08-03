@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=12 format=3 uid="uid://cmoxs3vcarn7g"]
 
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
