@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bal1ox5f2nxlk"]
+[gd_scene load_steps=25 format=3 uid="uid://bal1ox5f2nxlk"]
 
 [ext_resource type="Script" uid="uid://xxhiupwih85k" path="res://Scripts/FinalCutScene/final_cut_scene.gd" id="1_3g3ys"]
 [ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_48wjr"]
@@ -13,22 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://dmt5uyfhvlb1i" path="res://Assets/End/lulu_side.png" id="7_tsjip"]
 [ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="9_d3xal"]
-[ext_resource type="Script" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="13_savin"]
-[ext_resource type="Shader" uid="uid://c3g1y0j0ov1yi" path="res://Assets/Shaders/Noise.gdshader" id="15_tl7l5"]
+[ext_resource type="Script" uid="uid://cllgxxbdrv5w7" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="13_savin"]
+[ext_resource type="PackedScene" uid="uid://cwoj6ikvjxrd" path="res://Scene/Menus/Credits.tscn" id="14_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://c755q2s62ie44" path="res://Assets/End/CulAllume.webp" id="16_d3xal"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3g3ys"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_anlwx"]
-shader = ExtResource("15_tl7l5")
-shader_parameter/sparkle_intensity = 1.4
-shader_parameter/sparkle_speed = 1.2
-shader_parameter/sparkle_scale = 7.683
-shader_parameter/threshold = 0.41
-shader_parameter/modulate_color = Color(1, 1, 1, 1)
-shader_parameter/noise_octaves = 1.0
-shader_parameter/flicker_frequency = 1.647
-shader_parameter/invert_mask = false
 
 [sub_resource type="Animation" id="Animation_tsjip"]
 resource_name = "Credits"
@@ -55,7 +44,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 3.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(573.052, 583), Vector2(573.052, 992.702)]
+"values": [Vector2(573.052, 583), Vector2(573.052, 523)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -120,7 +109,7 @@ tracks/6/keys = {
 tracks/7/type = "bezier"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("ParallaxBackground/ThanksForPlaying:position:x")
+tracks/7/path = NodePath("ThanksForPlaying:position:x")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -131,7 +120,7 @@ tracks/7/keys = {
 tracks/8/type = "bezier"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("ParallaxBackground/ThanksForPlaying:position:y")
+tracks/8/path = NodePath("ThanksForPlaying:position:y")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -143,13 +132,25 @@ tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/path = NodePath("ParallaxBackground/ParallaxLayer3/Nuages:modulate")
-tracks/9/interp = 1
+tracks/9/interp = 2
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(3.76667, 6.76667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0901961)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Hill/LuluDos:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 3.91),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(106.483, -306.186), Vector2(106.483, 798.54)]
 }
 
 [sub_resource type="Animation" id="Animation_ptmbj"]
@@ -304,7 +305,7 @@ tracks/11/keys = {
 tracks/12/type = "bezier"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("ParallaxBackground/ThanksForPlaying:position:x")
+tracks/12/path = NodePath("ThanksForPlaying:position:x")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -315,7 +316,7 @@ tracks/12/keys = {
 tracks/13/type = "bezier"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("ParallaxBackground/ThanksForPlaying:position:y")
+tracks/13/path = NodePath("ThanksForPlaying:position:y")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -334,6 +335,18 @@ tracks/14/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0.733333)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Hill/LuluDos:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(106.483, -306.186)]
 }
 
 [sub_resource type="Animation" id="Animation_48wjr"]
@@ -504,11 +517,6 @@ rotation = 0.84823
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("8_tl7l5")
 
-[node name="ThanksForPlaying" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(565, -349)
-scale = Vector2(0.543359, 0.543359)
-texture = ExtResource("5_ptmbj")
-
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1578.04, 0)
@@ -557,6 +565,37 @@ position = Vector2(106.483, -306.186)
 scale = Vector2(1.00141, 1.00141)
 texture = ExtResource("7_tsjip")
 
+[node name="ThanksForPlaying" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(565, -349)
+scale = Vector2(0.543359, 0.543359)
+texture = ExtResource("5_ptmbj")
+
+[node name="Credits" parent="ThanksForPlaying" instance=ExtResource("14_tl7l5")]
+offset_left = -916.521
+offset_top = -489.813
+offset_right = -916.521
+offset_bottom = -489.813
+scale = Vector2(1.6551, 1.6551)
+
+[node name="ParallaxBackground2" parent="ThanksForPlaying/Credits" index="1"]
+visible = false
+
+[node name="Fond3" parent="ThanksForPlaying/Credits/Node2D2" index="0"]
+visible = false
+
+[node name="Fond2" parent="ThanksForPlaying/Credits/Node2D2" index="1"]
+visible = false
+
+[node name="Fond1" parent="ThanksForPlaying/Credits/Node2D2" index="2"]
+visible = false
+
+[node name="Reflets" parent="ThanksForPlaying/Credits/Node2D2" index="3"]
+visible = false
+
+[node name="Coline" parent="ThanksForPlaying/Credits/Node2D2" index="4"]
+visible = false
+
 [node name="FifiDos" type="Sprite2D" parent="."]
 position = Vector2(479, 464)
 rotation = 0.261799
@@ -565,7 +604,6 @@ texture = ExtResource("2_xr8ot")
 
 [node name="CulAllume" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.0588235)
-material = SubResource("ShaderMaterial_anlwx")
 position = Vector2(583, 385)
 scale = Vector2(0.896408, 0.896408)
 texture = ExtResource("16_d3xal")
@@ -578,3 +616,5 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_uppf4")
 scale = Vector2(28.8097, 16.3344)
+
+[editable path="ThanksForPlaying/Credits"]

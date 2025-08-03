@@ -74,7 +74,7 @@ func _on_keyboard_action_completed():
 func _on_badge_out_action_completed():
 	await get_tree().create_timer(0.5).timeout
 	GameStateManager.current_step_day = GameStateManager.TRAM_NIGHT
-	get_tree().change_scene_to_file("res://Scene/Tram/TramScene.tscn")
+	get_tree().change_scene_to_file("res://Scene/Tram/tramScene.tscn")
 
 func _on_keyboard_pressed():
 	if is_instance_valid(screen_popup):
