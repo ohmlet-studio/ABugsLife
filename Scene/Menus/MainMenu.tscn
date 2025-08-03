@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bgf7wgrv5ym7j" path="res://Scripts/Menus/main_menu.gd" id="1_d4yab"]
 [ext_resource type="Texture2D" uid="uid://dhne28h6pf04o" path="res://Assets/Menu/FondMenu.webp" id="2_d4yab"]
-[ext_resource type="SystemFont" uid="uid://biaqrm2p8wpgf" path="res://Assets/Menu/MetaAccantis.tres" id="2_eiy7p"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="5_v3p41"]
+[ext_resource type="FontFile" uid="uid://cnvordvwxiv71" path="res://Assets/Fonts/OliveVTypewriter-RemingPort.otf" id="5_w8po5"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="6_6nqpc"]
 [ext_resource type="Shader" uid="uid://c7vsl6mlj1vsd" path="res://Assets/blur.gdshader" id="7_6nqpc"]
 
@@ -314,7 +314,7 @@ theme_override_constants/separation = 32
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.890196, 1, 0.819608, 1)
-theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_fonts/font = ExtResource("5_w8po5")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = ExtResource("4_qoqlk")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
@@ -325,7 +325,7 @@ text = "Start Game"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.890196, 1, 0.819608, 1)
-theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_fonts/font = ExtResource("5_w8po5")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = ExtResource("4_qoqlk")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
@@ -343,7 +343,7 @@ offset_right = 331.0
 offset_bottom = 170.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.890196, 1, 0.819608, 1)
-theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_fonts/font = ExtResource("5_w8po5")
 theme_override_font_sizes/font_size = 72
 text = "A Bug's Day"
 horizontal_alignment = 1
