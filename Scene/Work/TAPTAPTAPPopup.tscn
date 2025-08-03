@@ -153,6 +153,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PanelContainer2" type="PanelContainer" parent="Popup"]
+layout_mode = 0
 offset_left = 19.0
 offset_top = -9.0
 offset_right = 268.0

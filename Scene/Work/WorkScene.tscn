@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=18 format=3 uid="uid://cmoxs3vcarn7g"]
 
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
@@ -12,10 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://bp61ut1o1hpyj" path="res://Assets/Work/chenille.png" id="10_hdcrf"]
 [ext_resource type="Texture2D" uid="uid://bu6uvrvt0h785" path="res://Assets/Work/worm.png" id="11_1ejuh"]
 [ext_resource type="Script" uid="uid://bhnw7tsicadqf" path="res://Scene/Work/ending.gd" id="12_1ejuh"]
-[ext_resource type="PackedScene" uid="uid://ba4bxnlhdl212" path="res://Scene/Work/HUHPopup.tscn" id="12_hdcrf"]
-[ext_resource type="PackedScene" uid="uid://cr8divv6dcj1v" path="res://Scene/Work/TAPTAPTAPPopup.tscn" id="13_1ejuh"]
-[ext_resource type="PackedScene" uid="uid://cbpud6lh8gcpw" path="res://Scene/Work/BadgePopup.tscn" id="13_hdcrf"]
-[ext_resource type="PackedScene" uid="uid://bcxuostqlh3xg" path="res://Scene/Work/DOORPopup.tscn" id="14_qihm4"]
+[ext_resource type="PackedScene" uid="uid://bmvu80de0wt2g" path="res://Scene/Work/HUHPopup.tscn" id="12_hdcrf"]
+[ext_resource type="PackedScene" uid="uid://c486m17x06xp" path="res://Scene/Work/TAPTAPTAPPopup.tscn" id="13_1ejuh"]
+[ext_resource type="PackedScene" uid="uid://bckvp8pwxbu7x" path="res://Scene/Work/BadgePopup.tscn" id="13_hdcrf"]
+[ext_resource type="PackedScene" uid="uid://dvoktehk15yye" path="res://Scene/Work/DOORPopup.tscn" id="14_qihm4"]
+[ext_resource type="PackedScene" uid="uid://lsovv6fjqklv" path="res://Scene/PauseMenu.tscn" id="17_qihm4"]
 
 [node name="WorkScene" type="Node2D"]
 script = ExtResource("1_t0oj5")
@@ -100,3 +101,8 @@ scale = Vector2(1.25125, 1.25125)
 [node name="OfficeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ud7g6")
 volume_db = -80.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("17_qihm4")]
+visible = false

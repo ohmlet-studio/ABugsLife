@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1w0ojybs5dps"]
+[gd_scene load_steps=13 format=3 uid="uid://b1w0ojybs5dps"]
 
 [ext_resource type="Texture2D" uid="uid://c3ioe3fi1g54a" path="res://Assets/Work/work.png" id="1_pxxr0"]
 [ext_resource type="Script" uid="uid://d4hjxit3mjw31" path="res://Scene/Ending/ending_scene.gd" id="1_se0fc"]
@@ -7,10 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://dcsaihk70waaa" path="res://Assets/Work/hat.png" id="4_hu08y"]
 [ext_resource type="Texture2D" uid="uid://bp61ut1o1hpyj" path="res://Assets/Work/chenille.png" id="5_4looj"]
 [ext_resource type="Texture2D" uid="uid://bu6uvrvt0h785" path="res://Assets/Work/worm.png" id="6_1y5a3"]
-[ext_resource type="PackedScene" uid="uid://bcxuostqlh3xg" path="res://Scene/Work/DOORPopup.tscn" id="8_1y5a3"]
+[ext_resource type="PackedScene" uid="uid://dvoktehk15yye" path="res://Scene/Work/DOORPopup.tscn" id="8_1y5a3"]
 [ext_resource type="AudioStream" uid="uid://cqpqmtekvu3ms" path="res://Assets/Audio/SFX/Office/Office 1.mp3" id="8_q1j2l"]
-[ext_resource type="PackedScene" uid="uid://ba4bxnlhdl212" path="res://Scene/Work/HUHPopup.tscn" id="9_3boqo"]
-[ext_resource type="PackedScene" uid="uid://cr8divv6dcj1v" path="res://Scene/Work/TAPTAPTAPPopup.tscn" id="10_spose"]
+[ext_resource type="PackedScene" uid="uid://bmvu80de0wt2g" path="res://Scene/Work/HUHPopup.tscn" id="9_3boqo"]
+[ext_resource type="PackedScene" uid="uid://c486m17x06xp" path="res://Scene/Work/TAPTAPTAPPopup.tscn" id="10_spose"]
+[ext_resource type="PackedScene" uid="uid://lsovv6fjqklv" path="res://Scene/PauseMenu.tscn" id="12_3boqo"]
 
 [node name="EndingScene" type="Node2D"]
 script = ExtResource("1_se0fc")
@@ -61,3 +62,8 @@ stream = ExtResource("8_q1j2l")
 volume_db = -7.495
 mix_target = 2
 parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("12_3boqo")]
+visible = false
