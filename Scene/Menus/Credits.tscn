@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://d3k3rwgrainif" path="res://Scripts/Menus/credits.gd" id="1_shr20"]
 [ext_resource type="Texture2D" uid="uid://da8sb3wqihqcq" path="res://Assets/Menu/Ciel.webp" id="2_osg4f"]
 [ext_resource type="Texture2D" uid="uid://bmvbvaotxo8sg" path="res://Assets/Menu/Sun.webp" id="3_2s3ch"]
-[ext_resource type="Texture2D" uid="uid://cn7jn2enpn4vs" path="res://Assets/Menu/rock_bottom.png" id="3_4b147"]
 [ext_resource type="FontFile" uid="uid://rhjyd1w7qf47" path="res://Assets/Fonts/punknova-regular.otf" id="3_r7f7t"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_ukvvl"]
 [ext_resource type="FontFile" uid="uid://dg6ev3blbv6tm" path="res://Assets/Fonts/punknova-slanted.otf" id="5_etu7k"]
@@ -13,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cepdfot70or3d" path="res://Assets/End/fond1.png" id="8_01wgj"]
 [ext_resource type="Texture2D" uid="uid://d2bx4ierpdbdn" path="res://Assets/Menu/Reflets.webp" id="9_njeq4"]
 [ext_resource type="Texture2D" uid="uid://bq8gk4rjfst2v" path="res://Assets/Menu/Coline.webp" id="10_wykyc"]
+[ext_resource type="Texture2D" uid="uid://dede6igsau5nt" path="res://Assets/Rock_Bottom_Production.png" id="11_osg4f"]
 
 [sub_resource type="Animation" id="Animation_qoqlk"]
 length = 0.001
@@ -319,6 +319,28 @@ position = Vector2(642.911, 185.53)
 scale = Vector2(0.616506, 0.616506)
 texture = ExtResource("6_u8jv0")
 
+[node name="Credits" type="Label" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.572483
+anchor_top = -0.0524691
+anchor_right = 0.550781
+anchor_bottom = -0.0231481
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.98, 0.992667, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 32
+text = "Art: Kima/Nispouli
+Music: m_defgecd	
+Code: Retronyme/Emile/m_defgecd"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Node2D2" type="Node2D" parent="."]
 position = Vector2(577, 323)
 scale = Vector2(0.810466, 0.810466)
@@ -350,14 +372,140 @@ texture = ExtResource("10_wykyc")
 [node name="Cailloux" type="Sprite2D" parent="Node2D2"]
 position = Vector2(4.93579, 118.45)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_4b147")
+texture = ExtResource("11_osg4f")
+
+[node name="Kima" type="Label" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.446615
+anchor_top = 0.450617
+anchor_right = 0.160156
+anchor_bottom = 0.353395
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 20
+text = "Kima"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Kima2" type="Label" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49783
+anchor_top = 0.447531
+anchor_right = 0.700955
+anchor_bottom = 0.447531
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 20
+text = "Kima          Retronyme        Nispouli           Emile            m_defgecd         "
+metadata/_edit_use_anchors_ = true
+
+[node name="Retronyme" type="Label" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.569878
+anchor_top = 0.452161
+anchor_right = 0.284288
+anchor_bottom = 0.354938
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 20
+text = "Retronyme"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Nispouli" type="Label" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.693142
+anchor_top = 0.452161
+anchor_right = 0.406684
+anchor_bottom = 0.33642
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 20
+text = "Nispouli"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Emile" type="Label" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.789496
+anchor_top = 0.452161
+anchor_right = 0.55599
+anchor_bottom = 0.365741
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 20
+text = "Emile
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="m_defgecd" type="Label" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.954427
+anchor_top = 0.455247
+anchor_right = 0.654948
+anchor_bottom = 0.368827
+offset_left = -308.5
+offset_top = 214.0
+offset_right = 166.5
+offset_bottom = 313.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 20
+text = "m_defgecd
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 857.0
-offset_top = 530.0
-offset_right = 1075.0
-offset_bottom = 594.0
+offset_left = 871.0
+offset_top = 557.0
+offset_right = 1089.0
+offset_bottom = 621.0
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2

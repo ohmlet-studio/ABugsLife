@@ -82,11 +82,11 @@ func _on_card_popup_finished():
 	interior_animation_player.play("TramMovement")
 	await get_tree().create_timer(2).timeout
 
-	if GameStateManager.current_day >= 1 or GameStateManager.current_step_day == GameStateManager.TRAM_NIGHT:
-		_play_talking_anim()
-	else:
+	if GameStateManager.current_day <= 1 or GameStateManager.current_day == 3 or GameStateManager.current_step_day != GameStateManager.TRAM_MORNING:
 		phone_popup.reveal()
 		notif.play()
+	else:
+		_play_talking_anim()
 
 func _on_phone_popup_finished():
 	if GameStateManager.current_day < 1:

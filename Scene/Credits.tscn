@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjn2ycrdihvea"]
+[gd_scene load_steps=6 format=3 uid="uid://dejfjlyfabnrw"]
 
 [ext_resource type="Texture2D" uid="uid://bcrc555pkq7m7" path="res://Assets/Thanks for playing.jpg" id="1_s2xlg"]
-[ext_resource type="SystemFont" uid="uid://biaqrm2p8wpgf" path="res://Assets/Menu/MetaAccantis.tres" id="3_rkknb"]
+[ext_resource type="FontFile" uid="uid://rhjyd1w7qf47" path="res://Assets/Fonts/punknova-regular.otf" id="2_fn3ya"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_ukvvl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkknb"]
@@ -55,7 +55,7 @@ offset_bottom = 594.0
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.89, 1, 0.81, 1)
-theme_override_fonts/font = ExtResource("3_rkknb")
+theme_override_fonts/font = ExtResource("2_fn3ya")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = ExtResource("4_ukvvl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rkknb")

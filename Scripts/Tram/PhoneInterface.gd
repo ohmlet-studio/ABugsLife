@@ -12,6 +12,9 @@ var swipe_data: Dictionary = {}  # Store swipe data for each notification
 var swipe_threshold: float = 50.0
 var active_tweens: Dictionary = {}  # Track tweens for each notification
 
+func _init():
+	GameStateManager.current_day = 3
+
 func _ready():
 	var children = get_children()
 	match GameStateManager.current_day:
@@ -19,10 +22,17 @@ func _ready():
 			notifications = children.slice(0, 2)
 			children[2].hide()
 			children[3].hide()
+			children[4].hide()
 		1:
 			notifications = children.slice(2, 4)
 			children[0].hide()
 			children[1].hide()
+			children[4].hide()
+		3:
+			notifications = [children[4]]
+			for child in children.slice(0, 4):
+				child.hide()
+
 
 
 	arrange_notifications()

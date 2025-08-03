@@ -74,12 +74,13 @@ func _on_keyboard_action_completed():
 func _on_badge_out_action_completed():
 	await get_tree().create_timer(0.5).timeout
 	GameStateManager.current_step_day = GameStateManager.TRAM_NIGHT
-	get_tree().change_scene_to_file("res://Scene/Tram/TramScene.tscn")
+	get_tree().change_scene_to_file("res://Scene/Tram/tramScene.tscn")
 
 func _on_keyboard_pressed():
 	if is_instance_valid(screen_popup):
 		word_count = screen_popup.add_random_word()
 		if GameStateManager.current_day == 3 and word_count == 7:
+			Musique.stop_music()
 		#if word_count == 7:
 			keyboard_popup.hide()
 			screen_popup.hide()

@@ -1,34 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://de5g3p5nfqdl"]
+[gd_scene load_steps=7 format=3 uid="uid://s3nlynin48v7"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_x1b0o"]
-[ext_resource type="Texture2D" uid="uid://8tl3jetcpr3a" path="res://Assets/Home/fifi_hat.webp" id="3_bwfg5"]
-[ext_resource type="Texture2D" uid="uid://bevoujan7gov8" path="res://Assets/Home/fifi_legs.webp" id="4_0jxw3"]
+[ext_resource type="Script" uid="uid://dn2dnqq1rddb6" path="res://Scene/Home/put_hat_popup.gd" id="2_nlsxv"]
+[ext_resource type="Texture2D" uid="uid://wmrgkd16cfx2" path="res://Assets/Home/fifi_hat.png" id="2_x1b0o"]
+[ext_resource type="Texture2D" uid="uid://ck5ys17tq244u" path="res://Assets/Home/fifi_legs.png" id="4_nlsxv"]
+[ext_resource type="Texture2D" uid="uid://cay06wu3e8xse" path="res://Assets/Home/hat.png" id="5_bwfg5"]
 [ext_resource type="AudioStream" uid="uid://g6deoiosewwm" path="res://Assets/Audio/SFX/Metro/beep beep.mp3" id="5_r8e3b"]
 
 [node name="FifiBday" instance=ExtResource("1_x1b0o")]
-script = null
-
-[node name="Popup" parent="." index="1"]
-offset_top = 14.0
-offset_bottom = 263.0
+script = ExtResource("2_nlsxv")
+going_in = false
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
-[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="0"]
-position = Vector2(120, 50)
+[node name="Hat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
+position = Vector2(120, 14)
+scale = Vector2(0.245692, 0.245692)
+texture = ExtResource("5_bwfg5")
 
-[node name="FifiHat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
-position = Vector2(117, 136)
-scale = Vector2(0.346992, 0.346992)
-texture = ExtResource("3_bwfg5")
+[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="1"]
+position = Vector2(120, 132)
 
-[node name="FifiLegs" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
-visible = false
-position = Vector2(106, 228)
-rotation = 0.937303
-scale = Vector2(0.45813, 0.45813)
-texture = ExtResource("4_0jxw3")
+[node name="FifiHat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
+position = Vector2(120, 171)
+scale = Vector2(0.182292, 0.182292)
+texture = ExtResource("2_x1b0o")
 
 [node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="3"]
 stream = ExtResource("5_r8e3b")
 volume_db = -14.99
+
+[node name="Legs" type="Node2D" parent="Popup/PanelContainer/Elements" index="4"]
+position = Vector2(120, 115)
+scale = Vector2(1.08119, 1.08119)
+
+[node name="FifiLegs2" type="Sprite2D" parent="Popup/PanelContainer/Elements/Legs" index="0"]
+position = Vector2(54.5697, 45.384)
+rotation = -0.261799
+scale = Vector2(0.334098, 0.334098)
+texture = ExtResource("4_nlsxv")
+
+[node name="FifiLegs3" type="Sprite2D" parent="Popup/PanelContainer/Elements/Legs" index="1"]
+position = Vector2(-55.4946, 49.384)
+rotation = -2.87979
+scale = Vector2(0.334654, -0.334654)
+texture = ExtResource("4_nlsxv")
