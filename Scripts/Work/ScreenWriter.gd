@@ -17,3 +17,6 @@ func add_random_word():
 	
 	if word_count >= words_needed:
 		self.action_completed.emit()
+		
+	return word_count
+	
