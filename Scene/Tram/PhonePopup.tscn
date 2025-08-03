@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1oq7xevew5jw"]
+[gd_scene load_steps=13 format=3 uid="uid://c1oq7xevew5jw"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_aw7cm"]
 [ext_resource type="Script" uid="uid://cb7ukf042rdrn" path="res://Scripts/Tram/card_swipe_popup.gd" id="2_ccss7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c7wsrwdr7o4vj" path="res://Assets/tram/popups/message3.png" id="6_vq5eu"]
 [ext_resource type="Texture2D" uid="uid://k1t4dor6fy6l" path="res://Assets/tram/popups/message4.png" id="7_b4brb"]
 [ext_resource type="Texture2D" uid="uid://cjhp2yrr66x71" path="res://Assets/tram/popups/message.png" id="8_rsdib"]
+[ext_resource type="Texture2D" uid="uid://cvcpqm66ccch8" path="res://Assets/tram/popups/friendrequest.png" id="9_b4brb"]
 [ext_resource type="Script" uid="uid://bfvhj1mmd1h8c" path="res://Scripts/Tram/move_arm.gd" id="10_vq5eu"]
 
 [sub_resource type="Theme" id="Theme_3slvu"]
@@ -81,6 +82,20 @@ anchor_bottom = 0.76337
 offset_top = 136.0
 offset_bottom = 136.0
 texture = ExtResource("8_rsdib")
+metadata/_edit_use_anchors_ = true
+
+[node name="Notif5" type="TextureRect" parent="Popup/PanelContainer/Popup_PanelContainer_Background4#Elements/Notif" index="4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00917029
+anchor_top = -0.556318
+anchor_right = 0.99664
+anchor_bottom = -0.324266
+offset_top = 345.853
+offset_right = 346.0
+offset_bottom = 484.853
+scale = Vector2(0.508724, 0.508724)
+texture = ExtResource("9_b4brb")
 metadata/_edit_use_anchors_ = true
 
 [node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Popup_PanelContainer_Background4#Elements" index="2"]
