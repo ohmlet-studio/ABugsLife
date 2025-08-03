@@ -73,6 +73,7 @@ scale = Vector2(0.799202, 0.799202)
 
 [node name="BadgePopupIn" parent="Interactions" instance=ExtResource("5_0syg0")]
 position = Vector2(-554.645, 107.892)
+going_in = true
 
 [node name="BadgePopupOut" parent="Interactions" instance=ExtResource("5_0syg0")]
 position = Vector2(-554.645, 107.892)

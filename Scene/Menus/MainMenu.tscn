@@ -1,16 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://fr56kbtu21h7"]
+[gd_scene load_steps=22 format=3 uid="uid://fr56kbtu21h7"]
 
 [ext_resource type="Script" uid="uid://bgf7wgrv5ym7j" path="res://Scripts/Menus/main_menu.gd" id="1_d4yab"]
 [ext_resource type="Texture2D" uid="uid://dhne28h6pf04o" path="res://Assets/Menu/FondMenu.webp" id="2_d4yab"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="5_v3p41"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="6_6nqpc"]
+[ext_resource type="Texture2D" uid="uid://4xgnkhy1w0ud" path="res://Assets/End/fond3.png" id="7_baexa"]
+[ext_resource type="Texture2D" uid="uid://bt5mjrx7hdamm" path="res://Assets/End/fond2.png" id="8_23njb"]
 [ext_resource type="FontFile" uid="uid://dg6ev3blbv6tm" path="res://Assets/Fonts/punknova-slanted.otf" id="8_dphv4"]
 [ext_resource type="Texture2D" uid="uid://da8sb3wqihqcq" path="res://Assets/Menu/Ciel.webp" id="8_ybmvd"]
-[ext_resource type="Texture2D" uid="uid://4xgnkhy1w0ud" path="res://Assets/End/fond3.png" id="9_23njb"]
-[ext_resource type="Texture2D" uid="uid://bt5mjrx7hdamm" path="res://Assets/End/fond2.png" id="10_1txp4"]
+[ext_resource type="Texture2D" uid="uid://cepdfot70or3d" path="res://Assets/End/fond1.png" id="9_1txp4"]
+[ext_resource type="Texture2D" uid="uid://bmvbvaotxo8sg" path="res://Assets/Menu/Sun.webp" id="9_dphv4"]
 [ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="10_eypsp"]
-[ext_resource type="Texture2D" uid="uid://cepdfot70or3d" path="res://Assets/End/fond1.png" id="11_ybmvd"]
 [ext_resource type="Texture2D" uid="uid://d2bx4ierpdbdn" path="res://Assets/Menu/Reflets.webp" id="14_tk18p"]
 [ext_resource type="Texture2D" uid="uid://bq8gk4rjfst2v" path="res://Assets/Menu/Coline.webp" id="15_cufvu"]
 [ext_resource type="FontFile" uid="uid://rhjyd1w7qf47" path="res://Assets/Fonts/punknova-regular.otf" id="15_eypsp"]
@@ -317,7 +318,7 @@ texture = ExtResource("8_ybmvd")
 [node name="Sun" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(408, 352)
 scale = Vector2(0.810466, 0.810466)
-texture = ExtResource("15_cufvu")
+texture = ExtResource("9_dphv4")
 
 [node name="NomJeu" type="Label" parent="ParallaxBackground"]
 clip_contents = true
@@ -353,23 +354,23 @@ position = Vector2(577, 323)
 scale = Vector2(0.810466, 0.810466)
 
 [node name="Fond3" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 188.94)
-scale = Vector2(0.567858, 0.567858)
-texture = ExtResource("9_23njb")
+position = Vector2(16.3954, 92.5394)
+scale = Vector2(0.58636, 0.58636)
+texture = ExtResource("7_baexa")
 
 [node name="Fond2" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 152.94)
-scale = Vector2(0.567858, 0.567858)
-texture = ExtResource("10_1txp4")
+position = Vector2(16.3954, 112.281)
+scale = Vector2(0.58636, 0.58636)
+texture = ExtResource("8_23njb")
 
 [node name="Fond1" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 152.94)
-scale = Vector2(0.567858, 0.567858)
-texture = ExtResource("11_ybmvd")
+position = Vector2(16.3954, 121.736)
+scale = Vector2(0.58636, 0.58636)
+texture = ExtResource("9_1txp4")
 
 [node name="Reflets" type="Sprite2D" parent="Node2D"]
 modulate = Color(1, 1, 1, 0.505882)
-position = Vector2(3.8147e-06, 26)
+position = Vector2(11.1047, 53.0559)
 scale = Vector2(1.0097, 1.0097)
 texture = ExtResource("14_tk18p")
 

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dmt5uyfhvlb1i" path="res://Assets/End/lulu_side.png" id="7_tsjip"]
 [ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="9_d3xal"]
-[ext_resource type="Script" uid="uid://cllgxxbdrv5w7" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="13_savin"]
+[ext_resource type="Script" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="13_savin"]
 [ext_resource type="Shader" uid="uid://c3g1y0j0ov1yi" path="res://Assets/Shaders/Noise.gdshader" id="15_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://c755q2s62ie44" path="res://Assets/End/CulAllume.webp" id="16_d3xal"]
 

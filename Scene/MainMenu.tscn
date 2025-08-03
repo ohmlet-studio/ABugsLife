@@ -286,7 +286,7 @@ _data = {
 &"ZoomInMenu": SubResource("Animation_h7a2f")
 }
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
