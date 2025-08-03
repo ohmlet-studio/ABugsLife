@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1q05v7wf8xs6"
-path="res://.godot/imported/insect.png-ccbb2727ccf9a27395e5c575a48c9e31.ctex"
+path="res://.godot/imported/insect.png-5cebce502ad76627cdc9334feff93fac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/background/insect.png"
-dest_files=["res://.godot/imported/insect.png-ccbb2727ccf9a27395e5c575a48c9e31.ctex"]
+source_file="res://Assets/Tram/characters/background/insect.png"
+dest_files=["res://.godot/imported/insect.png-5cebce502ad76627cdc9334feff93fac.ctex"]
 
 [params]
 

@@ -1,37 +1,37 @@
-[gd_scene load_steps=39 format=3 uid="uid://d3odr0ubllpcm"]
+[gd_scene load_steps=40 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
-[ext_resource type="Texture2D" uid="uid://dffhqcd0ti7p" path="res://Assets/tram/day/day_sky.png" id="3_55tlu"]
-[ext_resource type="Texture2D" uid="uid://vaurujj3dx2e" path="res://Assets/tram/night/night_sky.png" id="4_g7uoi"]
-[ext_resource type="Texture2D" uid="uid://cqbqllrxwck78" path="res://Assets/tram/day/day_clouds.png" id="6_pcc3a"]
-[ext_resource type="Texture2D" uid="uid://d16o5xj4p0awo" path="res://Assets/tram/night/night_clouds.png" id="7_xuh25"]
-[ext_resource type="Texture2D" uid="uid://1p4bg4ce8awr" path="res://Assets/tram/day/day_buildings_back.png" id="8_gq3dt"]
-[ext_resource type="Texture2D" uid="uid://rlo66v4u5hha" path="res://Assets/tram/night/night_buildings_back.png" id="9_p687b"]
-[ext_resource type="Texture2D" uid="uid://c0a7q71ls5d16" path="res://Assets/tram/day/day_buildings_front.png" id="10_ytes1"]
-[ext_resource type="Texture2D" uid="uid://t5sm8seu1qpt" path="res://Assets/tram/night/night_buildings_front.png" id="11_t5ihy"]
-[ext_resource type="Texture2D" uid="uid://hpg4t3hso2wv" path="res://Assets/tram/booper.png" id="12_p687b"]
-[ext_resource type="Texture2D" uid="uid://btnu0xryoxpx8" path="res://Assets/tram/background_tram_inside.png" id="12_sq7lc"]
-[ext_resource type="Texture2D" uid="uid://cl4a7v6r6kny7" path="res://Assets/tram/characters/background/worm.png" id="14_gq3dt"]
-[ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/tram/night/night_tram_lights.png" id="14_xddm6"]
-[ext_resource type="Texture2D" uid="uid://bbmyuo2yqgkhr" path="res://Assets/tram/characters/lulu/idle.png" id="14_xuh25"]
-[ext_resource type="Texture2D" uid="uid://d1q05v7wf8xs6" path="res://Assets/tram/characters/background/insect.png" id="15_sq7lc"]
-[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/tram/characters/fifi/idle.png" id="15_wbbch"]
-[ext_resource type="Texture2D" uid="uid://btwi4evy3lnp" path="res://Assets/tram/characters/fifi/idle_smile.png" id="16_pcc3a"]
-[ext_resource type="Texture2D" uid="uid://cm78b3fk6ul32" path="res://Assets/tram/characters/fifi/idle_birthday_smile.png" id="17_kfqh7"]
+[ext_resource type="Texture2D" uid="uid://dffhqcd0ti7p" path="res://Assets/Tram/day/day_sky.png" id="3_55tlu"]
+[ext_resource type="Texture2D" uid="uid://vaurujj3dx2e" path="res://Assets/Tram/night/night_sky.png" id="4_g7uoi"]
+[ext_resource type="Texture2D" uid="uid://cqbqllrxwck78" path="res://Assets/Tram/day/day_clouds.png" id="6_pcc3a"]
+[ext_resource type="Texture2D" uid="uid://d16o5xj4p0awo" path="res://Assets/Tram/night/night_clouds.png" id="7_xuh25"]
+[ext_resource type="Texture2D" uid="uid://1p4bg4ce8awr" path="res://Assets/Tram/day/day_buildings_back.png" id="8_gq3dt"]
+[ext_resource type="Texture2D" uid="uid://rlo66v4u5hha" path="res://Assets/Tram/night/night_buildings_back.png" id="9_p687b"]
+[ext_resource type="Texture2D" uid="uid://c0a7q71ls5d16" path="res://Assets/Tram/day/day_buildings_front.png" id="10_ytes1"]
+[ext_resource type="Texture2D" uid="uid://t5sm8seu1qpt" path="res://Assets/Tram/night/night_buildings_front.png" id="11_t5ihy"]
+[ext_resource type="Texture2D" uid="uid://hpg4t3hso2wv" path="res://Assets/Tram/booper.png" id="12_p687b"]
+[ext_resource type="Texture2D" uid="uid://btnu0xryoxpx8" path="res://Assets/Tram/background_tram_inside.png" id="12_sq7lc"]
+[ext_resource type="Texture2D" uid="uid://cl4a7v6r6kny7" path="res://Assets/Tram/characters/background/worm.png" id="14_gq3dt"]
+[ext_resource type="Texture2D" uid="uid://cadaviik482md" path="res://Assets/Tram/night/night_tram_lights.png" id="14_xddm6"]
+[ext_resource type="Texture2D" uid="uid://bbmyuo2yqgkhr" path="res://Assets/Tram/characters/lulu/idle.png" id="14_xuh25"]
+[ext_resource type="Texture2D" uid="uid://d1q05v7wf8xs6" path="res://Assets/Tram/characters/background/insect.png" id="15_sq7lc"]
+[ext_resource type="Texture2D" uid="uid://dyjpmqg7s2dwe" path="res://Assets/Tram/characters/fifi/idle.png" id="15_wbbch"]
+[ext_resource type="Texture2D" uid="uid://btwi4evy3lnp" path="res://Assets/Tram/characters/fifi/idle_smile.png" id="16_pcc3a"]
+[ext_resource type="Texture2D" uid="uid://cm78b3fk6ul32" path="res://Assets/Tram/characters/fifi/idle_birthday_smile.png" id="17_kfqh7"]
 [ext_resource type="PackedScene" uid="uid://c1oq7xevew5jw" path="res://Scene/Tram/PhonePopup.tscn" id="17_s6t5j"]
-[ext_resource type="Texture2D" uid="uid://bpcww57vbvc26" path="res://Assets/tram/characters/fifi/talking.png" id="17_xuh25"]
-[ext_resource type="Texture2D" uid="uid://dknaerunqyvbt" path="res://Assets/tram/characters/fifi/talking_blush.png" id="18_gq3dt"]
+[ext_resource type="Texture2D" uid="uid://bpcww57vbvc26" path="res://Assets/Tram/characters/fifi/talking.png" id="17_xuh25"]
+[ext_resource type="Texture2D" uid="uid://dknaerunqyvbt" path="res://Assets/Tram/characters/fifi/talking_blush.png" id="18_gq3dt"]
 [ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="18_rv5di"]
-[ext_resource type="Texture2D" uid="uid://d3cipgy8j0xp1" path="res://Assets/tram/characters/lulu/talking.png" id="19_cqi5x"]
-[ext_resource type="Texture2D" uid="uid://bocr0tib0vh4v" path="res://Assets/tram/characters/fifi/talking_smile.png" id="19_p687b"]
-[ext_resource type="Texture2D" uid="uid://b7nmnn1vfl5um" path="res://Assets/tram/bubbletext.png" id="22_t5ihy"]
+[ext_resource type="Texture2D" uid="uid://d3cipgy8j0xp1" path="res://Assets/Tram/characters/lulu/talking.png" id="19_cqi5x"]
+[ext_resource type="Texture2D" uid="uid://bocr0tib0vh4v" path="res://Assets/Tram/characters/fifi/talking_smile.png" id="19_p687b"]
+[ext_resource type="Texture2D" uid="uid://b7nmnn1vfl5um" path="res://Assets/Tram/bubbletext.png" id="22_t5ihy"]
 [ext_resource type="Texture2D" uid="uid://dcsaihk70waaa" path="res://Assets/Work/hat.png" id="22_xddm6"]
 [ext_resource type="PackedScene" uid="uid://cjyvghvf4eqdi" path="res://Scene/Tram/CardSwipePopup.tscn" id="24_xuh25"]
 [ext_resource type="AudioStream" uid="uid://c1cdjojqrehg7" path="res://Assets/Audio/SFX/Metro/metro.mp3" id="25_wy2ft"]
 [ext_resource type="PackedScene" uid="uid://30hx2dk0m2we" path="res://Scene/Tram/TalkPopup.tscn" id="25_ytes1"]
 [ext_resource type="AudioStream" uid="uid://douhvcu7g0sbd" path="res://Assets/Audio/SFX/Metro/Notif.mp3" id="26_vau31"]
-[ext_resource type="PackedScene" path="res://Scene/Tram/TramBarPopup.tscn" id="30_wbbch"]
+[ext_resource type="PackedScene" uid="uid://bv8udi0rbc6fh" path="res://Scene/Tram/TramBarPopup.tscn" id="30_wbbch"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t5ihy"]
 font_size = 121
@@ -285,6 +285,7 @@ texture = ExtResource("15_sq7lc")
 [node name="Fifi" type="Node2D" parent="TramInterior/Characters"]
 
 [node name="fifi_idle" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
+visible = false
 position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("15_wbbch")
@@ -315,15 +316,15 @@ texture = ExtResource("19_p687b")
 
 [node name="fifi_talk_blush" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
 visible = false
-z_index = 2
-position = Vector2(284, 368)
+position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
-texture = ExtResource("21_xddm6")
+texture = ExtResource("18_gq3dt")
 
-[node name="fifi_talk_smile" type="Sprite2D" parent="TramInterior/Characters/Fifi/fifi_talk_blush"]
-z_index = -1
-position = Vector2(53.0897, 15.6146)
-texture = ExtResource("19_p687b")
+[node name="Sprite2D" type="Sprite2D" parent="TramInterior/Characters/Fifi/fifi_talk_blush"]
+position = Vector2(-118.671, -627.707)
+rotation = -0.261799
+scale = Vector2(3.43189, 3.43189)
+texture = ExtResource("22_xddm6")
 
 [node name="Lulu" type="Node2D" parent="TramInterior/Characters"]
 position = Vector2(733, 126)
@@ -404,7 +405,6 @@ libraries = {
 position = Vector2(3, 0)
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
-visible = false
 position = Vector2(726, 78)
 scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
