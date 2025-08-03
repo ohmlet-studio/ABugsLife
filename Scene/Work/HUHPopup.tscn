@@ -147,14 +147,16 @@ offset_bottom = 54.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Popup"]
 layout_mode = 0
-offset_right = 249.0
-offset_bottom = 249.0
+offset_left = 19.0
+offset_top = -9.0
+offset_right = 268.0
+offset_bottom = 240.0
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
-position = Vector2(124, 126.425)
-scale = Vector2(0.616915, 0.616915)
+position = Vector2(108.5, 123.433)
+scale = Vector2(0.173103, 0.173581)
 texture = ExtResource("1_gfl6u")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
