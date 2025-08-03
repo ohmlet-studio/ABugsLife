@@ -80,6 +80,7 @@ func _on_keyboard_pressed():
 	if is_instance_valid(screen_popup):
 		word_count = screen_popup.add_random_word()
 		if GameStateManager.current_day == 3 and word_count == 7:
+			Musique.stop_music()
 		#if word_count == 7:
 			keyboard_popup.hide()
 			screen_popup.hide()
