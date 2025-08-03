@@ -15,6 +15,8 @@ extends Node2D
 @onready var worm = $Work/Worm
 @onready var darken_rect = $DarkenRect
 
+var word_count = 0
+
 func _ready():
 	fifi.hide()
 	hat.hide()
@@ -79,7 +81,14 @@ func _on_badge_out_action_completed():
 
 func _on_keyboard_pressed():
 	if is_instance_valid(screen_popup):
-		screen_popup.add_random_word()
+		word_count = screen_popup.add_random_word()
+		
+		if GameStateManager.current_day == 3 and word_count == 7:
+			darken_rect.modulate.a = 0.5
+			guirlance.hide()
+			guirlande_off.show()
+			
+		
 
 func _on_screen_action_completed():
 	await get_tree().create_timer(.3).timeout

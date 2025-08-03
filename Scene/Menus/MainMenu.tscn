@@ -316,7 +316,7 @@ scale = Vector2(0.810466, 0.810466)
 texture = ExtResource("8_ybmvd")
 
 [node name="Sun" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(407.613, 352.177)
+position = Vector2(408, 352)
 scale = Vector2(0.810466, 0.810466)
 texture = ExtResource("9_dphv4")
 
