@@ -31,4 +31,4 @@ func fade_in_children():
 	for child in day.get_children():
 		var delay: float = randf_range(.2, .7)
 		tween.tween_property(child, "modulate:a", 1.0, delay)
-		await popup.get_tree().create_timer(3).timeout
+	await popup.get_tree().create_timer(2).timeout
