@@ -581,6 +581,12 @@ scale = Vector2(1.6551, 1.6551)
 [node name="ParallaxBackground2" parent="ThanksForPlaying/Credits" index="1"]
 visible = false
 
+[node name="Credits" parent="ThanksForPlaying/Credits" index="2"]
+anchor_left = 0.244734
+anchor_top = -0.0868049
+anchor_right = 0.244734
+anchor_bottom = -0.0574839
+
 [node name="Fond3" parent="ThanksForPlaying/Credits/Node2D2" index="0"]
 visible = false
 
@@ -595,6 +601,36 @@ visible = false
 
 [node name="Coline" parent="ThanksForPlaying/Credits/Node2D2" index="4"]
 visible = false
+
+[node name="Kima" parent="ThanksForPlaying/Credits" index="4"]
+anchor_left = 0.160156
+anchor_top = 0.353395
+
+[node name="Kima2" parent="ThanksForPlaying/Credits" index="5"]
+anchor_left = 0.225553
+anchor_top = 0.231458
+anchor_right = 0.428678
+anchor_bottom = 0.231458
+
+[node name="Retronyme" parent="ThanksForPlaying/Credits" index="6"]
+anchor_left = 0.284288
+anchor_top = 0.354938
+
+[node name="Nispouli" parent="ThanksForPlaying/Credits" index="7"]
+anchor_left = 0.137448
+anchor_top = 0.127581
+anchor_right = 0.137448
+anchor_bottom = 0.127581
+
+[node name="Emile" parent="ThanksForPlaying/Credits" index="8"]
+anchor_left = 0.286754
+anchor_top = 0.156902
+anchor_right = 0.286754
+anchor_bottom = 0.156902
+
+[node name="m_defgecd" parent="ThanksForPlaying/Credits" index="9"]
+anchor_left = 0.654948
+anchor_top = 0.368827
 
 [node name="FifiDos" type="Sprite2D" parent="."]
 position = Vector2(479, 464)
