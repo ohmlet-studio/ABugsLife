@@ -24,8 +24,7 @@ var dialog_option = {
 	0: "",
 	1: "...",
 	2: "..bz.",
-	3: "bz",
-	4: "Bz!"
+	3: "bz!",
 }
 
 var fifi_sprite
@@ -50,10 +49,11 @@ func _ready():
 	
 	bubble_fifi.get_node("Bubble/Label").text = dialog_option[GameStateManager.current_day]
 	
-	if GameStateManager.current_day < 3:
-		fifi_sprite = fifi.get_node("fifi_idle") 
-	else:
-		fifi_sprite = fifi.get_node("fifi_idle_bday")
+	match GameStateManager.current_day:
+		0: fifi_sprite = fifi.get_node("fifi_idle")
+		1: fifi_sprite = fifi.get_node("fifi_idle")
+		2: fifi_sprite = fifi.get_node("fifi_smile")
+		3: fifi_sprite = fifi.get_node("fifi_idle_bday")
 
 func _process(delta: float) -> void:
 	var base_speed = 1 if is_tram_moving else 0
@@ -83,8 +83,7 @@ func _on_card_popup_finished():
 	await get_tree().create_timer(2).timeout
 
 	if GameStateManager.current_day >= 1 or GameStateManager.current_step_day == GameStateManager.TRAM_NIGHT:
-		change_scene()
-		await get_tree().create_timer(1).timeout # pour rajouter du temps avant arret
+		_play_talking_anim()
 	else:
 		phone_popup.reveal()
 		notif.play()

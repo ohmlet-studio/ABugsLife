@@ -290,17 +290,17 @@ position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("15_wbbch")
 
-[node name="fifi_idle_bday" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
-visible = false
-position = Vector2(303, 372)
-scale = Vector2(0.320213, 0.320213)
-texture = ExtResource("17_kfqh7")
-
 [node name="fifi_smile" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
 visible = false
 position = Vector2(303, 372)
 scale = Vector2(0.320213, 0.320213)
 texture = ExtResource("16_pcc3a")
+
+[node name="fifi_idle_bday" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
+visible = false
+position = Vector2(303, 372)
+scale = Vector2(0.320213, 0.320213)
+texture = ExtResource("17_kfqh7")
 
 [node name="fifi_talk" type="Sprite2D" parent="TramInterior/Characters/Fifi"]
 visible = false
