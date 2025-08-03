@@ -13,9 +13,7 @@ func _ready():
 	CurtainPopup.hide()
 	BadgePopup.hide()
 	
-	BadgePopup.reveal()
-	
-	#await night()
+	await night()
 
 
 func set_calendar_visibility():
@@ -30,7 +28,10 @@ func set_calendar_visibility():
 
 
 func _on_calendar_popup_finished():
-	get_tree().change_scene_to_file("res://Scene/Tram/tramScene.tscn")
+	match GameStateManager.current_day:
+		2: pass # logique vaisselle
+		3: BadgePopup.reveal()
+		_: get_tree().change_scene_to_file("res://Scene/Tram/tramScene.tscn")
 
 
 func morning():
@@ -64,7 +65,6 @@ func _on_curtain_popup_curtains_completed() -> void:
 	if GameStateManager.current_step_day == GameStateManager.ROOM_MORNING:
 		Musique.play_music_level()
 	await AnimPlayer.animation_finished
-
 	if GameStateManager.current_step_day == GameStateManager.ROOM_NIGHT:
 		if GameStateManager.current_day > 0:
 			AnimPlayer.speed_scale = 3.0
