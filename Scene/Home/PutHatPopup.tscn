@@ -14,7 +14,7 @@ going_in = false
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
 [node name="Hat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
-position = Vector2(120, 14)
+position = Vector2(120, 28)
 scale = Vector2(0.245692, 0.245692)
 texture = ExtResource("5_bwfg5")
 
