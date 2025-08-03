@@ -1,6 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba4bxnlhdl212"]
+[gd_scene load_steps=7 format=3 uid="uid://bmvu80de0wt2g"]
 
 [ext_resource type="Texture2D" uid="uid://7afjlqns5ud4" path="res://Assets/End/HUH.png" id="1_gfl6u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbcki"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_3slvu"]
 resource_name = "Appear"
@@ -141,9 +149,8 @@ color = Color(0.301961, 0.301961, 0.301961, 0.552941)
 [node name="Popup" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 14.0
 offset_right = 40.0
-offset_bottom = 54.0
+offset_bottom = 40.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Popup"]
 layout_mode = 0
@@ -151,6 +158,7 @@ offset_left = 19.0
 offset_top = -9.0
 offset_right = 268.0
 offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pbcki")
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer"]
 

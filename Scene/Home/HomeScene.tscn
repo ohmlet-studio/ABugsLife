@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dyeei0gpvfuhs"]
+[gd_scene load_steps=38 format=3 uid="uid://dyeei0gpvfuhs"]
 
 [ext_resource type="Script" uid="uid://c7psoygv16m7c" path="res://Scripts/Home/home_scene.gd" id="1_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
@@ -20,7 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://dslpxinwwtkk5" path="res://Assets/Home/KafkaDodo.webp" id="17_fkqow"]
 [ext_resource type="Script" uid="uid://bnnvicoaydpkf" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
+[ext_resource type="PackedScene" uid="uid://ceanward1yj0a" path="res://Scene/Home/VaisellePopup.tscn" id="21_olto7"]
 [ext_resource type="Texture2D" uid="uid://b3kyrgmwwimnn" path="res://Assets/Home/DeboutDeDos.webp" id="21_vcg4d"]
+[ext_resource type="PackedScene" uid="uid://s3nlynin48v7" path="res://Scene/Home/PutHatPopup.tscn" id="22_olto7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
 
@@ -903,17 +905,24 @@ texture = ExtResource("21_vcg4d")
 [node name="Interactions" type="Node2D" parent="."]
 
 [node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]
-visible = false
-position = Vector2(675, 75)
+position = Vector2(336, 15)
+
+[node name="VaisellePopup" parent="Interactions" instance=ExtResource("21_olto7")]
+position = Vector2(740, 56)
+scale = Vector2(1.57998, 1.57998)
+
+[node name="FifiBday" parent="Interactions" instance=ExtResource("22_olto7")]
+position = Vector2(718, 71)
+scale = Vector2(1.67975, 1.67975)
 
 [node name="CurtainPopup" type="Control" parent="Interactions"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 196.0
-offset_top = 9.0
-offset_right = 485.0
-offset_bottom = 298.0
+offset_left = 203.0
+offset_top = 5.0
+offset_right = 492.0
+offset_bottom = 294.0
 scale = Vector2(1.40387, 1.23846)
 script = ExtResource("19_4nqop")
 
@@ -921,7 +930,7 @@ script = ExtResource("19_4nqop")
 z_index = -1
 layout_mode = 2
 offset_left = -21.3695
-offset_top = 72.6708
+offset_top = 72.6709
 offset_right = 217.63
 offset_bottom = 311.671
 color = Color(0, 0, 0, 0.552941)

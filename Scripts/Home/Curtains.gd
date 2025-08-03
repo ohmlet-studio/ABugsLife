@@ -28,7 +28,6 @@ func end_swipe(end_pos: Vector2):
 		animate_to_current_state()
 
 func animate_to_current_state():
-	print(closed_default)
 	if closed_default:
 		Anim.play("OpenCurtains")
 		await Anim.animation_finished

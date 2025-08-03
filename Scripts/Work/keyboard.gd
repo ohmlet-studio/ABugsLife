@@ -24,3 +24,4 @@ func _on_input_event(viewport, event, shape_idx):
 		is_type_b = !is_type_b
 		
 		popup_parent.keyboard_pressed.emit()
+		

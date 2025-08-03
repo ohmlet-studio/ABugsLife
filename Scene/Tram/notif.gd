@@ -19,17 +19,10 @@ func _ready():
 			notifications = children.slice(0, 2)
 			children[2].hide()
 			children[3].hide()
-			children[4].hide()
 		1:
 			notifications = children.slice(2, 4)
 			children[0].hide()
 			children[1].hide()
-			children[4].hide()
-		3:
-			notifications = [children[4]]
-			for child in children.slice(0, 4):
-				child.hide()
-
 
 
 	arrange_notifications()
