@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0e6gcb41m1g3"]
+[gd_scene load_steps=15 format=3 uid="uid://dh2cf7ayamx7i"]
 
 [ext_resource type="Texture2D" uid="uid://dhne28h6pf04o" path="res://Assets/Menu/FondMenu.webp" id="2_d4yab"]
 [ext_resource type="SystemFont" uid="uid://biaqrm2p8wpgf" path="res://Assets/Menu/MetaAccantis.tres" id="2_eiy7p"]

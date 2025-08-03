@@ -15,3 +15,5 @@ func _ready():
 	TAPTAPTAPPopup.visible = true
 	
 	
+	get_tree().change_scene_to_file("res://Scene/FinalCutScene/FinalCutScene.tscn")
+	
