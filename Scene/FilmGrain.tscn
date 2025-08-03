@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvkqnboynfpaa"]
+
+[ext_resource type="Shader" uid="uid://cmy7y6cm22f1l" path="res://Assets/Shaders/FilmGrain.gdshader" id="1_ufvie"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_savin"]
+shader = ExtResource("1_ufvie")
+shader_parameter/grain_amount = 0.05
+shader_parameter/grain_size = 1.0
+shader_parameter/speed = 1.0
+
+[node name="ColorRect" type="ColorRect"]
+z_index = 1000
+material = SubResource("ShaderMaterial_savin")
+offset_right = 1160.0
+offset_bottom = 657.0
+mouse_filter = 1
