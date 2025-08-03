@@ -5,7 +5,6 @@ extends Node2D
 @onready var CurtainPopup = $Interactions/CurtainPopup
 @onready var CalendarArr: Node2D = $Inside/Room/Calendar
 
-
 func _ready():
 	GameStateManager.current_step_day = GameStateManager.ROOM_NIGHT #debug pour lancer la scene seule
 
