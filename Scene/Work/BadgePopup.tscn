@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bckvp8pwxbu7x"]
+[gd_scene load_steps=10 format=3 uid="uid://cbpud6lh8gcpw"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_sk13b"]
 [ext_resource type="Script" uid="uid://cqessqgvtlauq" path="res://Scene/Work/badge_popup.gd" id="2_eqrxt"]

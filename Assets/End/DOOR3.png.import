@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://p5aun4uo5kl2"
+path="res://.godot/imported/DOOR3.png-a8e37c517425d14376e91557dad0ee6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/End/DOOR3.png"
+dest_files=["res://.godot/imported/DOOR3.png-a8e37c517425d14376e91557dad0ee6d.ctex"]
 
 [params]
 

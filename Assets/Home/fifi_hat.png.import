@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://glwpl4bnc5jp"
+path="res://.godot/imported/fifi_hat.png-05c28045a84913d544b7771d203f09ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/Home/fifi_hat.png"
+dest_files=["res://.godot/imported/fifi_hat.png-05c28045a84913d544b7771d203f09ef.ctex"]
 
 [params]
 

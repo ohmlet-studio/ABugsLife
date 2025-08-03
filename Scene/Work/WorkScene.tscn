@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=17 format=3 uid="uid://cmoxs3vcarn7g"]
 
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
 [ext_resource type="Texture2D" uid="uid://74uojp0qojvm" path="res://Assets/Work/guirlande_off.png" id="4_0syg0"]
 [ext_resource type="PackedScene" uid="uid://y7rcpv3use5d" path="res://Scene/Work/ScreenPopup.tscn" id="4_t0oj5"]
-[ext_resource type="PackedScene" uid="uid://bckvp8pwxbu7x" path="res://Scene/Work/BadgePopup.tscn" id="5_0syg0"]
 [ext_resource type="Texture2D" uid="uid://c3ioe3fi1g54a" path="res://Assets/Work/work.png" id="6_u4nlu"]
 [ext_resource type="AudioStream" uid="uid://cqpqmtekvu3ms" path="res://Assets/Audio/SFX/Office/Office 1.mp3" id="6_ud7g6"]
 [ext_resource type="Texture2D" uid="uid://c2ltrwaxud4ry" path="res://Assets/Work/guirlande.png" id="7_0syg0"]
@@ -12,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dcsaihk70waaa" path="res://Assets/Work/hat.png" id="9_66vlb"]
 [ext_resource type="Texture2D" uid="uid://bp61ut1o1hpyj" path="res://Assets/Work/chenille.png" id="10_hdcrf"]
 [ext_resource type="Texture2D" uid="uid://bu6uvrvt0h785" path="res://Assets/Work/worm.png" id="11_1ejuh"]
+[ext_resource type="Script" uid="uid://bhnw7tsicadqf" path="res://Scene/Work/ending.gd" id="12_1ejuh"]
 [ext_resource type="PackedScene" uid="uid://ba4bxnlhdl212" path="res://Scene/Work/HUHPopup.tscn" id="12_hdcrf"]
 [ext_resource type="PackedScene" uid="uid://cr8divv6dcj1v" path="res://Scene/Work/TAPTAPTAPPopup.tscn" id="13_1ejuh"]
+[ext_resource type="PackedScene" uid="uid://cbpud6lh8gcpw" path="res://Scene/Work/BadgePopup.tscn" id="13_hdcrf"]
 [ext_resource type="PackedScene" uid="uid://bcxuostqlh3xg" path="res://Scene/Work/DOORPopup.tscn" id="14_qihm4"]
 
 [node name="WorkScene" type="Node2D"]
@@ -74,24 +75,27 @@ scale = Vector2(0.799202, 0.799202)
 
 [node name="ScreenPopup" parent="Interactions/Laptop" instance=ExtResource("4_t0oj5")]
 
-[node name="BadgePopupIn" parent="Interactions" instance=ExtResource("5_0syg0")]
-position = Vector2(-554.645, 107.892)
+[node name="BadgePopupIn" parent="Interactions" instance=ExtResource("13_hdcrf")]
+position = Vector2(-483.516, 113.487)
 going_in = true
 
-[node name="BadgePopupOut" parent="Interactions" instance=ExtResource("5_0syg0")]
-position = Vector2(-554.645, 107.892)
+[node name="BadgePopupOut" parent="Interactions" instance=ExtResource("13_hdcrf")]
+position = Vector2(-483.516, 113.487)
 
-[node name="HuhPopup" parent="Interactions" instance=ExtResource("12_hdcrf")]
-visible = false
-position = Vector2(-546.653, 165.435)
+[node name="Ending" type="Node2D" parent="."]
+script = ExtResource("12_1ejuh")
 
-[node name="TaptaptapPopup" parent="Interactions" instance=ExtResource("13_1ejuh")]
-visible = false
-position = Vector2(-351.648, -21.5784)
+[node name="HuhPopup" parent="Ending" instance=ExtResource("12_hdcrf")]
+position = Vector2(64.0004, 243.001)
+scale = Vector2(1.25125, 1.25125)
 
-[node name="DoorPopup" parent="Interactions" instance=ExtResource("14_qihm4")]
-visible = false
-position = Vector2(7.19281, 116.683)
+[node name="TaptaptapPopup" parent="Ending" instance=ExtResource("13_1ejuh")]
+position = Vector2(308, 9.00003)
+scale = Vector2(1.25125, 1.25125)
+
+[node name="DoorPopup" parent="Ending" instance=ExtResource("14_qihm4")]
+position = Vector2(757, 182)
+scale = Vector2(1.25125, 1.25125)
 
 [node name="OfficeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ud7g6")

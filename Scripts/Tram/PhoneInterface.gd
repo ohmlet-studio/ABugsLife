@@ -13,7 +13,18 @@ var swipe_threshold: float = 50.0
 var active_tweens: Dictionary = {}  # Track tweens for each notification
 
 func _ready():
-	notifications = get_children()
+	var children = get_children()
+	match GameStateManager.current_day:
+		0:
+			notifications = children.slice(0, 2)
+			children[2].hide()
+			children[3].hide()
+		1:
+			notifications = children.slice(2, 4)
+			children[0].hide()
+			children[1].hide()
+
+
 	arrange_notifications()
 	
 	# Setup swipe for all notifications

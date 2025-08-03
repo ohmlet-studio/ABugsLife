@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://0qg1pxincwfl"
+path="res://.godot/imported/talking_bday.png-26935fff920f699d62f452a0abd49265.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/tram/characters/fifi/talking_bday.png"
+dest_files=["res://.godot/imported/talking_bday.png-26935fff920f699d62f452a0abd49265.ctex"]
 
 [params]
 

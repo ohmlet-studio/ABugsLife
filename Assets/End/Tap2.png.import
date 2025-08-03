@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cae048nmcbjoi"
-path="res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"
+uid="uid://y0w4hpdhkoqp"
+path="res://.godot/imported/Tap2.png-a3f14794a35310f511774ff831e483f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/lights/light2.png"
-dest_files=["res://.godot/imported/light2.png-e6af8ffd1e0142b4b9690587a03f84e3.ctex"]
+source_file="res://Assets/End/Tap2.png"
+dest_files=["res://.godot/imported/Tap2.png-a3f14794a35310f511774ff831e483f0.ctex"]
 
 [params]
 
