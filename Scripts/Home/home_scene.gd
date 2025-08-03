@@ -78,5 +78,6 @@ func _on_curtain_popup_curtains_completed() -> void:
 		AnimPlayer.play("FenetreToCalendar")
 		await AnimPlayer.animation_finished
 		await get_tree().create_timer(1).timeout
+		GameStateManager.current_step_day = GameStateManager.TRAM_MORNING
 		CalendrierPopup.action_completed.connect(_on_calendar_popup_finished)
 		CalendrierPopup.reveal()

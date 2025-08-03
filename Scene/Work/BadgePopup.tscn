@@ -59,7 +59,7 @@ scale = Vector2(0.300503, 0.300503)
 texture = ExtResource("6_7vyrx")
 
 [node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="5"]
-position = Vector2(120, 142)
+position = Vector2(120, 124)
 
 [node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="6"]
 stream = ExtResource("8_l8kln")
