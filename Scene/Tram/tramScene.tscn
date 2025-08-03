@@ -405,6 +405,7 @@ libraries = {
 position = Vector2(3, 0)
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
+visible = false
 position = Vector2(726, 78)
 scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
