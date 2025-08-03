@@ -14,9 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b8wdvfgnddb1a" path="res://Assets/End/lune .png" id="8_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="9_d3xal"]
 [ext_resource type="Script" uid="uid://cllgxxbdrv5w7" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="13_savin"]
-[ext_resource type="Shader" uid="uid://c3g1y0j0ov1yi" path="res://Scene/FinalCutScene/Noise.gdshader" id="15_tl7l5"]
+[ext_resource type="Shader" uid="uid://c3g1y0j0ov1yi" path="res://Assets/Shaders/Noise.gdshader" id="15_tl7l5"]
 [ext_resource type="Texture2D" uid="uid://c755q2s62ie44" path="res://Assets/End/CulAllume.webp" id="16_d3xal"]
-[ext_resource type="Shader" uid="uid://c7vsl6mlj1vsd" path="res://Assets/blur.gdshader" id="17_d3xal"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3g3ys"]
 
@@ -30,6 +29,131 @@ shader_parameter/modulate_color = Color(1, 1, 1, 1)
 shader_parameter/noise_octaves = 1.0
 shader_parameter/flicker_frequency = 1.647
 shader_parameter/invert_mask = false
+
+[sub_resource type="Animation" id="Animation_tsjip"]
+resource_name = "Credits"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FifiDos:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(479, 464), Vector2(479, 873.702)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hill:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, 583), Vector2(573.052, 992.702)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fond1:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(574, 457), Vector2(574, 866.702)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fond3:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573.052, 410), Vector2(573.052, 819.702)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Light:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(579, 382), Vector2(579, 791.702)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Fond2:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(574, 418), Vector2(574, 827.702)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ParallaxBackground/ParallaxLayer4/Lune:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(111, 34), Vector2(111, 465)]
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ParallaxBackground/ThanksForPlaying:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(565, -0.25, 0, 0.25, 0, 565, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.5, 3.8)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ParallaxBackground/ThanksForPlaying:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-367.5, -0.25, 0, 0.25, 0, 297.5, -0.966667, -32.4999, 0.25, 0),
+"times": PackedFloat32Array(0.233333, 4)
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ParallaxBackground/ParallaxLayer3/Nuages:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.76667, 6.76667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0901961)]
+}
+
+[sub_resource type="Animation" id="Animation_ptmbj"]
+resource_name = "CulQuiSallume"
 
 [sub_resource type="Animation" id="Animation_xr8ot"]
 length = 0.001
@@ -336,131 +460,6 @@ tracks/9/keys = {
 "values": [-0.219911, 0.84823, -0.305433]
 }
 
-[sub_resource type="Animation" id="Animation_tsjip"]
-resource_name = "Credits"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("FifiDos:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(479, 464), Vector2(479, 873.702)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Hill:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(573.052, 583), Vector2(573.052, 992.702)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Fond1:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(574, 457), Vector2(574, 866.702)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Fond3:position")
-tracks/3/interp = 2
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(573.052, 410), Vector2(573.052, 819.702)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Light:position")
-tracks/4/interp = 2
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(579, 382), Vector2(579, 791.702)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Fond2:position")
-tracks/5/interp = 2
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(574, 418), Vector2(574, 827.702)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("ParallaxBackground/ParallaxLayer4/Lune:position")
-tracks/6/interp = 2
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(111, 34), Vector2(111, 465)]
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ParallaxBackground/ThanksForPlaying:position:x")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(565, -0.25, 0, 0.25, 0, 565, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.5, 3.8)
-}
-tracks/8/type = "bezier"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("ParallaxBackground/ThanksForPlaying:position:y")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-367.5, -0.25, 0, 0.25, 0, 297.5, -0.966667, -32.4999, 0.25, 0),
-"times": PackedFloat32Array(0.233333, 4)
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("ParallaxBackground/ParallaxLayer3/Nuages:modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(3.76667, 6.76667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0901961)]
-}
-
-[sub_resource type="Animation" id="Animation_ptmbj"]
-resource_name = "CulQuiSallume"
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6srg"]
 _data = {
 &"Credits": SubResource("Animation_tsjip"),
@@ -469,8 +468,18 @@ _data = {
 &"SceneEnter": SubResource("Animation_48wjr")
 }
 
+[sub_resource type="Shader" id="Shader_tl7l5"]
+code = "shader_type canvas_item;
+
+uniform float amount: hint_range(0.0, 5.0);
+
+void fragment() {
+	COLOR.rgb = textureLod(SCREEN_TEXTURE, SCREEN_UV, amount).rgb;
+}
+"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uppf4"]
-shader = ExtResource("17_d3xal")
+shader = SubResource("Shader_tl7l5")
 
 [node name="FinalCutScene" type="Node2D"]
 z_index = 2000
