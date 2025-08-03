@@ -153,8 +153,8 @@ offset_bottom = 249.0
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
-position = Vector2(124, 126.425)
-scale = Vector2(0.616915, 0.616915)
+position = Vector2(126.75, 110.75)
+scale = Vector2(0.121338, 0.121338)
 texture = ExtResource("1_wis0x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

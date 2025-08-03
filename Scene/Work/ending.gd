@@ -19,3 +19,9 @@ func end():
 	await get_tree().create_timer(2).timeout
 	Door_popup.show()
 	Door_popup.get_node("AnimationPlayer").play("Appear")
+	await get_tree().create_timer(1).timeout
+	Door_popup.get_node("Popup/PanelContainer/Elements/Door1").hide()
+	Door_popup.get_node("Popup/PanelContainer/Elements/Door2").show()
+	await get_tree().create_timer(1).timeout
+	Door_popup.get_node("Popup/PanelContainer/Elements/Door2").hide()
+	Door_popup.get_node("Popup/PanelContainer/Elements/Door3").show()
