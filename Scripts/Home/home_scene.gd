@@ -56,10 +56,13 @@ func open_curtain_popup():
 	CurtainPopup.show()
 	AnimPlayer.play("AppearCurtainPopup")
 	await AnimPlayer.animation_finished
+	
 
 
 func _on_curtain_popup_curtains_completed() -> void:
 	AnimPlayer.play("DisappearCurtainPopup")
+	if GameStateManager.current_step_day == GameStateManager.ROOM_MORNING:
+		Musique.play_music_level()
 	await AnimPlayer.animation_finished
 
 	if GameStateManager.current_step_day == GameStateManager.ROOM_NIGHT:
