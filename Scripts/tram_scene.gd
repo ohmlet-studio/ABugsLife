@@ -82,11 +82,11 @@ func _on_card_popup_finished():
 	interior_animation_player.play("TramMovement")
 	await get_tree().create_timer(2).timeout
 
-	if GameStateManager.current_day <= 1 or GameStateManager.current_day == 3 or GameStateManager.current_step_day != GameStateManager.TRAM_MORNING:
+	if (GameStateManager.current_day <= 1 or GameStateManager.current_day == 3) and GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
 		phone_popup.reveal()
 		notif.play()
 	else:
-		_play_talking_anim()
+		change_scene()
 
 func _on_phone_popup_finished():
 	if GameStateManager.current_day < 1:
@@ -146,8 +146,8 @@ func change_scene():
 	sound_ambiance.stop()
 	
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
-		get_tree().change_scene_to_file("res://Scene/Work/WorkScene.tscn")
 		GameStateManager.current_step_day == GameStateManager.WORK
+		get_tree().change_scene_to_file("res://Scene/Work/WorkScene.tscn")
 	else:
-		get_tree().change_scene_to_file("res://Scene/Home/HomeScene.tscn")
 		GameStateManager.current_step_day == GameStateManager.ROOM_NIGHT
+		get_tree().change_scene_to_file("res://Scene/Home/HomeScene.tscn")

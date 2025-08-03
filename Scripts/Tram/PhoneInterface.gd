@@ -12,9 +12,6 @@ var swipe_data: Dictionary = {}  # Store swipe data for each notification
 var swipe_threshold: float = 50.0
 var active_tweens: Dictionary = {}  # Track tweens for each notification
 
-func _init():
-	GameStateManager.current_day = 3
-
 func _ready():
 	var children = get_children()
 	match GameStateManager.current_day:

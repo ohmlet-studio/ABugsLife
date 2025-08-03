@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 	if is_mouse_in_valid_area(mouse_pos) and mouse_pos.y < max_y:
 		leg.global_position.y = mouse_pos.y
 	
-	print("féféf", is_holding_badge)
 	if is_holding_badge:
 		badge.global_position.y = mouse_pos.y
 		mouse_valid_once = true
