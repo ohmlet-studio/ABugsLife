@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
 [ext_resource type="Texture2D" uid="uid://74uojp0qojvm" path="res://Assets/Work/guirlande_off.png" id="4_0syg0"]
 [ext_resource type="PackedScene" uid="uid://y7rcpv3use5d" path="res://Scene/Work/ScreenPopup.tscn" id="4_t0oj5"]
-[ext_resource type="PackedScene" uid="uid://bckvp8pwxbu7x" path="res://Scene/Work/BadgePopup.tscn" id="5_0syg0"]
+[ext_resource type="PackedScene" path="res://Scene/Work/BadgePopup.tscn" id="5_0syg0"]
 [ext_resource type="Texture2D" uid="uid://c3ioe3fi1g54a" path="res://Assets/Work/work.png" id="6_u4nlu"]
 [ext_resource type="AudioStream" uid="uid://cqpqmtekvu3ms" path="res://Assets/Audio/SFX/Office/Office 1.mp3" id="6_ud7g6"]
 [ext_resource type="Texture2D" uid="uid://c2ltrwaxud4ry" path="res://Assets/Work/guirlande.png" id="7_0syg0"]

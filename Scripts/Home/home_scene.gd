@@ -5,9 +5,9 @@ extends Node2D
 @onready var CurtainPopup = $Interactions/CurtainPopup
 @onready var CalendarArr: Node2D = $Inside/Room/Calendar
 
+
 func _ready():
 	GameStateManager.current_step_day = GameStateManager.ROOM_NIGHT #debug pour lancer la scene seule
-
 	set_calendar_visibility()
 	CalendrierPopup.hide()
 	CurtainPopup.hide()
@@ -34,6 +34,8 @@ func morning():
 	await AnimPlayer.animation_finished
 	AnimPlayer.play("AuReveil")
 	await AnimPlayer.animation_finished
+	if GameStateManager.current_day > 0:
+		AnimPlayer.speed_scale = 1.0
 	open_curtain_popup()
 
 
@@ -57,6 +59,8 @@ func _on_curtain_popup_curtains_completed() -> void:
 	await AnimPlayer.animation_finished
 
 	if GameStateManager.current_step_day == GameStateManager.ROOM_NIGHT:
+		if GameStateManager.current_day > 0:
+			AnimPlayer.speed_scale = 3.0
 		AnimPlayer.play("RoomDayToNight")
 		await AnimPlayer.animation_finished
 		CurtainPopup.hide()

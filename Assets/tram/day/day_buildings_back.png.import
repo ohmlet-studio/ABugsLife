@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1p4bg4ce8awr"
-path="res://.godot/imported/day_buildings_back.png-ad1b1659047b886ed2ba7b18362138c8.ctex"
+path="res://.godot/imported/day_buildings_back.png-572fc5680294391d32c80f91eff1d0a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/day/day_buildings_back.png"
-dest_files=["res://.godot/imported/day_buildings_back.png-ad1b1659047b886ed2ba7b18362138c8.ctex"]
+source_file="res://Assets/tram/day/day_buildings_back.png"
+dest_files=["res://.godot/imported/day_buildings_back.png-572fc5680294391d32c80f91eff1d0a9.ctex"]
 
 [params]
 

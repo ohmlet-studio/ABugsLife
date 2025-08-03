@@ -9,6 +9,7 @@ extends Interaction
 var is_pressed = false
 var press_timer: Timer
 
+
 func _ready():
 	light_on.hide()
 	
