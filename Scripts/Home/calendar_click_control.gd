@@ -23,7 +23,6 @@ func _on_gui_input(event: InputEvent) -> void:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			fade_in_children()
 			sound_player.play()
-			await get_tree().create_timer(3).timeout
 			popup.action_completed.emit()
 
 

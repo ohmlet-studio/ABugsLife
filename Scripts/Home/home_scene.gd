@@ -12,7 +12,6 @@ func _ready():
 	set_calendar_visibility()
 	CalendrierPopup.hide()
 	CurtainPopup.hide()
-	await get_tree().create_timer(1).timeout
 	await night()
 
 
@@ -28,14 +27,12 @@ func set_calendar_visibility():
 
 
 func _on_calendar_popup_finished():
-	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scene/Tram/tramScene.tscn")
 
 
 func morning():
 	AnimPlayer.play("NightToDay")
 	await AnimPlayer.animation_finished
-	await get_tree().create_timer(2).timeout
 	AnimPlayer.play("AuReveil")
 	await AnimPlayer.animation_finished
 	open_curtain_popup()
@@ -61,14 +58,11 @@ func _on_curtain_popup_curtains_completed() -> void:
 	await AnimPlayer.animation_finished
 
 	if GameStateManager.current_step_day == GameStateManager.ROOM_NIGHT:
-		await get_tree().create_timer(2).timeout
 		AnimPlayer.play("RoomDayToNight")
 		await AnimPlayer.animation_finished
 		CurtainPopup.hide()
 		AnimPlayer.play("AuDodo")
 		await AnimPlayer.animation_finished
-		await get_tree().create_timer(2).timeout
-
 		GameStateManager.current_day += 1
 		GameStateManager.current_step_day = GameStateManager.ROOM_MORNING
 		await morning()
