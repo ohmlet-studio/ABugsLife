@@ -2,16 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_3wigi"]
 [ext_resource type="Script" uid="uid://b4d4q52u7gl6j" path="res://Scene/Home/vaiselle_popup.gd" id="2_u7n8w"]
-[ext_resource type="Texture2D" uid="uid://b8w0bdnpg3yuh" path="res://Assets/Home/vaiselle/IMG_0833.png" id="3_u7n8w"]
+[ext_resource type="Texture2D" uid="uid://b06xbdprqcju3" path="res://Assets/Home/vaiselle/IMG_0833.png" id="3_u7n8w"]
 [ext_resource type="Script" uid="uid://bfvhj1mmd1h8c" path="res://Scripts/Tram/move_arm.gd" id="5_0qi5r"]
-[ext_resource type="Texture2D" uid="uid://dute6jeis5jsk" path="res://Assets/Home/vaiselle/IMG_0847.png" id="6_ecxgh"]
-[ext_resource type="Texture2D" uid="uid://t8n0w8wcv1ae" path="res://Assets/Home/vaiselle/IMG_0843.png" id="7_g5xge"]
-[ext_resource type="Texture2D" uid="uid://dipnya17qbqib" path="res://Assets/Home/vaiselle/IMG_0841.png" id="8_at12p"]
-[ext_resource type="Texture2D" uid="uid://mjml5m2q8onv" path="res://Assets/Home/vaiselle/IMG_0842.png" id="9_v7dfa"]
+[ext_resource type="Texture2D" uid="uid://p4oax8odfti2" path="res://Assets/Home/vaiselle/IMG_0847.png" id="6_ecxgh"]
+[ext_resource type="Texture2D" uid="uid://6n0xft0opkbg" path="res://Assets/Home/vaiselle/IMG_0843.png" id="7_g5xge"]
+[ext_resource type="Texture2D" uid="uid://bjen3jussurjj" path="res://Assets/Home/vaiselle/IMG_0841.png" id="8_at12p"]
+[ext_resource type="Texture2D" uid="uid://b84u4jdbvgh6y" path="res://Assets/Home/vaiselle/IMG_0842.png" id="9_v7dfa"]
 [ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="11_1d3cv"]
 
 [node name="VaisellePopup" instance=ExtResource("1_3wigi")]
 script = ExtResource("2_u7n8w")
+
+[node name="Popup" parent="." index="1"]
+offset_top = 0.0
+offset_bottom = 249.0
 
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background" index="0"]
 position = Vector2(-10, -10)

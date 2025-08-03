@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://c36kikkfiew7i" path="res://Assets/End/DOOR.png" id="1_3vjj8"]
 [ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_34t8a"]
-[ext_resource type="Texture2D" uid="uid://cl6kvu2ybcpfg" path="res://Assets/End/DOOR2.png" id="2_vj0u4"]
-[ext_resource type="Texture2D" uid="uid://p5aun4uo5kl2" path="res://Assets/End/DOOR3.png" id="3_34t8a"]
+[ext_resource type="Texture2D" uid="uid://2cqwx8k0kujd" path="res://Assets/End/DOOR2.png" id="2_vj0u4"]
+[ext_resource type="Texture2D" uid="uid://dwqrljkb18d3n" path="res://Assets/End/DOOR3.png" id="3_34t8a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj0u4"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dyeei0gpvfuhs"]
+[gd_scene load_steps=39 format=3 uid="uid://dyeei0gpvfuhs"]
 
 [ext_resource type="Script" uid="uid://c7psoygv16m7c" path="res://Scripts/Home/home_scene.gd" id="1_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
@@ -22,7 +22,8 @@
 [ext_resource type="Script" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
 [ext_resource type="PackedScene" uid="uid://ceanward1yj0a" path="res://Scene/Home/VaisellePopup.tscn" id="21_olto7"]
 [ext_resource type="Texture2D" uid="uid://b3kyrgmwwimnn" path="res://Assets/Home/DeboutDeDos.webp" id="21_vcg4d"]
-[ext_resource type="PackedScene" uid="uid://s3nlynin48v7" path="res://Scene/Home/PutHatPopup.tscn" id="22_olto7"]
+[ext_resource type="PackedScene" uid="uid://de5g3p5nfqdl" path="res://Scene/Home/PutHatPopup.tscn" id="22_olto7"]
+[ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="24_02ot3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
 
@@ -944,6 +945,9 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_4nqop")
 
 [node name="FifiBday" parent="Interactions" instance=ExtResource("22_olto7")]
+position = Vector2(334, 63)
+scale = Vector2(1.67975, 1.67975)
+script = ExtResource("24_02ot3")
 
 [node name="RoomAnimation" type="AnimationPlayer" parent="."]
 libraries = {
