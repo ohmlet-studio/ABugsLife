@@ -13,6 +13,10 @@
 [node name="VaisellePopup" instance=ExtResource("1_3wigi")]
 script = ExtResource("2_u7n8w")
 
+[node name="Popup" parent="." index="1"]
+offset_top = 0.0
+offset_bottom = 249.0
+
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background" index="0"]
 position = Vector2(-10, -10)
 
