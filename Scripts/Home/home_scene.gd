@@ -12,7 +12,7 @@ func _ready():
 	CalendrierPopup.hide()
 	CurtainPopup.hide()
 	BadgePopup.hide()
-	
+
 	await night()
 
 
@@ -57,7 +57,9 @@ func open_curtain_popup():
 	CurtainPopup.show()
 	AnimPlayer.play("AppearCurtainPopup")
 	await AnimPlayer.animation_finished
-	
+
+func _on_badge_popup_completed() -> void:
+	pass
 
 
 func _on_curtain_popup_curtains_completed() -> void:

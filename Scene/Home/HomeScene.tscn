@@ -22,7 +22,7 @@
 [ext_resource type="Script" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
 [ext_resource type="PackedScene" uid="uid://ceanward1yj0a" path="res://Scene/Home/VaisellePopup.tscn" id="21_olto7"]
 [ext_resource type="Texture2D" uid="uid://b3kyrgmwwimnn" path="res://Assets/Home/DeboutDeDos.webp" id="21_vcg4d"]
-[ext_resource type="PackedScene" uid="uid://de5g3p5nfqdl" path="res://Scene/Home/PutHatPopup.tscn" id="22_olto7"]
+[ext_resource type="PackedScene" uid="uid://s3nlynin48v7" path="res://Scene/Home/PutHatPopup.tscn" id="22_olto7"]
 [ext_resource type="Script" uid="uid://imqi7jo4fmhf" path="res://Scripts/interaction_popup.gd" id="24_02ot3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
@@ -917,10 +917,10 @@ scale = Vector2(1.57998, 1.57998)
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 196.0
-offset_top = 9.0
-offset_right = 485.0
-offset_bottom = 298.0
+offset_left = 203.0
+offset_top = 5.0
+offset_right = 492.0
+offset_bottom = 294.0
 scale = Vector2(1.40387, 1.23846)
 script = ExtResource("19_4nqop")
 

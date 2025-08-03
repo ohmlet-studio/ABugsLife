@@ -11,24 +11,29 @@
 script = ExtResource("2_nlsxv")
 going_in = false
 
+[node name="Popup" parent="." index="1"]
+offset_top = 0.0
+offset_bottom = 249.0
+
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
-[node name="Hat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
-position = Vector2(120, 14)
-scale = Vector2(0.245692, 0.245692)
-texture = ExtResource("5_bwfg5")
+[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="0"]
+position = Vector2(120, 110)
 
-[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="1"]
-position = Vector2(120, 132)
-
-[node name="FifiHat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
+[node name="FifiHat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
 position = Vector2(120, 171)
 scale = Vector2(0.182292, 0.182292)
 texture = ExtResource("2_x1b0o")
 
-[node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="3"]
+[node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="2"]
 stream = ExtResource("5_r8e3b")
 volume_db = -14.99
+
+[node name="Hat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="3"]
+position = Vector2(118, 19)
+scale = Vector2(0.245692, 0.245692)
+texture = ExtResource("5_bwfg5")
+offset = Vector2(8.14026, -162.806)
 
 [node name="Legs" type="Node2D" parent="Popup/PanelContainer/Elements" index="4"]
 position = Vector2(120, 115)
