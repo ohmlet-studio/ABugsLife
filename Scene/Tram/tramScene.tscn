@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d3odr0ubllpcm"]
+[gd_scene load_steps=40 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
@@ -31,7 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://c1cdjojqrehg7" path="res://Assets/Audio/SFX/Metro/metro.mp3" id="25_wy2ft"]
 [ext_resource type="PackedScene" uid="uid://30hx2dk0m2we" path="res://Scene/Tram/TalkPopup.tscn" id="25_ytes1"]
 [ext_resource type="AudioStream" uid="uid://douhvcu7g0sbd" path="res://Assets/Audio/SFX/Metro/Notif.mp3" id="26_vau31"]
-[ext_resource type="PackedScene" path="res://Scene/Tram/TramBarPopup.tscn" id="30_wbbch"]
+[ext_resource type="PackedScene" uid="uid://bv8udi0rbc6fh" path="res://Scene/Tram/TramBarPopup.tscn" id="30_wbbch"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t5ihy"]
 font_size = 121
