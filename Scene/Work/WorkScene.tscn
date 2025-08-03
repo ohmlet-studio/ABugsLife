@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=12 format=3 uid="uid://cmoxs3vcarn7g"]
 
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
 [ext_resource type="Texture2D" uid="uid://74uojp0qojvm" path="res://Assets/Work/guirlande_off.png" id="4_0syg0"]
 [ext_resource type="PackedScene" uid="uid://y7rcpv3use5d" path="res://Scene/Work/ScreenPopup.tscn" id="4_t0oj5"]
-[ext_resource type="PackedScene" uid="uid://de5g3p5nfqdl" path="res://Scene/Home/PutHatPopup.tscn" id="5_0syg0"]
 [ext_resource type="Texture2D" uid="uid://c3ioe3fi1g54a" path="res://Assets/Work/work.png" id="6_u4nlu"]
 [ext_resource type="AudioStream" uid="uid://cqpqmtekvu3ms" path="res://Assets/Audio/SFX/Office/Office 1.mp3" id="6_ud7g6"]
 [ext_resource type="Texture2D" uid="uid://c2ltrwaxud4ry" path="res://Assets/Work/guirlande.png" id="7_0syg0"]
@@ -71,14 +70,34 @@ scale = Vector2(0.799202, 0.799202)
 
 [node name="ScreenPopup" parent="Interactions/Laptop" instance=ExtResource("4_t0oj5")]
 
-[node name="BadgePopupIn" parent="Interactions" instance=ExtResource("5_0syg0")]
+[node name="BadgePopupIn" parent="Interactions"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(-574.625, 74.3257)
 scale = Vector2(1.23114, 1.23114)
 going_in = true
+script = null
 
-[node name="BadgePopupOut" parent="Interactions" instance=ExtResource("5_0syg0")]
+[node name="BadgePopupOut" parent="Interactions"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(-574.625, 74.3257)
 scale = Vector2(1.23114, 1.23114)
+script = null
 
 [node name="OfficeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ud7g6")

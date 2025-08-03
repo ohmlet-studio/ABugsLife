@@ -81,8 +81,14 @@ func _on_card_popup_finished():
 	sound_ambiance.play()
 	interior_animation_player.play("TramMovement")
 	await get_tree().create_timer(2).timeout
-	phone_popup.reveal()
-	notif.play()
+
+	match GameStateManager.current_step_day:
+		GameStateManager.TRAM_MORNING:
+			phone_popup.reveal()
+			notif.play()
+		GameStateManager.TRAM_NIGHT:
+			await get_tree().create_timer(1).timeout # pour rajouter du temps avant arret
+			change_scene()
 
 func _on_phone_popup_finished():
 	if GameStateManager.current_day < 1:
@@ -129,8 +135,7 @@ func _on_talk_finished():
 	lulu.get_node("lulu_talking").hide()
 	
 	await get_tree().create_timer(0.5).timeout
-	
-	
+
 	change_scene()
 	
 func change_scene():
