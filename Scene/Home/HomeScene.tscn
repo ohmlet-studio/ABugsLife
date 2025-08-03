@@ -911,10 +911,10 @@ position = Vector2(675, 75)
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 196.0
-offset_top = 9.0
-offset_right = 485.0
-offset_bottom = 298.0
+offset_left = 203.0
+offset_top = 5.0
+offset_right = 492.0
+offset_bottom = 294.0
 scale = Vector2(1.40387, 1.23846)
 script = ExtResource("19_4nqop")
 
@@ -939,6 +939,7 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_4nqop")
 
 [node name="FifiBday" parent="Interactions" instance=ExtResource("22_olto7")]
+position = Vector2(360, 57)
 
 [node name="RoomAnimation" type="AnimationPlayer" parent="."]
 libraries = {
