@@ -5,7 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="5_v3p41"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="6_6nqpc"]
-[ext_resource type="Shader" path="res://Assets/blur.gdshader" id="7_6nqpc"]
+[ext_resource type="Shader" uid="uid://bbrnrg0noabyg" path="res://Assets/Shaders/Blur.gdshader" id="7_6nqpc"]
 
 [sub_resource type="GDScript" id="GDScript_v3p41"]
 script/source = "extends Control
@@ -42,6 +42,10 @@ events = [SubResource("InputEventKey_d4yab")]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qf8tx"]
 shader = ExtResource("7_6nqpc")
+shader_parameter/blur_amount = 2.0
+shader_parameter/samples = 9
+shader_parameter/preserve_alpha = true
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_qoqlk"]
 length = 0.001
