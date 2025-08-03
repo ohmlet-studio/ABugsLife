@@ -21,6 +21,10 @@ GameStateManager="*res://Scripts/GameStateManager.gd"
 Musique="*res://Scene/Musique.tscn"
 FilmGrain="*res://Scene/FilmGrain.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

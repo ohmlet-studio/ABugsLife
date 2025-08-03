@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwoj6ikvjxrd"]
+[gd_scene load_steps=9 format=3 uid="uid://cwoj6ikvjxrd"]
 
-[ext_resource type="Texture2D" uid="uid://bcrc555pkq7m7" path="res://Assets/Thanks for playing.jpg" id="1_s2xlg"]
 [ext_resource type="Script" uid="uid://d3k3rwgrainif" path="res://Scripts/Menus/credits.gd" id="1_shr20"]
+[ext_resource type="Texture2D" uid="uid://cn7jn2enpn4vs" path="res://Assets/Menu/rock_bottom.png" id="3_4b147"]
 [ext_resource type="FontFile" uid="uid://rhjyd1w7qf47" path="res://Assets/Fonts/punknova-regular.otf" id="3_r7f7t"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_ukvvl"]
+[ext_resource type="FontFile" uid="uid://dg6ev3blbv6tm" path="res://Assets/Fonts/punknova-slanted.otf" id="5_etu7k"]
+[ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="6_u8jv0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkknb"]
 bg_color = Color(1, 0.945098, 0.658824, 0.188235)
@@ -25,35 +27,75 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_shr20")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Ciel" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(577, 323)
+scale = Vector2(0.810466, 0.810466)
+
+[node name="Sun" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(407.613, 352.177)
+scale = Vector2(0.810466, 0.810466)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-503, 32.0426)
+scale = Vector2(0.810466, 0.810466)
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1947.36, 0)
+
+[node name="Nuages" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color(1, 1, 1, 0.356863)
+position = Vector2(642.911, 185.53)
+scale = Vector2(0.616506, 0.616506)
+texture = ExtResource("6_u8jv0")
+
+[node name="NomJeu" type="Label" parent="ParallaxBackground"]
+clip_contents = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.5
+offset_top = 72.0
+offset_right = 237.5
+offset_bottom = 171.0
 grow_horizontal = 2
-grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.98, 0.992667, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 72
+text = "A Bug's Day"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(577, 323)
+scale = Vector2(0.810466, 0.810466)
 
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
-position = Vector2(566, 325)
-scale = Vector2(0.57, 0.522)
-texture = ExtResource("1_s2xlg")
+[node name="Fond3" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 36)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 0
+[node name="Fond2" type="Sprite2D" parent="Node2D"]
+
+[node name="Fond1" type="Sprite2D" parent="Node2D"]
+
+[node name="Reflets" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0.505882)
+position = Vector2(3.8147e-06, 26)
+scale = Vector2(1.0097, 1.0097)
+
+[node name="Coline" type="Sprite2D" parent="Node2D"]
+
+[node name="Cailloux" type="Sprite2D" parent="Node2D"]
+position = Vector2(4.93579, 118.45)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_4b147")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 857.0
 offset_top = 530.0
 offset_right = 1075.0
 offset_bottom = 594.0
 
-[node name="Button" type="Button" parent="Control/VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.823212, 0.823212, 0.823212, 1)
@@ -65,4 +107,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rkknb")
 shortcut = SubResource("Shortcut_shr20")
 text = "Return"
 
-[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_return_pressed"]
