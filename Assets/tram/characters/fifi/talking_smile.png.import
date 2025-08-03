@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bocr0tib0vh4v"
-path="res://.godot/imported/talking_smile.png-71d67adc99a38b96d864ec1dde0b624c.ctex"
+path="res://.godot/imported/talking_smile.png-482f689b77d6eab8f965fe451d8f6dac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tram/characters/fifi/talking_smile.png"
-dest_files=["res://.godot/imported/talking_smile.png-71d67adc99a38b96d864ec1dde0b624c.ctex"]
+source_file="res://Assets/Tram/characters/fifi/talking_smile.png"
+dest_files=["res://.godot/imported/talking_smile.png-482f689b77d6eab8f965fe451d8f6dac.ctex"]
 
 [params]
 
