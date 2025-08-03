@@ -6,10 +6,8 @@ func _ready() -> void:
 	Musique.play_music_level()
 
 func _on_start_pressed() -> void:
-	animation_player.play("ZoomInMenu")
-	await get_tree().create_timer(3.0).timeout
 	get_tree().change_scene_to_file("res://Scene/Tram/TramScene.tscn")
 
-"res://Scene/Tram/TramScene.tscn"
+
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/Menus/Credits.tscn")

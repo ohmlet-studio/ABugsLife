@@ -1,30 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://fr56kbtu21h7"]
+[gd_scene load_steps=23 format=3 uid="uid://fr56kbtu21h7"]
 
 [ext_resource type="Script" uid="uid://bgf7wgrv5ym7j" path="res://Scripts/Menus/main_menu.gd" id="1_d4yab"]
 [ext_resource type="Texture2D" uid="uid://dhne28h6pf04o" path="res://Assets/Menu/FondMenu.webp" id="2_d4yab"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://dnjxhclpb5l74" path="res://Assets/Home/RideauGauche.png" id="5_v3p41"]
-[ext_resource type="FontFile" uid="uid://cnvordvwxiv71" path="res://Assets/Fonts/OliveVTypewriter-RemingPort.otf" id="5_w8po5"]
 [ext_resource type="Texture2D" uid="uid://c5rxivguq5i4m" path="res://Assets/Home/RideauDroit.png" id="6_6nqpc"]
-[ext_resource type="Shader" uid="uid://c7vsl6mlj1vsd" path="res://Assets/blur.gdshader" id="7_6nqpc"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
-bg_color = Color(0.819608, 1, 0.807843, 0.321569)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_color = Color(0, 0, 0, 0.278431)
-shadow_size = 8
-
-[sub_resource type="InputEventKey" id="InputEventKey_d4yab"]
-keycode = 4194309
-
-[sub_resource type="Shortcut" id="Shortcut_o3nbu"]
-events = [SubResource("InputEventKey_d4yab")]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qf8tx"]
-shader = ExtResource("7_6nqpc")
+[ext_resource type="Script" uid="uid://cllgxxbdrv5w7" path="res://Scene/FinalCutScene/parallax_background_cut_scene.gd" id="7_1txp4"]
+[ext_resource type="FontFile" uid="uid://dg6ev3blbv6tm" path="res://Assets/Fonts/punknova-slanted.otf" id="8_dphv4"]
+[ext_resource type="Texture2D" uid="uid://da8sb3wqihqcq" path="res://Assets/Menu/Ciel.webp" id="8_ybmvd"]
+[ext_resource type="Texture2D" uid="uid://bmvbvaotxo8sg" path="res://Assets/Menu/Sun.webp" id="9_dphv4"]
+[ext_resource type="Texture2D" uid="uid://6fd0w7jesqux" path="res://Assets/End/nuages.png" id="10_eypsp"]
+[ext_resource type="Texture2D" uid="uid://cadli8a2435oe" path="res://Assets/Menu/Fond3.webp" id="11_aqnsn"]
+[ext_resource type="Texture2D" uid="uid://mm06v8hv3b1h" path="res://Assets/Menu/Fond2.webp" id="12_g5yac"]
+[ext_resource type="Texture2D" uid="uid://u20xyhw72jyt" path="res://Assets/Menu/Fond1.webp" id="13_cx3vn"]
+[ext_resource type="Texture2D" uid="uid://d2bx4ierpdbdn" path="res://Assets/Menu/Reflets.webp" id="14_tk18p"]
+[ext_resource type="Texture2D" uid="uid://bq8gk4rjfst2v" path="res://Assets/Menu/Coline.webp" id="15_cufvu"]
+[ext_resource type="FontFile" uid="uid://rhjyd1w7qf47" path="res://Assets/Fonts/punknova-regular.otf" id="15_eypsp"]
 
 [sub_resource type="Animation" id="Animation_qoqlk"]
 length = 0.001
@@ -265,6 +256,21 @@ _data = {
 &"ZoomInMenu": SubResource("Animation_h7a2f")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
+bg_color = Color(1, 0.943333, 0.66, 0.188235)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_size = 8
+
+[sub_resource type="InputEventKey" id="InputEventKey_d4yab"]
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_o3nbu"]
+events = [SubResource("InputEventKey_d4yab")]
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -274,15 +280,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4yab")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -295,59 +294,6 @@ position = Vector2(576, 324)
 scale = Vector2(0.795031, 0.795092)
 texture = ExtResource("2_d4yab")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 10.5
-offset_top = -109.0
-offset_right = 246.5
-offset_bottom = 71.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 32
-
-[node name="Button" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.890196, 1, 0.819608, 1)
-theme_override_fonts/font = ExtResource("5_w8po5")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = ExtResource("4_qoqlk")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
-shortcut = SubResource("Shortcut_o3nbu")
-text = "Start Game"
-
-[node name="Credits" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.890196, 1, 0.819608, 1)
-theme_override_fonts/font = ExtResource("5_w8po5")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = ExtResource("4_qoqlk")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
-text = "Credits
-"
-
-[node name="NomJeu" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -74.0
-offset_top = 71.0
-offset_right = 331.0
-offset_bottom = 170.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.890196, 1, 0.819608, 1)
-theme_override_fonts/font = ExtResource("5_w8po5")
-theme_override_font_sizes/font_size = 72
-text = "A Bug's Day"
-horizontal_alignment = 1
-
 [node name="RideauGauche" type="Sprite2D" parent="Control"]
 position = Vector2(112, 176)
 scale = Vector2(0.8, 0.8)
@@ -358,21 +304,112 @@ position = Vector2(224, 176)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("6_6nqpc")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-material = SubResource("ShaderMaterial_qf8tx")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_iwfq2")
 }
 
-[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("7_1txp4")
+scroll_speed = 0.7
+
+[node name="Ciel" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(577, 323)
+scale = Vector2(0.810466, 0.810466)
+texture = ExtResource("8_ybmvd")
+
+[node name="Sun" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(407.613, 352.177)
+scale = Vector2(0.810466, 0.810466)
+texture = ExtResource("9_dphv4")
+
+[node name="NomJeu" type="Label" parent="ParallaxBackground"]
+clip_contents = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.5
+offset_top = 72.0
+offset_right = 237.5
+offset_bottom = 171.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.98, 0.992667, 1)
+theme_override_fonts/font = ExtResource("8_dphv4")
+theme_override_font_sizes/font_size = 72
+text = "A Bug's Day"
+horizontal_alignment = 1
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-503, 32.0426)
+scale = Vector2(0.810466, 0.810466)
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1947.36, 0)
+
+[node name="Nuages" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color(1, 1, 1, 0.356863)
+position = Vector2(642.911, 185.53)
+scale = Vector2(0.616506, 0.616506)
+texture = ExtResource("10_eypsp")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(577, 323)
+scale = Vector2(0.810466, 0.810466)
+
+[node name="Fond3" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 36)
+texture = ExtResource("11_aqnsn")
+
+[node name="Fond2" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("12_g5yac")
+
+[node name="Fond1" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("13_cx3vn")
+
+[node name="Reflets" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0.505882)
+position = Vector2(3.8147e-06, 26)
+scale = Vector2(1.0097, 1.0097)
+texture = ExtResource("14_tk18p")
+
+[node name="Coline" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("15_cufvu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -90.0
+offset_right = 118.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("15_eypsp")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = ExtResource("4_qoqlk")
+theme_override_styles/pressed = ExtResource("4_qoqlk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+shortcut = SubResource("Shortcut_o3nbu")
+text = "Start Game"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("15_eypsp")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = ExtResource("4_qoqlk")
+theme_override_styles/pressed = ExtResource("4_qoqlk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+text = "Credits
+"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]

@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bcrc555pkq7m7" path="res://Assets/Thanks for playing.jpg" id="1_s2xlg"]
 [ext_resource type="Script" uid="uid://d3k3rwgrainif" path="res://Scripts/Menus/credits.gd" id="1_shr20"]
-[ext_resource type="SystemFont" uid="uid://biaqrm2p8wpgf" path="res://Assets/Menu/MetaAccantis.tres" id="3_rkknb"]
+[ext_resource type="FontFile" uid="uid://rhjyd1w7qf47" path="res://Assets/Fonts/punknova-regular.otf" id="3_r7f7t"]
 [ext_resource type="StyleBox" uid="uid://b61i1wlhgxiau" path="res://Assets/Styles/MainMenuHovered.tres" id="4_ukvvl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkknb"]
-bg_color = Color(0.819608, 1, 0.807843, 0.321569)
+bg_color = Color(1, 0.945098, 0.658824, 0.188235)
 corner_radius_top_left = 60
 corner_radius_top_right = 60
 corner_radius_bottom_right = 60
@@ -56,10 +56,11 @@ offset_bottom = 594.0
 [node name="Button" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.89, 1, 0.81, 1)
-theme_override_fonts/font = ExtResource("3_rkknb")
+theme_override_colors/font_color = Color(0.823212, 0.823212, 0.823212, 1)
+theme_override_fonts/font = ExtResource("3_r7f7t")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/hover = ExtResource("4_ukvvl")
+theme_override_styles/pressed = ExtResource("4_ukvvl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rkknb")
 shortcut = SubResource("Shortcut_shr20")
 text = "Return"
