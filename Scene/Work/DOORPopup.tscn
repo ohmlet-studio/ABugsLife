@@ -1,8 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcxuostqlh3xg"]
+[gd_scene load_steps=10 format=3 uid="uid://dvoktehk15yye"]
 
 [ext_resource type="Texture2D" uid="uid://c36kikkfiew7i" path="res://Assets/End/DOOR.png" id="1_3vjj8"]
+[ext_resource type="Texture2D" uid="uid://likwopfs3d5o" path="res://Assets/End/Ciel.png" id="1_34t8a"]
 [ext_resource type="Texture2D" uid="uid://cl6kvu2ybcpfg" path="res://Assets/End/DOOR2.png" id="2_vj0u4"]
 [ext_resource type="Texture2D" uid="uid://p5aun4uo5kl2" path="res://Assets/End/DOOR3.png" id="3_34t8a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj0u4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_3slvu"]
 resource_name = "Appear"
@@ -159,6 +168,11 @@ offset_top = -14.0
 offset_right = 251.0
 offset_bottom = 236.0
 
+[node name="Ciel" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
+position = Vector2(124.5, 111)
+scale = Vector2(0.0980469, 0.0779384)
+texture = ExtResource("1_34t8a")
+
 [node name="Door1" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
 position = Vector2(125.5, 111)
 scale = Vector2(0.122559, 0.12207)
@@ -175,6 +189,15 @@ visible = false
 position = Vector2(125.5, 111)
 scale = Vector2(0.122559, 0.12207)
 texture = ExtResource("3_34t8a")
+
+[node name="PanelContainer2" type="PanelContainer" parent="Popup"]
+layout_mode = 2
+offset_left = -5.0
+offset_top = -20.0
+offset_right = 244.0
+offset_bottom = 229.0
+scale = Vector2(1.04447, 1.04447)
+theme_override_styles/panel = SubResource("StyleBoxFlat_vj0u4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

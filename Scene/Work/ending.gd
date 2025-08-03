@@ -25,3 +25,5 @@ func end():
 	await get_tree().create_timer(1).timeout
 	Door_popup.get_node("Popup/PanelContainer/Elements/Door2").hide()
 	Door_popup.get_node("Popup/PanelContainer/Elements/Door3").show()
+	
+	get_tree().change_scene_to_file("res://Scene/FinalCutScene/FinalCutScene.tscn")

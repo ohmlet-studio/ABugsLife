@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dyeei0gpvfuhs"]
+[gd_scene load_steps=37 format=3 uid="uid://dyeei0gpvfuhs"]
 
 [ext_resource type="Script" uid="uid://c7psoygv16m7c" path="res://Scripts/Home/home_scene.gd" id="1_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://cs5govecmsb5w" path="res://Assets/Home/WindowDay.webp" id="1_p6w8n"]
@@ -19,7 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://bjypomtbo06h0" path="res://Assets/Home/blanket.png" id="17_4nqop"]
 [ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://dslpxinwwtkk5" path="res://Assets/Home/KafkaDodo.webp" id="17_fkqow"]
-[ext_resource type="Script" uid="uid://bnnvicoaydpkf" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
+[ext_resource type="Script" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
+[ext_resource type="PackedScene" uid="uid://ceanward1yj0a" path="res://Scene/Home/VaisellePopup.tscn" id="21_olto7"]
 [ext_resource type="Texture2D" uid="uid://b3kyrgmwwimnn" path="res://Assets/Home/DeboutDeDos.webp" id="21_vcg4d"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]
@@ -905,6 +906,10 @@ texture = ExtResource("21_vcg4d")
 [node name="CalendrierPopup" parent="Interactions" instance=ExtResource("1_upts1")]
 visible = false
 position = Vector2(675, 75)
+
+[node name="VaisellePopup" parent="Interactions" instance=ExtResource("21_olto7")]
+position = Vector2(740, 56)
+scale = Vector2(1.57998, 1.57998)
 
 [node name="CurtainPopup" type="Control" parent="Interactions"]
 modulate = Color(1, 1, 1, 0)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://udu4be8v1wii"
-path="res://.godot/imported/idle2.png-6abf5d6aa2b126cd645813ce22c44570.ctex"
+uid="uid://dute6jeis5jsk"
+path="res://.godot/imported/IMG_0847.png-c65d0c42e6841a4fb3b6235dc53cc87e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tram/characters/fifi/idle2.png"
-dest_files=["res://.godot/imported/idle2.png-6abf5d6aa2b126cd645813ce22c44570.ctex"]
+source_file="res://Assets/Home/vaiselle/IMG_0847.png"
+dest_files=["res://.godot/imported/IMG_0847.png-c65d0c42e6841a4fb3b6235dc53cc87e.ctex"]
 
 [params]
 
