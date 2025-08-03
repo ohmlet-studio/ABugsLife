@@ -20,13 +20,24 @@ var current_scroll_speed = 0.0
 var scroll_tween: Tween
 var acceleration_time = 2.0
 
+var dialog_option = {
+	0: "",
+	1: "...",
+	2: "..bz.",
+	3: "bz",
+	4: "Bz!"
+}
+
+var fifi_sprite
+
 func _ready():
 	phone_popup.hide()
 	card_popup.hide()
 	talk_popup.hide()
+	bubble_lulu.hide()
+	bubble_fifi.hide()
 	
 	lulu.hide()
-	fifi.hide()
 	interactions.show()
 	
 	talk_popup.action_completed.connect(_on_talk_finished)
@@ -36,7 +47,13 @@ func _ready():
 	await get_tree().create_timer(1).timeout
 	
 	card_popup.reveal()
-
+	
+	bubble_fifi.get_node("Bubble/Label").text = dialog_option[GameStateManager.current_day]
+	
+	if GameStateManager.current_day < 3:
+		fifi_sprite = fifi.get_node("fifi_idle") 
+	else:
+		fifi_sprite = fifi.get_node("fifi_idle_bday")
 
 func _process(delta: float) -> void:
 	var base_speed = 1 if is_tram_moving else 0
@@ -59,7 +76,7 @@ func interpolate_scroll_speed():
 	
 func _on_card_popup_finished():
 	await get_tree().create_timer(0.5).timeout
-	fifi.show()
+	fifi_sprite.show()
 	is_tram_moving = true
 	sound_ambiance.play()
 	interior_animation_player.play("TramMovement")
@@ -68,7 +85,7 @@ func _on_card_popup_finished():
 	notif.play()
 
 func _on_phone_popup_finished():
-	if GameStateManager.current_day < 2:
+	if GameStateManager.current_day < 1:
 		return await change_scene()
 	
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:
@@ -89,29 +106,40 @@ func _play_talking_anim():
 	
 	await get_tree().create_timer(0.7).timeout
 	
-	bubble_lulu.show() # TODO animation
+	bubble_lulu.show()
+	bubble_lulu.get_node("Bubble/AnimationPlayer").play("Appear")
 	
-	await get_tree().create_timer(0.7).timeout
-
+	await get_tree().create_timer(1).timeout
+	
 	talk_popup.reveal()
 	
 func _on_talk_finished():
-	bubble_lulu.hide()
+	bubble_fifi.show()
+	var fifi_bubble_anim: AnimationPlayer = bubble_fifi.get_node("Bubble/AnimationPlayer")
+	fifi_bubble_anim.play("Appear")
 	
-	fifi.get_node("fifi_idle").hide()
-	fifi.get_node("fifi_talk").show()
+	fifi_sprite.hide()
+	
+	match GameStateManager.current_day:
+		1: fifi.get_node("fifi_talk").show()
+		2: fifi.get_node("fifi_talk_smile").show()
+		3: fifi.get_node("fifi_talk_blush").show()
 	
 	lulu.get_node("lulu_idle").show()
 	lulu.get_node("lulu_talking").hide()
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	
 	change_scene()
 	
 func change_scene():
-	await get_tree().create_timer(0.5).timeout
 
 	is_tram_moving = false
 	interior_animation_player.pause()
 
 	await get_tree().create_timer(acceleration_time).timeout
+	
 	sound_ambiance.stop()
 	
 	if GameStateManager.current_step_day == GameStateManager.TRAM_MORNING:

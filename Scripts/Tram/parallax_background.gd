@@ -8,7 +8,8 @@ extends ParallaxBackground
 	$ParallaxLayer/NightBuildingsBack,
 	$ParallaxLayer4/NightBuildingsFront,
 	$"../../TramInterior/Lights/NightLights",
-	$"../../TramInterior/NightShadowBox"
+	$"../../TramInterior/NightShadowBox",
+	$"../../TramInterior/Characters/Passenger/passenger2"
 ]
 
 func _ready() -> void:
