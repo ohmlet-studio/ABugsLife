@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bckvp8pwxbu7x"]
+
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_sk13b"]
+[ext_resource type="Script" uid="uid://cqessqgvtlauq" path="res://Scene/Work/badge_popup.gd" id="2_eqrxt"]
+[ext_resource type="Texture2D" uid="uid://bssb4wkba1ri7" path="res://Assets/Work/Pointeuse/pointeuse_back.png" id="3_yu7o1"]
+[ext_resource type="Texture2D" uid="uid://63wtvg4dglbx" path="res://Assets/Work/Pointeuse/workcard.png" id="4_hy61s"]
+[ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_mqvnq"]
+[ext_resource type="Texture2D" uid="uid://b2sb7og8lkvm7" path="res://Assets/Work/Pointeuse/pointeuse.png" id="6_blhmm"]
+[ext_resource type="Texture2D" uid="uid://c0wxv5xm8l4r" path="res://Assets/Work/Pointeuse/pointeuse_green.png" id="7_jn1k3"]
+[ext_resource type="Texture2D" uid="uid://b3v0axljbgg5q" path="res://Assets/Work/Pointeuse/pointeuse_orange.png" id="8_8uimf"]
+[ext_resource type="AudioStream" uid="uid://g6deoiosewwm" path="res://Assets/Audio/SFX/Metro/beep beep.mp3" id="9_4isoh"]
+
+[node name="BadgePopup" instance=ExtResource("1_sk13b")]
+script = ExtResource("2_eqrxt")
+going_in = false
+
+[node name="Popup" parent="." index="1"]
+offset_top = 14.0
+offset_bottom = 263.0
+
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
+
+[node name="Back" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
+position = Vector2(121, 88.8621)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("3_yu7o1")
+
+[node name="Card" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
+position = Vector2(117.427, -59.5061)
+rotation = 1.58375
+scale = Vector2(0.307828, 0.307828)
+texture = ExtResource("4_hy61s")
+offset = Vector2(125.003, -7.50345)
+metadata/_edit_use_anchors_ = true
+
+[node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
+z_index = 1
+position = Vector2(117.629, -142)
+rotation = 0.536542
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_mqvnq")
+offset = Vector2(-106.555, 573.817)
+
+[node name="FrontPlate" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="3"]
+position = Vector2(125, 144.063)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("6_blhmm")
+
+[node name="LightsIn" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="4"]
+position = Vector2(125, 144.201)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("7_jn1k3")
+
+[node name="LightsOut" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="5"]
+position = Vector2(125, 144.201)
+scale = Vector2(0.300503, 0.300503)
+texture = ExtResource("8_8uimf")
+
+[node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="6"]
+position = Vector2(120, 50)
+
+[node name="Beep sound" type="AudioStreamPlayer" parent="Popup/PanelContainer/Elements" index="7"]
+stream = ExtResource("9_4isoh")
+volume_db = -14.99
