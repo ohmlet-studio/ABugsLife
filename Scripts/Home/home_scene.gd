@@ -4,14 +4,18 @@ extends Node2D
 @onready var CalendrierPopup = $Interactions/CalendrierPopup
 @onready var CurtainPopup = $Interactions/CurtainPopup
 @onready var CalendarArr: Node2D = $Inside/Room/Calendar
-
+@onready var BadgePopup = $Interactions/FifiBday
 
 func _ready():
 	GameStateManager.current_step_day = GameStateManager.ROOM_NIGHT #debug pour lancer la scene seule
 	set_calendar_visibility()
 	CalendrierPopup.hide()
 	CurtainPopup.hide()
-	await night()
+	BadgePopup.hide()
+	
+	BadgePopup.reveal()
+	
+	#await night()
 
 
 func set_calendar_visibility():
