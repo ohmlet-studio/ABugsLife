@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bjypomtbo06h0" path="res://Assets/Home/blanket.png" id="17_4nqop"]
 [ext_resource type="Texture2D" uid="uid://bjlyu3vs6c20y" path="res://Assets/Home/mothman.png" id="17_5uhx5"]
 [ext_resource type="Texture2D" uid="uid://dslpxinwwtkk5" path="res://Assets/Home/KafkaDodo.webp" id="17_fkqow"]
-[ext_resource type="Script" uid="uid://bnnvicoaydpkf" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
+[ext_resource type="Script" path="res://Scripts/Home/Curtains.gd" id="19_4nqop"]
 [ext_resource type="Texture2D" uid="uid://b3kyrgmwwimnn" path="res://Assets/Home/DeboutDeDos.webp" id="21_vcg4d"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ve0fl"]

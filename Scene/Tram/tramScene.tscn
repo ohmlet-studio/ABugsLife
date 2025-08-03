@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://h6qs28nw2xu0"]
+[gd_scene load_steps=40 format=3 uid="uid://h6qs28nw2xu0"]
 
 [ext_resource type="Script" uid="uid://b7bwv7hvwye3y" path="res://Scripts/tram_scene.gd" id="1_qlsm1"]
 [ext_resource type="Script" uid="uid://2nrcube3fr7q" path="res://Scripts/Tram/parallax_background.gd" id="2_cqi5x"]
@@ -31,6 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://c1cdjojqrehg7" path="res://Assets/Audio/SFX/Metro/metro.mp3" id="25_wy2ft"]
 [ext_resource type="PackedScene" uid="uid://30hx2dk0m2we" path="res://Scene/Tram/TalkPopup.tscn" id="25_ytes1"]
 [ext_resource type="AudioStream" uid="uid://douhvcu7g0sbd" path="res://Assets/Audio/SFX/Metro/Notif.mp3" id="26_vau31"]
+[ext_resource type="PackedScene" uid="uid://bv8udi0rbc6fh" path="res://Scene/Tram/TramBarPopup.tscn" id="30_wbbch"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t5ihy"]
 font_size = 121
@@ -404,7 +405,6 @@ libraries = {
 position = Vector2(3, 0)
 
 [node name="PhonePopup" parent="Interactions" instance=ExtResource("17_s6t5j")]
-visible = false
 position = Vector2(726, 78)
 scale = Vector2(1.44746, 1.44746)
 script = ExtResource("18_rv5di")
@@ -417,6 +417,11 @@ scale = Vector2(1.63348, 1.63348)
 [node name="TalkPopup" parent="Interactions" instance=ExtResource("25_ytes1")]
 visible = false
 position = Vector2(380, 131)
+
+[node name="BadgePopup" parent="Interactions" instance=ExtResource("30_wbbch")]
+visible = false
+position = Vector2(123, 146)
+scale = Vector2(1.47399, 1.47399)
 
 [node name="metro sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_wy2ft")

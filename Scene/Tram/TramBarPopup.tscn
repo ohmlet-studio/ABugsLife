@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv8udi0rbc6fh"]
+
+[ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_4qowo"]
+[ext_resource type="Script" uid="uid://bn3res6e0xcbi" path="res://Scene/Tram/tram_bar_popup.gd" id="2_org7i"]
+[ext_resource type="Texture2D" uid="uid://ccfmq2bjp4vpy" path="res://Assets/Tram/pole.png" id="4_org7i"]
+[ext_resource type="Texture2D" uid="uid://dc3rectcjri4b" path="res://Assets/Leg.png" id="5_nh212"]
+
+[node name="BadgePopup" instance=ExtResource("1_4qowo")]
+script = ExtResource("2_org7i")
+
+[node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
+
+[node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="0"]
+z_index = 1
+position = Vector2(-33, 119)
+rotation = 0.832118
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_nh212")
+offset = Vector2(-106.555, 573.817)
+
+[node name="MaxMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="1"]
+position = Vector2(199, 50)
+
+[node name="Pole" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="2"]
+position = Vector2(197, 77)
+scale = Vector2(0.144058, 0.144058)
+texture = ExtResource("4_org7i")
+
+[node name="Pole2" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="3"]
+position = Vector2(197, 232)
+scale = Vector2(0.144058, 0.144058)
+texture = ExtResource("4_org7i")
+
+[node name="Panel" type="Control" parent="Popup/PanelContainer/Elements" index="4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 183.0
+offset_right = 211.0
+offset_bottom = 250.0
