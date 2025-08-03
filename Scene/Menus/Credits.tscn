@@ -29,6 +29,23 @@ script = ExtResource("1_shr20")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+[node name="NomJeu" type="Label" parent="ParallaxBackground"]
+clip_contents = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.5
+offset_top = 72.0
+offset_right = 237.5
+offset_bottom = 171.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.98, 0.992667, 1)
+theme_override_fonts/font = ExtResource("5_etu7k")
+theme_override_font_sizes/font_size = 72
+text = "A Bug's Day"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Ciel" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(577, 323)
 scale = Vector2(0.810466, 0.810466)
@@ -48,23 +65,6 @@ modulate = Color(1, 1, 1, 0.356863)
 position = Vector2(642.911, 185.53)
 scale = Vector2(0.616506, 0.616506)
 texture = ExtResource("6_u8jv0")
-
-[node name="NomJeu" type="Label" parent="ParallaxBackground"]
-clip_contents = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -237.5
-offset_top = 72.0
-offset_right = 237.5
-offset_bottom = 171.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 0.98, 0.992667, 1)
-theme_override_fonts/font = ExtResource("5_etu7k")
-theme_override_font_sizes/font_size = 72
-text = "A Bug's Day"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(577, 323)
@@ -90,6 +90,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_4b147")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 857.0
 offset_top = 530.0
 offset_right = 1075.0

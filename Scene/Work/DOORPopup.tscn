@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ba4bxnlhdl212"]
+[gd_scene load_steps=2 format=3 uid="uid://cfmhnong2q0jk"]
 
-[ext_resource type="Texture2D" uid="uid://7afjlqns5ud4" path="res://Assets/End/HUH.png" id="1_gfl6u"]
+[ext_resource type="Texture2D" uid="uid://c36kikkfiew7i" path="res://Assets/End/DOOR.png" id="1_3vjj8"]
 
-[node name="HuhPopup" type="Node2D"]
+[node name="DoorPopup" type="Node2D"]
 
 [node name="Popup" type="Control" parent="."]
 layout_mode = 3
@@ -18,6 +18,6 @@ offset_bottom = 249.0
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Popup/PanelContainer/Elements"]
-position = Vector2(124, 126.425)
-scale = Vector2(0.616915, 0.616915)
-texture = ExtResource("1_gfl6u")
+position = Vector2(134.642, 137.112)
+scale = Vector2(0.571727, 0.571727)
+texture = ExtResource("1_3vjj8")
