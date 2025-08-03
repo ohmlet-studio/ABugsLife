@@ -5,7 +5,7 @@ extends Node2D
 @onready var badge_popup_in = $Interactions/BadgePopupIn
 @onready var badge_popup_out = $Interactions/BadgePopupOut
 @onready var interactions = $Interactions
-@onready var office_sounds = $"Office sound"
+@onready var office_sounds = $"OfficeSound"
 @onready var guirlance = $Work/Guirlande
 @onready var fifi = $Work/Fifi
 @onready var hat = $Work/Fifi/Hat
