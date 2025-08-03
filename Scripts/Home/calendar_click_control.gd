@@ -3,14 +3,13 @@ extends Control
 @onready var sound_player = $"../AudioStreamPlayer"
 @onready var popup = $"../../../.."
 
-
 func _ready() -> void:
-	visibility_changed.connect(refresh_calendar)
-
+	popup.visibility_changed.connect(refresh_calendar)
 
 func refresh_calendar() -> void:
 	for child in get_children():
 		var child_day = child.name.replace("Jour", "").to_int()
+		print(child.name)
 		for sub_child in child.get_children():
 			if child_day < GameStateManager.current_day+1:
 				sub_child.modulate.a = 1
@@ -24,7 +23,7 @@ func _on_gui_input(event: InputEvent) -> void:
 			fade_in_children()
 			sound_player.play()
 			popup.action_completed.emit()
-
+			await get_tree().create_timer(3).timeout
 
 func fade_in_children():
 	var tween = create_tween()
