@@ -17,7 +17,6 @@ func _ready():
 	match GameStateManager.current_day:
 		0:
 			notifications = children.slice(0, 2)
-			print(notifications)
 			children[2].hide()
 			children[3].hide()
 		1:
