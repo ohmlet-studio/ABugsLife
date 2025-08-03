@@ -14,6 +14,7 @@ extends Node2D
 @onready var chenille = $Work/Chenille
 @onready var worm = $Work/Worm
 @onready var darken_rect = $DarkenRect
+@onready var ending = $Ending
 
 var word_count = 0
 
@@ -27,7 +28,6 @@ func _ready():
 	worm.hide()
 	badge_popup_in.hide()
 	badge_popup_out.hide()
-	
 	office_sounds.play()
 	
 	keyboard_popup.keyboard_pressed.connect(_on_keyboard_pressed)
@@ -53,21 +53,18 @@ func _on_badge_in_action_completed():
 	await get_tree().create_timer(0.5).timeout
 	fifi.show()
 	
-	await get_tree().create_timer(0.5).timeout
-	keyboard_popup.reveal()
-	
-	await get_tree().create_timer(.3).timeout
-	screen_popup.reveal()
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	keyboard_popup.reveal()
 	
 	await get_tree().create_timer(.3).timeout
 	screen_popup.reveal()
 	
-	await get_tree().create_timer(1.5).timeout
+	if GameStateManager.current_day < 3:
+		await get_tree().create_timer(1.5).timeout
 	chenille.show()
 	
-	await get_tree().create_timer(1.5).timeout
+	if GameStateManager.current_day < 3:
+		await get_tree().create_timer(1.5).timeout
 	worm.show()
 
 func _on_keyboard_action_completed():
@@ -82,13 +79,13 @@ func _on_badge_out_action_completed():
 func _on_keyboard_pressed():
 	if is_instance_valid(screen_popup):
 		word_count = screen_popup.add_random_word()
-		
 		if GameStateManager.current_day == 3 and word_count == 7:
-			darken_rect.modulate.a = 0.5
+			keyboard_popup.hide()
+			screen_popup.hide()
+			darken_rect.modulate.a = 1
 			guirlance.hide()
 			guirlande_off.show()
-			
-		
+			ending.end()
 
 func _on_screen_action_completed():
 	await get_tree().create_timer(.3).timeout
