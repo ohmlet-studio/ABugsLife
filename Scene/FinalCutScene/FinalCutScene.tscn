@@ -348,6 +348,18 @@ tracks/15/keys = {
 "update": 0,
 "values": [Vector2(106.483, -306.186)]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("FifiDos/CulAllume:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_48wjr"]
 resource_name = "SceneEnter"
@@ -471,6 +483,18 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.219911, 0.84823, -0.305433]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("FifiDos/CulAllume:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(8.9261, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6srg"]
@@ -602,19 +626,11 @@ visible = false
 [node name="Coline" parent="ThanksForPlaying/Credits/Node2D2" index="4"]
 visible = false
 
-[node name="Kima" parent="ThanksForPlaying/Credits" index="4"]
-anchor_left = 0.160156
-anchor_top = 0.353395
-
 [node name="Kima2" parent="ThanksForPlaying/Credits" index="5"]
 anchor_left = 0.225553
 anchor_top = 0.231458
 anchor_right = 0.428678
 anchor_bottom = 0.231458
-
-[node name="Retronyme" parent="ThanksForPlaying/Credits" index="6"]
-anchor_left = 0.284288
-anchor_top = 0.354938
 
 [node name="Nispouli" parent="ThanksForPlaying/Credits" index="7"]
 anchor_left = 0.137448
@@ -628,20 +644,16 @@ anchor_top = 0.156902
 anchor_right = 0.286754
 anchor_bottom = 0.156902
 
-[node name="m_defgecd" parent="ThanksForPlaying/Credits" index="9"]
-anchor_left = 0.654948
-anchor_top = 0.368827
-
 [node name="FifiDos" type="Sprite2D" parent="."]
 position = Vector2(479, 464)
 rotation = 0.261799
 scale = Vector2(0.447697, 0.447697)
 texture = ExtResource("2_xr8ot")
 
-[node name="CulAllume" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.0588235)
-position = Vector2(583, 385)
-scale = Vector2(0.896408, 0.896408)
+[node name="CulAllume" type="Sprite2D" parent="FifiDos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(232.3, -176.459)
+scale = Vector2(2.00226, 2.00226)
 texture = ExtResource("16_d3xal")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
