@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmoxs3vcarn7g"]
+[gd_scene load_steps=16 format=3 uid="uid://cmoxs3vcarn7g"]
 
 [ext_resource type="Script" uid="uid://d0kest0aftt6r" path="res://Scripts/Work/work_scene.gd" id="1_t0oj5"]
 [ext_resource type="PackedScene" uid="uid://bdr0keyymx0jk" path="res://Scene/Work/KeyboardPopup.tscn" id="3_0xuk1"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dcsaihk70waaa" path="res://Assets/Work/hat.png" id="9_66vlb"]
 [ext_resource type="Texture2D" uid="uid://bp61ut1o1hpyj" path="res://Assets/Work/chenille.png" id="10_hdcrf"]
 [ext_resource type="Texture2D" uid="uid://bu6uvrvt0h785" path="res://Assets/Work/worm.png" id="11_1ejuh"]
+[ext_resource type="PackedScene" uid="uid://ba4bxnlhdl212" path="res://Scene/Work/HUHPopup.tscn" id="12_hdcrf"]
+[ext_resource type="PackedScene" uid="uid://cr8divv6dcj1v" path="res://Scene/Work/TAPTAPTAPPopup.tscn" id="13_1ejuh"]
+[ext_resource type="PackedScene" uid="uid://bcxuostqlh3xg" path="res://Scene/Work/DOORPopup.tscn" id="14_qihm4"]
 
 [node name="WorkScene" type="Node2D"]
 script = ExtResource("1_t0oj5")
@@ -77,6 +80,18 @@ going_in = true
 
 [node name="BadgePopupOut" parent="Interactions" instance=ExtResource("5_0syg0")]
 position = Vector2(-554.645, 107.892)
+
+[node name="HuhPopup" parent="Interactions" instance=ExtResource("12_hdcrf")]
+visible = false
+position = Vector2(-546.653, 165.435)
+
+[node name="TaptaptapPopup" parent="Interactions" instance=ExtResource("13_1ejuh")]
+visible = false
+position = Vector2(-351.648, -21.5784)
+
+[node name="DoorPopup" parent="Interactions" instance=ExtResource("14_qihm4")]
+visible = false
+position = Vector2(7.19281, 116.683)
 
 [node name="OfficeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ud7g6")

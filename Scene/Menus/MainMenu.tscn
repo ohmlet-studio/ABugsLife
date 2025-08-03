@@ -338,9 +338,9 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(-503, 32.0426)
+position = Vector2(-433, 31)
 scale = Vector2(0.810466, 0.810466)
-motion_scale = Vector2(1, 0)
+motion_scale = Vector2(0, 1)
 motion_mirroring = Vector2(1947.36, 0)
 
 [node name="Nuages" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
