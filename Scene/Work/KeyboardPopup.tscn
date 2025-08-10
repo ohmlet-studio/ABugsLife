@@ -365,6 +365,10 @@ _data = {
 [node name="KeyboardPopup" instance=ExtResource("1_8e61w")]
 script = ExtResource("2_k0q5x")
 
+[node name="Popup" parent="." index="1"]
+offset_top = 0.0
+offset_bottom = 249.0
+
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background" index="0"]
 position = Vector2(-10, -10)
 

@@ -11,10 +11,6 @@
 script = ExtResource("2_nlsxv")
 going_in = false
 
-[node name="Popup" parent="." index="1"]
-offset_top = 0.0
-offset_bottom = 249.0
-
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
 [node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="0"]

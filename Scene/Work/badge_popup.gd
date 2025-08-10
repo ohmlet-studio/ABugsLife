@@ -17,7 +17,7 @@ var drag_offset: Vector2 = Vector2.ZERO
 func _ready():
 	light_in.hide()
 	light_out.hide()
-	popup_ready = true
+	
 
 func _process(delta: float) -> void:
 	if playing_anim:
