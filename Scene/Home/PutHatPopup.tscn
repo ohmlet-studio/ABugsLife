@@ -11,10 +11,14 @@
 script = ExtResource("2_nlsxv")
 going_in = false
 
+[node name="Popup" parent="." index="1"]
+offset_top = 0.0
+offset_bottom = 249.0
+
 [node name="Elements" type="Node2D" parent="Popup/PanelContainer" index="1"]
 
 [node name="MaxYMovement" type="Node2D" parent="Popup/PanelContainer/Elements" index="0"]
-position = Vector2(120, 110)
+position = Vector2(120, 140)
 
 [node name="FifiHat" type="Sprite2D" parent="Popup/PanelContainer/Elements" index="1"]
 position = Vector2(120, 171)
@@ -32,17 +36,17 @@ texture = ExtResource("5_bwfg5")
 offset = Vector2(8.14026, -162.806)
 
 [node name="Legs" type="Node2D" parent="Popup/PanelContainer/Elements" index="4"]
-position = Vector2(120, 115)
+position = Vector2(120, 303)
 scale = Vector2(1.08119, 1.08119)
 
 [node name="FifiLegs2" type="Sprite2D" parent="Popup/PanelContainer/Elements/Legs" index="0"]
-position = Vector2(54.5697, 45.384)
-rotation = -0.261799
+position = Vector2(97.1152, 65.0497)
+rotation = -0.888453
 scale = Vector2(0.334098, 0.334098)
 texture = ExtResource("4_nlsxv")
 
 [node name="FifiLegs3" type="Sprite2D" parent="Popup/PanelContainer/Elements/Legs" index="1"]
-position = Vector2(-55.4946, 49.384)
-rotation = -2.87979
+position = Vector2(-90.6409, 68.7494)
+rotation = -2.23547
 scale = Vector2(0.334654, -0.334654)
 texture = ExtResource("4_nlsxv")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceanward1yj0a"]
+[gd_scene load_steps=11 format=3 uid="uid://ceanward1yj0a"]
 
 [ext_resource type="PackedScene" uid="uid://dg035xci6inme" path="res://Scene/InteractionPopup.tscn" id="1_3wigi"]
 [ext_resource type="Script" uid="uid://b4d4q52u7gl6j" path="res://Scene/Home/vaiselle_popup.gd" id="2_u7n8w"]
 [ext_resource type="Texture2D" uid="uid://b06xbdprqcju3" path="res://Assets/Home/vaiselle/IMG_0833.png" id="3_u7n8w"]
-[ext_resource type="Script" uid="uid://bfvhj1mmd1h8c" path="res://Scripts/Tram/move_arm.gd" id="5_0qi5r"]
+[ext_resource type="Script" uid="uid://cvybpi45vuc5f" path="res://Scene/Home/washing_leg.gd" id="5_0qi5r"]
 [ext_resource type="Texture2D" uid="uid://p4oax8odfti2" path="res://Assets/Home/vaiselle/IMG_0847.png" id="6_ecxgh"]
+[ext_resource type="Texture2D" uid="uid://dwqlaf2m2hn8n" path="res://Assets/Home/SmokeParticle.png" id="7_0qi5r"]
 [ext_resource type="Texture2D" uid="uid://6n0xft0opkbg" path="res://Assets/Home/vaiselle/IMG_0843.png" id="7_g5xge"]
 [ext_resource type="Texture2D" uid="uid://bjen3jussurjj" path="res://Assets/Home/vaiselle/IMG_0841.png" id="8_at12p"]
 [ext_resource type="Texture2D" uid="uid://b84u4jdbvgh6y" path="res://Assets/Home/vaiselle/IMG_0842.png" id="9_v7dfa"]
@@ -12,28 +13,34 @@
 
 [node name="VaisellePopup" instance=ExtResource("1_3wigi")]
 script = ExtResource("2_u7n8w")
+cleaning_time_per_sprite = 1.0
 
 [node name="Popup" parent="." index="1"]
 offset_top = 0.0
 offset_bottom = 249.0
 
-[node name="Elements" type="Node2D" parent="Popup/PanelContainer/Background" index="0"]
-position = Vector2(-10, -10)
+[node name="Elements" type="PanelContainer" parent="Popup/PanelContainer/Background" index="0"]
+clip_contents = true
+layout_mode = 0
+offset_right = 239.0
+offset_bottom = 239.0
 
 [node name="Img0833" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements" index="0"]
-position = Vector2(129.281, 129.281)
-scale = Vector2(0.116913, 0.116913)
+position = Vector2(129.281, 192)
+scale = Vector2(0.203884, 0.203884)
 texture = ExtResource("3_u7n8w")
 
 [node name="Leg" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements" index="1"]
 z_index = 8
-position = Vector2(76, 284)
+position = Vector2(106.093, 113.891)
 rotation = 0.187329
 scale = Vector2(0.138396, 0.143263)
-skew = 0.0698131
+skew = 0.069813
 texture = ExtResource("11_1d3cv")
 offset = Vector2(-128.385, 577.293)
 script = ExtResource("5_0qi5r")
+speed_treshold_squared = 50
+grace_period_frames = 20
 
 [node name="Leg2" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements/Leg" index="0"]
 z_index = -2
@@ -42,17 +49,30 @@ scale = Vector2(0.42177, 0.42177)
 texture = ExtResource("6_ecxgh")
 offset = Vector2(-128.385, 577.293)
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Popup/PanelContainer/Background/Elements/Leg" index="1"]
+z_index = -1
+position = Vector2(31.7046, 8.5368)
+scale = Vector2(0.42177, 0.42177)
+emitting = false
+amount = 10
+texture = ExtResource("7_0qi5r")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_max = 2.0
+
 [node name="Img0843" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements" index="2"]
-position = Vector2(129, 79)
-scale = Vector2(0.189151, 0.189151)
+position = Vector2(136, 101)
+scale = Vector2(0.299841, 0.299841)
 texture = ExtResource("7_g5xge")
 
 [node name="Img0841" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements" index="3"]
-position = Vector2(135, 98)
-scale = Vector2(0.243473, 0.243473)
+position = Vector2(165, 133)
+scale = Vector2(0.385951, 0.385951)
 texture = ExtResource("8_at12p")
 
 [node name="Img0842" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements" index="4"]
-position = Vector2(79, 94)
-scale = Vector2(0.243473, 0.243473)
+position = Vector2(82, 137)
+scale = Vector2(0.385951, 0.385951)
 texture = ExtResource("9_v7dfa")

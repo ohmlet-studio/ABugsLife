@@ -37,6 +37,7 @@ func _on_calendar_popup_finished():
 			3: BadgePopup.reveal()
 			_: tram_change()
 func tram_change():
+	await get_tree().create_timer(1.0).timeout
 	GameStateManager.current_step_day = GameStateManager.TRAM_MORNING
 	get_tree().change_scene_to_file("res://Scene/Tram/tramScene.tscn")
 
