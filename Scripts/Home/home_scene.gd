@@ -2,20 +2,24 @@ extends Node2D
 
 @onready var AnimPlayer: AnimationPlayer = $RoomAnimation
 @onready var CalendrierPopup = $Interactions/CalendrierPopup
-@onready var CurtainPopup = $Interactions/CurtainPopup
 @onready var CalendarArr: Node2D = $Inside/Room/Calendar
-@onready var BadgePopup: Interaction = $Interactions/FifiBday
+@onready var HatPopup: Interaction = $Interactions/FifiBday
+
+@onready var CurtainPopup = $Interactions/CurtainPopup
 @onready var VaissellePopup: Interaction = $Interactions/VaisellePopup
 
+@onready var vaiselle_bkg = $Inside/Room/Junkfood
 
 func _ready():
 	GameStateManager.current_step_day = GameStateManager.ROOM_NIGHT
 	set_calendar_visibility()
+	vaiselle_bkg.visible = GameStateManager.current_day <= 1
+	
 	CalendrierPopup.hide()
 	CurtainPopup.hide()
-	BadgePopup.hide()
+	HatPopup.hide()
 	VaissellePopup.hide()
-	BadgePopup.action_completed.connect(tram_change)
+	HatPopup.action_completed.connect(tram_change)
 	VaissellePopup.action_completed.connect(tram_change)
 	CalendrierPopup.action_completed.connect(_on_calendar_popup_finished)
 	await night()
@@ -34,7 +38,7 @@ func _on_calendar_popup_finished():
 	if GameStateManager.current_step_day == GameStateManager.ROOM_MORNING:
 		match GameStateManager.current_day:
 			2: VaissellePopup.reveal()
-			3: BadgePopup.reveal()
+			3: HatPopup.reveal()
 			_: tram_change()
 func tram_change():
 	await get_tree().create_timer(1.0).timeout

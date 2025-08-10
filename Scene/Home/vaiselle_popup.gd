@@ -15,7 +15,7 @@ var current_tween: Tween
 var previous_washing_state = false
 
 func _ready() -> void:
-	# Store initial state
+	popup_ready = true
 	previous_washing_state = leg.is_washing_dishes
 
 func _process(_delta):
@@ -52,7 +52,6 @@ func clean_next_sprite():
 	
 	var current_sprite = sprites[current_sprite_index]
 	if not is_instance_valid(current_sprite):
-		# Sprite was removed, skip to next
 		current_sprite_index += 1
 		clean_next_sprite()
 		return
@@ -72,16 +71,7 @@ func clean_next_sprite():
 	)
 
 func stop_cleaning_and_reset():
-	# Stop current tween
 	if current_tween and current_tween.is_valid():
-		current_tween.kill()
-	
+		current_tween.pause()
 	is_cleaning = false
-	current_sprite_index = 0
-	
-	# Reset all remaining sprites to full opacity
-	for sprite in sprites:
-		if is_instance_valid(sprite):
-			sprite.modulate.a = 1.0
-	
-	print("Cleaning stopped and sprites reset!")
+	print("Cleaning stopped!")

@@ -39,10 +39,9 @@ skew = 0.069813
 texture = ExtResource("11_1d3cv")
 offset = Vector2(-128.385, 577.293)
 script = ExtResource("5_0qi5r")
-speed_treshold_squared = 50
-grace_period_frames = 20
+speed_treshold_squared = 30
 
-[node name="Leg2" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements/Leg" index="0"]
+[node name="Sponge" type="Sprite2D" parent="Popup/PanelContainer/Background/Elements/Leg" index="0"]
 z_index = -2
 position = Vector2(102.252, -213.184)
 scale = Vector2(0.42177, 0.42177)
